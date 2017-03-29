@@ -1,0 +1,78 @@
+% set the margins here, if they need to be modified
+\usepackage[a4paper, left=1.3in, right=1.0in]{geometry}
+
+% The linespacing you want
+\linespread{1.4}
+
+% Lets you pick fonts. Only works if you compile with xelatex or luatex
+\usepackage[no-math]{fontspec}
+
+% For block quotes
+\usepackage{attrib}
+
+% Additional mathsy symbols
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+% Used to make the captions on figures sans serif
+\usepackage{caption}
+
+% For including images
+\usepackage{graphicx}
+
+% For fancy code listings
+\usepackage{listings}
+
+% For tables that span multiple pages elegantly
+\usepackage{longtable}
+
+% For APA-style citations
+
+% For maintaining a list of abbreviations
+\usepackage{nomencl}
+
+% For drawing diagrams
+\usepackage{tikz}
+
+% These closely match the SCSS word template fonts
+% Won't work unless you compile with xelatex or luatex
+\setmainfont[Mapping=tex-text]{Times New Roman}
+\setsansfont{Helvetica}
+\setmonofont{Courier New}
+
+\pagestyle{headings}
+
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+
+\bibliographystyle{acm}
+
+% Settings for how you want your code listings to look
+\lstset{
+basicstyle=\ttfamily\scriptsize,
+keywordstyle=\ttfamily,
+numberstyle=\rmfamily\tiny,
+numbers=left,
+commentstyle=\sffamily,
+breaklines=true,
+frame=single,
+stringstyle=\ttfamily,
+identifierstyle=\bfseries,
+lineskip=1mm
+}
+
+\input{settings/constants}
+\input{settings/commands}
+
+% For changing the names of the List of Listings, etc.
+\renewcommand*{\lstlistlistingname}{List of Listings}
+\renewcommand*{\contentsname}{Table of Contents}
+\renewcommand*{\nomname}{Abbreviations}
+
+% Make the captions sans serif
+\renewcommand{\captionfont}{\sffamily}

@@ -1,0 +1,40 @@
+#+LATEX_COMPILER: xelatex
+#+LATEX_CLASS: report
+#+LATEX_CLASS_OPTIONS: [a4paper, notitlepage]
+#+LATEX_HEADER: \include{settings/preamble}
+#+OPTIONS: toc:nil
+
+# Inserts the 'TRINITY COLLEGE' etc. page
+\inserttitlepage
+
+\pagenumbering{roman}
+
+\declaration
+
+\permissiontolend
+
+\insertabstract
+
+# Need to fiddle with page numbers manually to make them consistent
+\acknowledgements
+
+\tableofcontents
+
+\newpage
+
+
+\pagenumbering{arabic}
+
+* First section
+
+** First chapter
+
+** Second chapter
+* Second
+** Third chap
+
+* Third
+
+
+bibliography:bibliography.bib
+\appendix

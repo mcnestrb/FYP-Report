@@ -1,0 +1,21 @@
+% All the commands are defined in this file
+\newcommand \inserttitlepage{\include{tcd/titlepage}}
+\newcommand \insertabstract{\include{abstract}}
+\newcommand \declaration{\include{tcd/declaration}}
+\newcommand \acknowledgements{\include{acknowledgements}}
+\newcommand \permissiontolend{\include{tcd/permissiontolend}}
+
+\newcommand{\argmax}[1]{\underset{#1}{\operatorname{arg}\,\operatorname{max}}\;}
+
+\usepackage{datetime}
+
+\def\fullhrulefill{\leavevmode\leaders\hrule height 1pt\hfill\kern 0pt}
+
+\newcommand{\signedanddate} {
+  \par\noindent\makebox[2.5in]{\fullhrulefill}
+  \par\noindent\makebox[2.5in][l]{\authorname, May 5 2017}
+}
+
+\newcommand \needcite[1]{\underline{#1}}
+
+\newcommand \abbrev[2]{#1\nomenclature{#1}{#2}}
