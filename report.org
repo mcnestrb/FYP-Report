@@ -77,9 +77,13 @@ decentralised grid. This model would need a massive infrastructure overhaul in
 order to implement so it would not exist in the world until it is needed and
 accepted by the major companies who would then go about implementing it. In this
 case necessity would be the mother of invention, at least on a practical level.
-The rough idea of a decentralised grid is described in figure 1.1. 
+The rough idea of a distributed grid is described in figure 1.1. Throughout the
+rest of this report distributed grid and decentralised grid are used
+interchangeably. 
 
-
+#+CAPTION: Each local consumer and supplier is attached to a regional grid hub which manages the allocation of electricity between suppliers and consumers. This is just a simple overview of the idea but conceivably a consumer or a supplier could be connected to two or more different regional grid hubs. 
+#+NAME: Decentralised Grid (Fig 1.1)
+[[./img/DecentralisedGrid.jpg]]
 ** Smart Grid
 
 *** Nanogrids
