@@ -25,16 +25,55 @@
 
 \pagenumbering{arabic}
 
-* First section
+* Abstract
 
-** First chapter
+* Introduction
 
-** Second chapter
-* Second
-** Third chap
 
-* Third
+* Background
+** Decentralised Grid
+At present in Ireland and in many other countries, the national electric grid
+infrastructure is controlled by a central body, namely the ESB. While there are
+several electricity providers in Ireland, such as Bord Gáis Energy, SSE
+Airtricity and Energy Ireland, each of them use the same distribution network as
+one another. Essentially the power is provided from each of the different
+providers and then the routed into the same centralised hub belonging to the ESB
+and then the power  
+** Smart Grid
 
+*** Nanogrids
+
+** Auctions
+
+
+** Game Theory
+*** Cooperative Game Theory
+
+*** Non-Cooperative Game Theory
+
+*** Cournot and Stackelberg Games
+
+** Optimisation Techniques
+
+*** Convex Optimisation
+
+*** Hyperplane Projection
+
+* Implementation
+
+** Design
+
+** Framework
+
+** Processes
+
+* Conclusion
+
+** Assessment
+
+** Future Work and Continuations
 
 bibliography:bibliography.bib
 \appendix
+
+
