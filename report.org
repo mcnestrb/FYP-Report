@@ -37,12 +37,54 @@ infrastructure is controlled by a central body, namely the ESB. While there are
 several electricity providers in Ireland, such as Bord Gáis Energy, SSE
 Airtricity and Energy Ireland, each of them use the same distribution network as
 one another. Essentially the power is provided from each of the different
-providers and then the routed into the same centralised hub belonging to the ESB
-and then the power  
+providers and then routed into the same centralised hub belonging to the ESB.
+From there, each consumer (a household) receives the energy that they pay for
+accordingly at a fixed rate through that same infrastructure belonging to the
+ESB. This is much the same system as any other country, where there is a
+centralised grid. 
+
+This system has been in place for decades and lends itself very well to the
+situation where large companies can provide a steady supply of energy by way of
+electricity plants that use both renewable and non-renewable energy sources.
+Non-renewable energy sources, also known as fossil fuels, include resources such
+as coal, gas and oil. While these are finite resources, at present they can be
+burned at a steady rate in order to meet the demands of customers. Electricity
+from renewable sources can also be produced at a fairly steady rate by placing
+large farms in areas that are particularly well suited to the type of renewable
+energy being produced. For example, large wind farms are set up in windy
+regions far removed from residential or urban areas and solar panels can be
+placed in regions that typically enjoy clearer skies than other areas.
+
+However in the future, perhaps the very near future, with the ongoing depletion
+of non-renewable resources, more and more people will turn to deploying solar
+panels and local wind farms in their locale, regardless of whether or not they
+are living in a particularly sunny or windy area. At the moment there are a few
+houses out there that use a solar panel to heat their water or other smaller
+tasks but soon more and more people will become more and more dependent on what
+they can produce either within their own home, or in a more collective sense in
+their own neighbourhood to power their houses.
+
+The issue that then arises in these areas that aren't as sunny or windy is that
+supply of electricity is no longer steady. The current system could not be
+maintained as the energy produced on a local level would be small enough that it
+would not be worth it to pass this energy upstream to the central grid. The
+energy would instead be used at a local level to try to cover the demand for
+electricity of the house or business with which that particular device is
+associated.
+
+The model of infrastructure that would then be required is that of a
+decentralised grid. This model would need a massive infrastructure overhaul in
+order to implement so it would not exist in the world until it is needed and
+accepted by the major companies who would then go about implementing it. In this
+case necessity would be the mother of invention, at least on a practical level.
+The rough idea of a decentralised grid is described in figure 1.1. 
+
+
 ** Smart Grid
 
 *** Nanogrids
 
+** REFIT Scheme
 ** Auctions
 
 
