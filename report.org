@@ -2,6 +2,7 @@
 #+LATEX_CLASS: report
 #+LATEX_CLASS_OPTIONS: [a4paper, notitlepage]
 #+LATEX_HEADER: \include{settings/preamble}
+#+LaTeX_HEADER: \addbibresource{bibliography.bib}
 #+OPTIONS: toc:nil
 
 # Inserts the 'TRINITY COLLEGE' etc. page
@@ -137,5 +138,5 @@ in a centralised grid system meaning that the transition from a centralised
 * Conclusion
 ** Assessment
 ** Future Work and Continuations
-bibliography:bibliography.bib
+\printbibliography
 \appendix

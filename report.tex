@@ -1,4 +1,4 @@
-% Created 2017-04-18 Tue 14:17
+% Created 2017-04-18 Tue 21:03
 % Intended LaTeX compiler: xelatex
 \documentclass[a4paper, notitlepage]{report}
 \usepackage{graphicx}
@@ -13,6 +13,7 @@
 \usepackage{capt-of}
 \usepackage{hyperref}
 \include{settings/preamble}
+\addbibresource{bibliography.bib}
 \author{Brian McNestry}
 \date{\today}
 \title{}
@@ -45,16 +46,16 @@
 \pagenumbering{arabic}
 
 \part{Abstract}
-\label{sec:orgc2b0f77}
+\label{sec:org3cce1d2}
 
 \part{Introduction}
-\label{sec:org9d885c3}
+\label{sec:orgf5ba695}
 
 
 \part{Background}
-\label{sec:org8f3e275}
+\label{sec:orgd969de3}
 \chapter{Decentralised Grid}
-\label{sec:org468487d}
+\label{sec:org7f176a9}
 At present in Ireland and in many other countries, the national electric grid
 infrastructure is controlled by a central body, namely the ESB. While there are
 several electricity providers in Ireland, such as Bord Gáis Energy, SSE
@@ -107,11 +108,11 @@ interchangeably.
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=.9\linewidth]{./img/DecentralisedGrid.jpg}
-\caption{\label{fig:org9ad2220}
+\caption{\label{fig:org2195bf0}
 Each local consumer and supplier is attached to a regional grid hub which manages the allocation of electricity between suppliers and consumers. This is just a simple overview of the idea but conceivably a consumer or a supplier could be connected to two or more different regional grid hubs.}
 \end{figure}
 \chapter{Smart Grid}
-\label{sec:org61f0527}
+\label{sec:org888cfb7}
 Due to advancements in networking technologies as well as in the field of
 sophisticated decision making technologies, the idea of a smart grid has become
 increasingly popular. The idea of the smart grid is that actors within a grid,
@@ -139,56 +140,48 @@ of energy is cheapest. It also tries to predict how much energy it will consume
 based off its own knowledge of previous experiences in buying power at that
 particular time of day, allowing the system to learn over time and make smarter
 decisions as time goes on.
-\section{Nanogrids}
-\label{sec:org42ed8ff}
+
+\section{Microgrids and Nanogrids}
+\label{sec:orge275e0a}
+At present smart grids have generally been implemented on the level of
+microgrids. Microgrids are generally thought of in terms of having a consumer
+be a single house, or perhaps a group of houses, and a supplier being a small
+wind farm or solar farm, or perhaps a group of these together. In the case of a
+microgrid, actors within the system are defined in similar to the units involved
+in a centralised grid system meaning that the transition from a centralised 
 
 \chapter{REFIT Scheme}
-\label{sec:org58342f2}
+\label{sec:org860bce8}
 \chapter{Auctions}
-\label{sec:org139a1e2}
-
-
+\label{sec:orga638cf4}
 \chapter{Game Theory}
-\label{sec:org41c4521}
+\label{sec:orge917be8}
 \section{Cooperative Game Theory}
-\label{sec:orgc3b851f}
-
+\label{sec:orgc549809}
 \section{Non-Cooperative Game Theory}
-\label{sec:orgb651563}
-
+\label{sec:org22dd58d}
 \section{Cournot and Stackelberg Games}
-\label{sec:org898a4b5}
-
+\label{sec:orgf2eeb9f}
 \chapter{Optimisation Techniques}
-\label{sec:org34c25ee}
-
+\label{sec:org216c102}
 \section{Convex Optimisation}
-\label{sec:orgd480b2f}
-
+\label{sec:org6e0c561}
 \section{Hyperplane Projection}
-\label{sec:org7cdb0a2}
-
+\label{sec:orgd8833e7}
 \part{Implementation}
-\label{sec:orgefa2dd1}
-
+\label{sec:org1d28502}
 \chapter{Design}
-\label{sec:org81c3bed}
-
+\label{sec:orgcb1b4e1}
 \chapter{Framework}
-\label{sec:orgc10c3b6}
-
+\label{sec:org6bcd9ec}
 \chapter{Processes}
-\label{sec:org7342f57}
-
+\label{sec:org76ceb1a}
 \part{Conclusion}
-\label{sec:org63460aa}
-
+\label{sec:org49b95aa}
 \chapter{Assessment}
-\label{sec:org0b8dac9}
-
+\label{sec:orgef69aaa}
 \chapter{Future Work and Continuations}
-\label{sec:orgb29d7df}
-
-\bibliography{bibliography}
+\label{sec:orge2be6eb}
+\printbibliography
 \appendix
 \end{document}
