@@ -85,7 +85,33 @@ interchangeably.
 #+NAME: Decentralised Grid (Fig 1.1)
 [[./img/DecentralisedGrid.jpg]]
 ** Smart Grid
+Due to advancements in networking technologies as well as in the field of
+sophisticated decision making technologies, the idea of a smart grid has become
+increasingly popular. The idea of the smart grid is that actors within a grid,
+be they individual consumers or suppliers, or groups thereof, can be fitted with
+small computers that perceive changes in the grid and then these actors can
+then react accordingly. Several different types of management systems have been
+constructed in order to successfully, fairly and efficiently allocate resources
+for each of these different types of actors. The two primary types of management
+systems that were examined as part of this final year project were Auctions and
+Game Theory which will both be discussed in detail later on.
 
+The smart grid is not only used in this regard but in fact has many other
+potential applications, some of which have been implemented already in several
+cities and regions throughout the world. Other applications of the technology
+include energy consumption or production prediction, scheduling the use of
+consumers in order to reduce costs or operation and smart reaction and response
+to disruptions or blackout within the grid to reduce the damage that occurs as a
+result.
+
+In this project it is assumed that the consumers within the system are outfitted
+with some kind of prediction technology. An example of such a system has been
+proposed by Garcia et al cite:mohsenian2010optimal where a device tries to time
+its own operation within a certain time-frame in accordance with when the price
+of energy is cheapest. It also tries to predict how much energy it will consume
+based off its own knowledge of previous experiences in buying power at that
+particular time of day, allowing the system to learn over time and make smarter
+decisions as time goes on.
 *** Nanogrids
 
 ** REFIT Scheme
