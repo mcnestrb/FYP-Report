@@ -112,40 +112,30 @@ of energy is cheapest. It also tries to predict how much energy it will consume
 based off its own knowledge of previous experiences in buying power at that
 particular time of day, allowing the system to learn over time and make smarter
 decisions as time goes on.
-*** Nanogrids
+
+*** Microgrids and Nanogrids
+At present smart grids have generally been implemented on the level of
+microgrids. Microgrids are generally thought of in terms of having a consumer
+be a single house, or perhaps a group of houses, and a supplier being a small
+wind farm or solar farm, or perhaps a group of these together. In the case of a
+microgrid, actors within the system are defined in similar to the units involved
+in a centralised grid system meaning that the transition from a centralised 
 
 ** REFIT Scheme
 ** Auctions
-
-
 ** Game Theory
 *** Cooperative Game Theory
-
 *** Non-Cooperative Game Theory
-
 *** Cournot and Stackelberg Games
-
 ** Optimisation Techniques
-
 *** Convex Optimisation
-
 *** Hyperplane Projection
-
 * Implementation
-
 ** Design
-
 ** Framework
-
 ** Processes
-
 * Conclusion
-
 ** Assessment
-
 ** Future Work and Continuations
-
 bibliography:bibliography.bib
 \appendix
-
-
