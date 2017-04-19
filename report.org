@@ -234,6 +234,32 @@ this game. Similarly due to the lack of communication between the players in the
 game, they can also never know if other players could change their strategies so
 are unable to even realise that cooperation is even possible at any given stage.
 *** Cournot and Stackelberg Games
+Cournot and Stackelberg games are two manners in which players participate in
+the game, in other words they constitute the structure of the game as opposed to
+how players react to one another and strategise within the game. Both of these
+are relatively easy concepts to understand so this section should be quite
+short. Because these different structures of games effect the way in which a
+player interacts with the other players in the game, different strategies can be
+better or worse based on whether the game is a Cournot game or a Stackelberg
+game and in some cases some strategies may not even be possible within different
+game structures.
+
+A Cournot game is simply where all the players make their moves at the same
+time. For example, all players may submit their moves separately to a central
+manager node who then reveals all of the different moves at the same time and
+tries to work out and resolve all the different collisions and determine what
+exactly the outcome of the game was on that particular turn. In a Cournot game,
+the players all have to predict what the most likely turn of all the other
+players are and react accordingly for every round of the game.
+
+A Stackelberg game is where there is a leader within the game who plays first,
+attempting to maximise its own utility first and then all other players in the
+game play in turn after that and are able to see the moves of all other players
+before them. Obviously in this kind of a game, where players are competing over
+a finite resource, whoever plays first has an immediate advantage over the over
+players in the game. This trickles down through the game, so that while any
+given player has a disadvantage compared the whoever had the preceding turn,
+they have a distinct advantage over all players who come afterwards.
 ** Optimisation Techniques
 *** Convex Optimisation
 *** Hyperplane Projection

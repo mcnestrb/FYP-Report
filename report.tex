@@ -1,4 +1,4 @@
-% Created 2017-04-19 Wed 17:21
+% Created 2017-04-19 Wed 17:56
 % Intended LaTeX compiler: xelatex
 \documentclass[a4paper, notitlepage]{report}
 \usepackage{graphicx}
@@ -46,16 +46,16 @@
 \pagenumbering{arabic}
 
 \part{Abstract}
-\label{sec:org22dbc26}
+\label{sec:orgba70f2a}
 
 \part{Introduction}
-\label{sec:org5619b3d}
+\label{sec:org1d7a6e6}
 
 
 \part{Background}
-\label{sec:org29888ff}
+\label{sec:orgb30f0bf}
 \chapter{Decentralised Grid}
-\label{sec:orgf8a99f4}
+\label{sec:org735ddc4}
 At present in Ireland and in many other countries, the national electric grid
 infrastructure is controlled by a central body, namely the ESB. While there are
 several electricity providers in Ireland, such as Bord Gáis Energy, SSE
@@ -108,13 +108,13 @@ interchangeably.
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=.9\linewidth]{./img/DecentralisedGrid.jpg}
-\caption{\label{fig:org7c128db}
+\caption{\label{fig:orgf71e762}
 Each local consumer and supplier is attached to a regional grid hub which manages the allocation of electricity between suppliers and consumers. This is just a simple overview of the idea but conceivably a consumer or a supplier could be connected to two or more different regional grid hubs.}
 \end{figure}
 \chapter{Smart Grid}
-\label{sec:orgc17f186}
+\label{sec:org5d73e9c}
 \section{Overview}
-\label{sec:org1423fb1}
+\label{sec:org3e15978}
 Due to advancements in networking technologies as well as in the field of
 sophisticated decision making technologies, the idea of a smart grid has become
 increasingly popular. The idea of the smart grid is that actors within a grid,
@@ -144,7 +144,7 @@ particular time of day, allowing the system to learn over time and make smarter
 decisions as time goes on.
 
 \section{Microgrids and Nanogrids}
-\label{sec:org77c43aa}
+\label{sec:org48fb3d9}
 At present smart grids have generally been implemented on the level of
 microgrids. Microgrids are generally thought of in terms of having a consumer
 be a single house, or perhaps a group of houses, and a supplier being a small
@@ -181,13 +181,13 @@ distributed grids. This tree could also be adapted into a graph where a parent
 node in the tree could have multiple children and a child could have multiple
 parents. This will be discussed more in the conclusion.
 \chapter{REFIT Scheme}
-\label{sec:org1181de5}
+\label{sec:org31266fa}
 \chapter{Auctions}
-\label{sec:orgc17a68d}
+\label{sec:org2b265b0}
 \chapter{Game Theory}
-\label{sec:orgfc6e072}
+\label{sec:org64547da}
 \section{Overview}
-\label{sec:orga508f04}
+\label{sec:org20454f1}
 The field of game theory has been one that has many different facets and
 versions depending on the type of situation required. In this section of the
 report the nomenclature and jargon of game theory will be discussed, as will a
@@ -220,7 +220,7 @@ the game. In a well-designed game the utility function must be designed such
 that the state of equilibrium not only can be reached but also that reaching
 that state is appealing to all players within the game.
 \section{Non-Cooperative Game Theory}
-\label{sec:org4d72ccd}
+\label{sec:org783cf47}
 Non-Cooperative games are the simplest types of games to both understand and
 design. As previously stated, each player is trying to maximise its own utility
 but the core component of a non-cooperative game is that all of the players are
@@ -243,7 +243,7 @@ game. In this case all other players would then be aware that this players
 strategy had changed and would then react accordingly in order to maximise their
 own utility and decrease that player's utility.
 \section{Cooperative Game Theory}
-\label{sec:org9e3de17}
+\label{sec:org29e3b86}
 Cooperative game theory shares many similar traits with that of non-cooperative
 game theory as outlined in the overview section of this part on game theory in
 this report. However the key aspect of cooperative game theory is that players
@@ -269,27 +269,53 @@ this game. Similarly due to the lack of communication between the players in the
 game, they can also never know if other players could change their strategies so
 are unable to even realise that cooperation is even possible at any given stage.
 \section{Cournot and Stackelberg Games}
-\label{sec:org72c12c9}
+\label{sec:orgf04b0a4}
+Cournot and Stackelberg games are two manners in which players participate in
+the game, in other words they constitute the structure of the game as opposed to
+how players react to one another and strategise within the game. Both of these
+are relatively easy concepts to understand so this section should be quite
+short. Because these different structures of games effect the way in which a
+player interacts with the other players in the game, different strategies can be
+better or worse based on whether the game is a Cournot game or a Stackelberg
+game and in some cases some strategies may not even be possible within different
+game structures.
+
+A Cournot game is simply where all the players make their moves at the same
+time. For example, all players may submit their moves separately to a central
+manager node who then reveals all of the different moves at the same time and
+tries to work out and resolve all the different collisions and determine what
+exactly the outcome of the game was on that particular turn. In a Cournot game,
+the players all have to predict what the most likely turn of all the other
+players are and react accordingly for every round of the game.
+
+A Stackelberg game is where there is a leader within the game who plays first,
+attempting to maximise its own utility first and then all other players in the
+game play in turn after that and are able to see the moves of all other players
+before them. Obviously in this kind of a game, where players are competing over
+a finite resource, whoever plays first has an immediate advantage over the over
+players in the game. This trickles down through the game, so that while any
+given player has a disadvantage compared the whoever had the preceding turn,
+they have a distinct advantage over all players who come afterwards.
 \chapter{Optimisation Techniques}
-\label{sec:org6177a74}
+\label{sec:orge3eae5f}
 \section{Convex Optimisation}
-\label{sec:orga46ecbf}
+\label{sec:orgbf62cc9}
 \section{Hyperplane Projection}
-\label{sec:orgff4fd09}
+\label{sec:org9cdf578}
 \part{Implementation}
-\label{sec:orga51a39c}
+\label{sec:org5040665}
 \chapter{Design}
-\label{sec:org1ae0535}
+\label{sec:org108e9c1}
 \chapter{Framework}
-\label{sec:org6bb7567}
+\label{sec:org40e40d2}
 \chapter{Processes}
-\label{sec:orgde468b3}
+\label{sec:org951b593}
 \part{Conclusion}
-\label{sec:orgcd39caf}
+\label{sec:org3ef1b69}
 \chapter{Assessment}
-\label{sec:org1d5837b}
+\label{sec:orgde2b845}
 \chapter{Future Work and Continuations}
-\label{sec:orgb6bec35}
+\label{sec:orge926e77}
 \printbibliography
 \appendix
 \end{document}
