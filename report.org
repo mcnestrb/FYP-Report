@@ -86,6 +86,7 @@ interchangeably.
 #+NAME: Decentralised Grid (Fig 1.1)
 [[./img/DecentralisedGrid.jpg]]
 ** Smart Grid
+*** Overview
 Due to advancements in networking technologies as well as in the field of
 sophisticated decision making technologies, the idea of a smart grid has become
 increasingly popular. The idea of the smart grid is that actors within a grid,
@@ -208,6 +209,30 @@ game. In this case all other players would then be aware that this players
 strategy had changed and would then react accordingly in order to maximise their
 own utility and decrease that player's utility.
 *** Cooperative Game Theory
+Cooperative game theory shares many similar traits with that of non-cooperative
+game theory as outlined in the overview section of this part on game theory in
+this report. However the key aspect of cooperative game theory is that players
+within the game will form coalitions based on threats and incentives that occur
+between each other. The key component of cooperative game theory is the
+analysis of which coalitions are likely to form within any given game and what
+the projected outcomes are based upon these permutations of coalitions. In this
+way the study of cooperative games have two main facets. First of all they are
+concerned with what might cause different groups of players to act together in
+unison. Secondly they are concerned with the outcomes from the most likely of
+each of these games that happen when different groups form.
+
+In this project, the nodes involved in the game are all energy suppliers who are
+each trying to maximise their own profit based on the amount of energy that they
+are able to sell. The utility functions of the nodes and other such details will
+be discussed later in the Implementation section of this report. The desired
+outcome of each player is therefore entirely selfish and because they are all
+trying to compete for a finite price, they each want to obtain as much of that
+money as possible. Therefore it does not make sense to design this game in such
+a way that these players should be able to form coalitions, as any coalition
+would involve compromising and receiving less money which doesn't make sense in
+this game. Similarly due to the lack of communication between the players in the
+game, they can also never know if other players could change their strategies so
+are unable to even realise that cooperation is even possible at any given stage.
 *** Cournot and Stackelberg Games
 ** Optimisation Techniques
 *** Convex Optimisation
@@ -221,5 +246,3 @@ own utility and decrease that player's utility.
 ** Future Work and Continuations
 \printbibliography
 \appendix
-
-#  LocalWords:  EV

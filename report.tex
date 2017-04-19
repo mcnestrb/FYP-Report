@@ -1,4 +1,4 @@
-% Created 2017-04-19 Wed 16:35
+% Created 2017-04-19 Wed 17:21
 % Intended LaTeX compiler: xelatex
 \documentclass[a4paper, notitlepage]{report}
 \usepackage{graphicx}
@@ -46,16 +46,16 @@
 \pagenumbering{arabic}
 
 \part{Abstract}
-\label{sec:org1b9e7e5}
+\label{sec:org22dbc26}
 
 \part{Introduction}
-\label{sec:org6817e81}
+\label{sec:org5619b3d}
 
 
 \part{Background}
-\label{sec:org60916f0}
+\label{sec:org29888ff}
 \chapter{Decentralised Grid}
-\label{sec:org8ef908e}
+\label{sec:orgf8a99f4}
 At present in Ireland and in many other countries, the national electric grid
 infrastructure is controlled by a central body, namely the ESB. While there are
 several electricity providers in Ireland, such as Bord Gáis Energy, SSE
@@ -108,11 +108,13 @@ interchangeably.
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=.9\linewidth]{./img/DecentralisedGrid.jpg}
-\caption{\label{fig:org6f0a5da}
+\caption{\label{fig:org7c128db}
 Each local consumer and supplier is attached to a regional grid hub which manages the allocation of electricity between suppliers and consumers. This is just a simple overview of the idea but conceivably a consumer or a supplier could be connected to two or more different regional grid hubs.}
 \end{figure}
 \chapter{Smart Grid}
-\label{sec:orge78b097}
+\label{sec:orgc17f186}
+\section{Overview}
+\label{sec:org1423fb1}
 Due to advancements in networking technologies as well as in the field of
 sophisticated decision making technologies, the idea of a smart grid has become
 increasingly popular. The idea of the smart grid is that actors within a grid,
@@ -142,7 +144,7 @@ particular time of day, allowing the system to learn over time and make smarter
 decisions as time goes on.
 
 \section{Microgrids and Nanogrids}
-\label{sec:org0028276}
+\label{sec:org77c43aa}
 At present smart grids have generally been implemented on the level of
 microgrids. Microgrids are generally thought of in terms of having a consumer
 be a single house, or perhaps a group of houses, and a supplier being a small
@@ -179,13 +181,13 @@ distributed grids. This tree could also be adapted into a graph where a parent
 node in the tree could have multiple children and a child could have multiple
 parents. This will be discussed more in the conclusion.
 \chapter{REFIT Scheme}
-\label{sec:org45dabaa}
+\label{sec:org1181de5}
 \chapter{Auctions}
-\label{sec:org5e4f705}
+\label{sec:orgc17a68d}
 \chapter{Game Theory}
-\label{sec:org92dd2f1}
+\label{sec:orgfc6e072}
 \section{Overview}
-\label{sec:orgf91835e}
+\label{sec:orga508f04}
 The field of game theory has been one that has many different facets and
 versions depending on the type of situation required. In this section of the
 report the nomenclature and jargon of game theory will be discussed, as will a
@@ -218,7 +220,7 @@ the game. In a well-designed game the utility function must be designed such
 that the state of equilibrium not only can be reached but also that reaching
 that state is appealing to all players within the game.
 \section{Non-Cooperative Game Theory}
-\label{sec:orgdf713dc}
+\label{sec:org4d72ccd}
 Non-Cooperative games are the simplest types of games to both understand and
 design. As previously stated, each player is trying to maximise its own utility
 but the core component of a non-cooperative game is that all of the players are
@@ -241,29 +243,53 @@ game. In this case all other players would then be aware that this players
 strategy had changed and would then react accordingly in order to maximise their
 own utility and decrease that player's utility.
 \section{Cooperative Game Theory}
-\label{sec:orge9e5ec5}
+\label{sec:org9e3de17}
+Cooperative game theory shares many similar traits with that of non-cooperative
+game theory as outlined in the overview section of this part on game theory in
+this report. However the key aspect of cooperative game theory is that players
+within the game will form coalitions based on threats and incentives that occur
+between each other. The key component of cooperative game theory is the
+analysis of which coalitions are likely to form within any given game and what
+the projected outcomes are based upon these permutations of coalitions. In this
+way the study of cooperative games have two main facets. First of all they are
+concerned with what might cause different groups of players to act together in
+unison. Secondly they are concerned with the outcomes from the most likely of
+each of these games that happen when different groups form.
+
+In this project, the nodes involved in the game are all energy suppliers who are
+each trying to maximise their own profit based on the amount of energy that they
+are able to sell. The utility functions of the nodes and other such details will
+be discussed later in the Implementation section of this report. The desired
+outcome of each player is therefore entirely selfish and because they are all
+trying to compete for a finite price, they each want to obtain as much of that
+money as possible. Therefore it does not make sense to design this game in such
+a way that these players should be able to form coalitions, as any coalition
+would involve compromising and receiving less money which doesn't make sense in
+this game. Similarly due to the lack of communication between the players in the
+game, they can also never know if other players could change their strategies so
+are unable to even realise that cooperation is even possible at any given stage.
 \section{Cournot and Stackelberg Games}
-\label{sec:org562cb7b}
+\label{sec:org72c12c9}
 \chapter{Optimisation Techniques}
-\label{sec:org48bf0bf}
+\label{sec:org6177a74}
 \section{Convex Optimisation}
-\label{sec:orge064502}
+\label{sec:orga46ecbf}
 \section{Hyperplane Projection}
-\label{sec:org27cac25}
+\label{sec:orgff4fd09}
 \part{Implementation}
-\label{sec:orgad1f7cd}
+\label{sec:orga51a39c}
 \chapter{Design}
-\label{sec:orgd2a1466}
+\label{sec:org1ae0535}
 \chapter{Framework}
-\label{sec:org0594e4a}
+\label{sec:org6bb7567}
 \chapter{Processes}
-\label{sec:org446aa9d}
+\label{sec:orgde468b3}
 \part{Conclusion}
-\label{sec:org3cdf970}
+\label{sec:orgcd39caf}
 \chapter{Assessment}
-\label{sec:orgbf76004}
+\label{sec:org1d5837b}
 \chapter{Future Work and Continuations}
-\label{sec:org21f72b4}
+\label{sec:orgb6bec35}
 \printbibliography
 \appendix
 \end{document}
