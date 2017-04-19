@@ -1,4 +1,4 @@
-% Created 2017-04-19 Wed 13:25
+% Created 2017-04-19 Wed 16:35
 % Intended LaTeX compiler: xelatex
 \documentclass[a4paper, notitlepage]{report}
 \usepackage{graphicx}
@@ -46,16 +46,16 @@
 \pagenumbering{arabic}
 
 \part{Abstract}
-\label{sec:orgd7175e1}
+\label{sec:org1b9e7e5}
 
 \part{Introduction}
-\label{sec:org09f0ddf}
+\label{sec:org6817e81}
 
 
 \part{Background}
-\label{sec:org44abf14}
+\label{sec:org60916f0}
 \chapter{Decentralised Grid}
-\label{sec:org34292a6}
+\label{sec:org8ef908e}
 At present in Ireland and in many other countries, the national electric grid
 infrastructure is controlled by a central body, namely the ESB. While there are
 several electricity providers in Ireland, such as Bord Gáis Energy, SSE
@@ -108,11 +108,11 @@ interchangeably.
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=.9\linewidth]{./img/DecentralisedGrid.jpg}
-\caption{\label{fig:org981a145}
+\caption{\label{fig:org6f0a5da}
 Each local consumer and supplier is attached to a regional grid hub which manages the allocation of electricity between suppliers and consumers. This is just a simple overview of the idea but conceivably a consumer or a supplier could be connected to two or more different regional grid hubs.}
 \end{figure}
 \chapter{Smart Grid}
-\label{sec:orgbd6f6a3}
+\label{sec:orge78b097}
 Due to advancements in networking technologies as well as in the field of
 sophisticated decision making technologies, the idea of a smart grid has become
 increasingly popular. The idea of the smart grid is that actors within a grid,
@@ -142,7 +142,7 @@ particular time of day, allowing the system to learn over time and make smarter
 decisions as time goes on.
 
 \section{Microgrids and Nanogrids}
-\label{sec:org894727d}
+\label{sec:org0028276}
 At present smart grids have generally been implemented on the level of
 microgrids. Microgrids are generally thought of in terms of having a consumer
 be a single house, or perhaps a group of houses, and a supplier being a small
@@ -167,7 +167,7 @@ but is concerned with a much smaller scale. A nanogrid is one that operates
 within the confines of a single building, generally where each consumer is a
 single appliance such as a washing machine or an electronic vehicles (EV).
 Suppliers would also be very small scale perhaps a set of solar panels or a
-small wind mill. A nanogrid system could also be adapted to aggregate a number
+small wind turbine. A nanogrid system could also be adapted to aggregate a number
 of devices to act as one as a single actor within the nanogrid system, for
 example all the lights on one floor of a house could act as a single consumer
 and draw on a shared reserve of power.
@@ -179,37 +179,91 @@ distributed grids. This tree could also be adapted into a graph where a parent
 node in the tree could have multiple children and a child could have multiple
 parents. This will be discussed more in the conclusion.
 \chapter{REFIT Scheme}
-\label{sec:orge54679c}
+\label{sec:org45dabaa}
 \chapter{Auctions}
-\label{sec:orga91b949}
+\label{sec:org5e4f705}
 \chapter{Game Theory}
-\label{sec:org4787ade}
-\section{Cooperative Game Theory}
-\label{sec:org97c46d6}
+\label{sec:org92dd2f1}
+\section{Overview}
+\label{sec:orgf91835e}
+The field of game theory has been one that has many different facets and
+versions depending on the type of situation required. In this section of the
+report the nomenclature and jargon of game theory will be discussed, as will a
+short explanation about the decision of selection of the type of game
+implemented as part of this final year project. First the two primary types of
+interactions between players in a game will be discussed and after that the two
+primary types of playing styles will be discussed. However first of all there
+are certain traits that are universal for any type of game that must first be
+explained in order to grasp the concept of game theory enough to understand some
+of the implementation decisions later in this report as well as to grasp the
+general concept of game theory itself.
+
+In game theory, players within a game compete for a finite resource with the
+objective of maximising their own utility within the scope of that game. Each
+player within the game has an associated utility function that is generally the
+same for all players within that game. The utility function generally results in
+some scalar value that is trying to reach some max value, whether on an
+individual or collective level. There is also generally some kind of manager
+node that helps to conduct the game between all of the players involved. Within
+any particular game, the players are all trying to maximise their own utility,
+however in different types of games they may also be conscious of the utilities
+of all the other players involved and try to react accordingly, whether to
+further their own goal or to further the goals of the collective group.
+
+A well defined game also has some from of state of equilibrium. This state of
+equilibrium is when the sum of utilities of all the players within the game
+reaches a maximum. The central managing node, if there is one, generally decides
+whether or not this state has been reached. This state is the success state of
+the game. In a well-designed game the utility function must be designed such
+that the state of equilibrium not only can be reached but also that reaching
+that state is appealing to all players within the game.
 \section{Non-Cooperative Game Theory}
-\label{sec:orgceeee1a}
+\label{sec:orgdf713dc}
+Non-Cooperative games are the simplest types of games to both understand and
+design. As previously stated, each player is trying to maximise its own utility
+but the core component of a non-cooperative game is that all of the players are
+operating purely independently. Each player within the game knows the best
+strategy to take in order to maximise its own utility. Because each player in a
+game has the same moves open for them to take and therefore the same strategy
+that each other player will take to maximise their own respective utilities.
+
+This is where the concept of Nash Equilibrium comes into play. Nash Equilibrium
+is the state in which there is the least disparity between the best player and
+the worst player, that is that each player performs the best that it can with
+the knowledge that all other players are similarly going to try to maximise
+their own utilities. With this knowledge, each player is then able to pick the
+strategy that maximises its own utility, taking into consideration that all
+other players are trying to do the exact same thing and therefore it picks an
+appropriate strategy. In a well designed game, there should also be no incentive
+for a player to change their strategy to try to undercut other players. If made
+correctly, such an action would have an adverse effect on the player in the
+game. In this case all other players would then be aware that this players
+strategy had changed and would then react accordingly in order to maximise their
+own utility and decrease that player's utility.
+\section{Cooperative Game Theory}
+\label{sec:orge9e5ec5}
 \section{Cournot and Stackelberg Games}
-\label{sec:org5059935}
+\label{sec:org562cb7b}
 \chapter{Optimisation Techniques}
-\label{sec:org0be45de}
+\label{sec:org48bf0bf}
 \section{Convex Optimisation}
-\label{sec:orgd27bfc7}
+\label{sec:orge064502}
 \section{Hyperplane Projection}
-\label{sec:org16af39d}
+\label{sec:org27cac25}
 \part{Implementation}
-\label{sec:org75c74ff}
+\label{sec:orgad1f7cd}
 \chapter{Design}
-\label{sec:orge59dc23}
+\label{sec:orgd2a1466}
 \chapter{Framework}
-\label{sec:org79c5f74}
+\label{sec:org0594e4a}
 \chapter{Processes}
-\label{sec:orgfc48a17}
+\label{sec:org446aa9d}
 \part{Conclusion}
-\label{sec:org8289356}
+\label{sec:org3cdf970}
 \chapter{Assessment}
-\label{sec:org09d883b}
+\label{sec:orgbf76004}
 \chapter{Future Work and Continuations}
-\label{sec:org192ad0e}
+\label{sec:org21f72b4}
 \printbibliography
 \appendix
 \end{document}

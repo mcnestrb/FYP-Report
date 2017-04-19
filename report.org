@@ -153,6 +153,7 @@ parents. This will be discussed more in the conclusion.
 ** REFIT Scheme
 ** Auctions
 ** Game Theory
+*** Overview
 The field of game theory has been one that has many different facets and
 versions depending on the type of situation required. In this section of the
 report the nomenclature and jargon of game theory will be discussed, as will a
@@ -184,8 +185,29 @@ whether or not this state has been reached. This state is the success state of
 the game. In a well-designed game the utility function must be designed such
 that the state of equilibrium not only can be reached but also that reaching
 that state is appealing to all players within the game.
-*** Cooperative Game Theory
 *** Non-Cooperative Game Theory
+Non-Cooperative games are the simplest types of games to both understand and
+design. As previously stated, each player is trying to maximise its own utility
+but the core component of a non-cooperative game is that all of the players are
+operating purely independently. Each player within the game knows the best
+strategy to take in order to maximise its own utility. Because each player in a
+game has the same moves open for them to take and therefore the same strategy
+that each other player will take to maximise their own respective utilities.
+
+This is where the concept of Nash Equilibrium comes into play. Nash Equilibrium
+is the state in which there is the least disparity between the best player and
+the worst player, that is that each player performs the best that it can with
+the knowledge that all other players are similarly going to try to maximise
+their own utilities. With this knowledge, each player is then able to pick the
+strategy that maximises its own utility, taking into consideration that all
+other players are trying to do the exact same thing and therefore it picks an
+appropriate strategy. In a well designed game, there should also be no incentive
+for a player to change their strategy to try to undercut other players. If made
+correctly, such an action would have an adverse effect on the player in the
+game. In this case all other players would then be aware that this players
+strategy had changed and would then react accordingly in order to maximise their
+own utility and decrease that player's utility.
+*** Cooperative Game Theory
 *** Cournot and Stackelberg Games
 ** Optimisation Techniques
 *** Convex Optimisation
