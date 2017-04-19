@@ -120,8 +120,36 @@ microgrids. Microgrids are generally thought of in terms of having a consumer
 be a single house, or perhaps a group of houses, and a supplier being a small
 wind farm or solar farm, or perhaps a group of these together. In the case of a
 microgrid, actors within the system are defined in similar to the units involved
-in a centralised grid system meaning that the transition from a centralised 
+in a centralised grid system meaning that the transition from a centralised grid
+to the microgrid scheme was a relatively easy one.
 
+An example of such a real world implementation is that of the system in place in
+Japan. This system was mostly implemented following the disaster of Fukushima,
+where it became clear that a reliance on a single power source and a centralised
+power distribution network left the country vulnerable following the disaster
+cite:japan_microgrids. Several regions were cut off from power as a result of
+the disaster which hampered the relief efforts as well as making the lives of
+ordinary Japanese citizens more difficult. Had a microgrid system been in place
+then not so many hospitals and homes would have been left without power
+following the disaster. The company ENEL has also introduced a smart grid system
+in the region of Apulia in southern Italy cite:sapienza2013enel.  
+
+The nanogrid system is very similar to that of the microgrid system conceptually
+but is concerned with a much smaller scale. A nanogrid is one that operates
+within the confines of a single building, generally where each consumer is a
+single appliance such as a washing machine or an electronic vehicles (EV).
+Suppliers would also be very small scale perhaps a set of solar panels or a
+small wind mill. A nanogrid system could also be adapted to aggregate a number
+of devices to act as one as a single actor within the nanogrid system, for
+example all the lights on one floor of a house could act as a single consumer
+and draw on a shared reserve of power.
+
+Another extension of the nanogrid system, which will be discussed in further
+detail in the conclusion section of this paper, would be to incorporate a
+nanogrid as a sub-node of a microgrid. This would create a hierarchy of
+distributed grids. This tree could also be adapted into a graph where a parent
+node in the tree could have multiple children and a child could have multiple
+parents. This will be discussed more in the conclusion.
 ** REFIT Scheme
 ** Auctions
 ** Game Theory
@@ -140,3 +168,5 @@ in a centralised grid system meaning that the transition from a centralised
 ** Future Work and Continuations
 \printbibliography
 \appendix
+
+#  LocalWords:  EV
