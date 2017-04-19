@@ -139,7 +139,7 @@ but is concerned with a much smaller scale. A nanogrid is one that operates
 within the confines of a single building, generally where each consumer is a
 single appliance such as a washing machine or an electronic vehicles (EV).
 Suppliers would also be very small scale perhaps a set of solar panels or a
-small wind mill. A nanogrid system could also be adapted to aggregate a number
+small wind turbine. A nanogrid system could also be adapted to aggregate a number
 of devices to act as one as a single actor within the nanogrid system, for
 example all the lights on one floor of a house could act as a single consumer
 and draw on a shared reserve of power.
@@ -153,6 +153,37 @@ parents. This will be discussed more in the conclusion.
 ** REFIT Scheme
 ** Auctions
 ** Game Theory
+The field of game theory has been one that has many different facets and
+versions depending on the type of situation required. In this section of the
+report the nomenclature and jargon of game theory will be discussed, as will a
+short explanation about the decision of selection of the type of game
+implemented as part of this final year project. First the two primary types of
+interactions between players in a game will be discussed and after that the two
+primary types of playing styles will be discussed. However first of all there
+are certain traits that are universal for any type of game that must first be
+explained in order to grasp the concept of game theory enough to understand some
+of the implementation decisions later in this report as well as to grasp the
+general concept of game theory itself.
+
+In game theory, players within a game compete for a finite resource with the
+objective of maximising their own utility within the scope of that game. Each
+player within the game has an associated utility function that is generally the
+same for all players within that game. The utility function generally results in
+some scalar value that is trying to reach some max value, whether on an
+individual or collective level. There is also generally some kind of manager
+node that helps to conduct the game between all of the players involved. Within
+any particular game, the players are all trying to maximise their own utility,
+however in different types of games they may also be conscious of the utilities
+of all the other players involved and try to react accordingly, whether to
+further their own goal or to further the goals of the collective group.
+
+A well defined game also has some from of state of equilibrium. This state of
+equilibrium is when the sum of utilities of all the players within the game
+reaches a maximum. The central managing node, if there is one, generally decides
+whether or not this state has been reached. This state is the success state of
+the game. In a well-designed game the utility function must be designed such
+that the state of equilibrium not only can be reached but also that reaching
+that state is appealing to all players within the game.
 *** Cooperative Game Theory
 *** Non-Cooperative Game Theory
 *** Cournot and Stackelberg Games

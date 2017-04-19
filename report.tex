@@ -1,4 +1,4 @@
-% Created 2017-04-19 Wed 12:29
+% Created 2017-04-19 Wed 13:25
 % Intended LaTeX compiler: xelatex
 \documentclass[a4paper, notitlepage]{report}
 \usepackage{graphicx}
@@ -46,16 +46,16 @@
 \pagenumbering{arabic}
 
 \part{Abstract}
-\label{sec:org5ab6a68}
+\label{sec:orgd7175e1}
 
 \part{Introduction}
-\label{sec:org75d94a4}
+\label{sec:org09f0ddf}
 
 
 \part{Background}
-\label{sec:orgf75301e}
+\label{sec:org44abf14}
 \chapter{Decentralised Grid}
-\label{sec:org1fdd92a}
+\label{sec:org34292a6}
 At present in Ireland and in many other countries, the national electric grid
 infrastructure is controlled by a central body, namely the ESB. While there are
 several electricity providers in Ireland, such as Bord Gáis Energy, SSE
@@ -108,11 +108,11 @@ interchangeably.
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=.9\linewidth]{./img/DecentralisedGrid.jpg}
-\caption{\label{fig:orgdf995c7}
+\caption{\label{fig:org981a145}
 Each local consumer and supplier is attached to a regional grid hub which manages the allocation of electricity between suppliers and consumers. This is just a simple overview of the idea but conceivably a consumer or a supplier could be connected to two or more different regional grid hubs.}
 \end{figure}
 \chapter{Smart Grid}
-\label{sec:org7269b04}
+\label{sec:orgbd6f6a3}
 Due to advancements in networking technologies as well as in the field of
 sophisticated decision making technologies, the idea of a smart grid has become
 increasingly popular. The idea of the smart grid is that actors within a grid,
@@ -142,7 +142,7 @@ particular time of day, allowing the system to learn over time and make smarter
 decisions as time goes on.
 
 \section{Microgrids and Nanogrids}
-\label{sec:org0ae2e77}
+\label{sec:org894727d}
 At present smart grids have generally been implemented on the level of
 microgrids. Microgrids are generally thought of in terms of having a consumer
 be a single house, or perhaps a group of houses, and a supplier being a small
@@ -151,40 +151,65 @@ microgrid, actors within the system are defined in similar to the units involved
 in a centralised grid system meaning that the transition from a centralised grid
 to the microgrid scheme was a relatively easy one.
 
-\cite{japan_microgrids}
+An example of such a real world implementation is that of the system in place in
+Japan. This system was mostly implemented following the disaster of Fukushima,
+where it became clear that a reliance on a single power source and a centralised
+power distribution network left the country vulnerable following the disaster
+\cite{japan_microgrids}. Several regions were cut off from power as a result of
+the disaster which hampered the relief efforts as well as making the lives of
+ordinary Japanese citizens more difficult. Had a microgrid system been in place
+then not so many hospitals and homes would have been left without power
+following the disaster. The company ENEL has also introduced a smart grid system
+in the region of Apulia in southern Italy \cite{sapienza2013enel}.  
 
+The nanogrid system is very similar to that of the microgrid system conceptually
+but is concerned with a much smaller scale. A nanogrid is one that operates
+within the confines of a single building, generally where each consumer is a
+single appliance such as a washing machine or an electronic vehicles (EV).
+Suppliers would also be very small scale perhaps a set of solar panels or a
+small wind mill. A nanogrid system could also be adapted to aggregate a number
+of devices to act as one as a single actor within the nanogrid system, for
+example all the lights on one floor of a house could act as a single consumer
+and draw on a shared reserve of power.
+
+Another extension of the nanogrid system, which will be discussed in further
+detail in the conclusion section of this paper, would be to incorporate a
+nanogrid as a sub-node of a microgrid. This would create a hierarchy of
+distributed grids. This tree could also be adapted into a graph where a parent
+node in the tree could have multiple children and a child could have multiple
+parents. This will be discussed more in the conclusion.
 \chapter{REFIT Scheme}
-\label{sec:orge51138b}
+\label{sec:orge54679c}
 \chapter{Auctions}
-\label{sec:orgb904a7c}
+\label{sec:orga91b949}
 \chapter{Game Theory}
-\label{sec:org5700143}
+\label{sec:org4787ade}
 \section{Cooperative Game Theory}
-\label{sec:org2ab45d0}
+\label{sec:org97c46d6}
 \section{Non-Cooperative Game Theory}
-\label{sec:org006c143}
+\label{sec:orgceeee1a}
 \section{Cournot and Stackelberg Games}
-\label{sec:org77c6dca}
+\label{sec:org5059935}
 \chapter{Optimisation Techniques}
-\label{sec:orgbe61dff}
+\label{sec:org0be45de}
 \section{Convex Optimisation}
-\label{sec:org6b2aace}
+\label{sec:orgd27bfc7}
 \section{Hyperplane Projection}
-\label{sec:orgd9803ec}
+\label{sec:org16af39d}
 \part{Implementation}
-\label{sec:org34c0d26}
+\label{sec:org75c74ff}
 \chapter{Design}
-\label{sec:orgd163b72}
+\label{sec:orge59dc23}
 \chapter{Framework}
-\label{sec:orgfa54c1e}
+\label{sec:org79c5f74}
 \chapter{Processes}
-\label{sec:orgd271006}
+\label{sec:orgfc48a17}
 \part{Conclusion}
-\label{sec:org70f706f}
+\label{sec:org8289356}
 \chapter{Assessment}
-\label{sec:org9f00a56}
+\label{sec:org09d883b}
 \chapter{Future Work and Continuations}
-\label{sec:orgd5aa523}
+\label{sec:org192ad0e}
 \printbibliography
 \appendix
 \end{document}
