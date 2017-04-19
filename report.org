@@ -260,6 +260,9 @@ a finite resource, whoever plays first has an immediate advantage over the over
 players in the game. This trickles down through the game, so that while any
 given player has a disadvantage compared the whoever had the preceding turn,
 they have a distinct advantage over all players who come afterwards.
+
+The reasoning behind choosing a Stackelberg game over a Cournot game for this
+project will be discussed later in the Implementation section of this report.
 ** Optimisation Techniques
 *** Convex Optimisation
 *** Hyperplane Projection
