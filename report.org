@@ -27,10 +27,7 @@
 \pagenumbering{arabic}
 
 * Abstract
-
 * Introduction
-
-
 * Background
 ** Decentralised Grid
 At present in Ireland and in many other countries, the national electric grid
@@ -264,12 +261,48 @@ they have a distinct advantage over all players who come afterwards.
 The reasoning behind choosing a Stackelberg game over a Cournot game for this
 project will be discussed later in the Implementation section of this report.
 ** Optimisation Techniques
+*** Overview
+Optimisation techniques are an important part of the field of mathematics and
+are reasonably simple to understand, but can be extremely difficult to
+formulate. Optimisation problems concern themselves with a key problem that is
+relevant to many different fields of engineering and computer programming.
+
+For a function $f \colon A \rightarrow \mathbb{R}^n$ for a particular set $A$,
+an optimisation problem is concerned with finding an element $x_o$ of $A$ where
+$f(x_o) <= f(x)$ for a minimisation problem or $f(x_o) >= f(x)$ for a
+maximisation problem, $\forall x \in A$. These optimisation problems manifest
+themselves in countless fields from economics cite:dixit1990optimization, civil
+engineering cite:piryonesi2017mathematical and of course as part of the smart
+grid cite:ahat2013smart. The optimisation techniques involved in this particular
+project are used on each of the two utility functions involved in the process
+namely that of each of the game players and then the moderator actor process
+involved in the system. This will of course be discussed in more detail later on.
+
+One of the main benefits of an optimisation technique is that it is often
+obtainable using linear algebraic methods which means that a computer can figure
+out the solution to the optimisation problem in polynomial time. Another benefit
+of this is that an optimisation technique can be used in tandem with any other
+problem solving technique in order to find a better solution much faster. If any
+problem fits the parameters of the optimisation as defined above then different
+optimisation techniques can be applied or at least the same one in multiple
+places.
+
+While the basic premise and motivation behind every optimisation technique is
+the same, different types of sets of values can be used for the set $A$ and as a
+result. Fortunately, different types of optimisation techniques have been
+developed in order to more efficiently solve problems in each of these areas. In
+some cases, the type of values in the set such as in a convex set, actually make
+other optimisation methods useless. In this project, two main optimisation
+methods were used, namely Convex Optimisation and Hyperplane Projection
+Optimisation. Both techniques are involved with quickly and accurately solving
+for a maximum in the case of two different utility functions but operate with
+different types of sets, each one being suitable for the relevant type of problem.
 *** Convex Optimisation
 *** Hyperplane Projection
 * Implementation
 ** Design
 ** Framework
-** Processes
+** Processes   
 * Conclusion
 ** Assessment
 ** Future Work and Continuations
