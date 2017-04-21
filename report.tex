@@ -1,4 +1,4 @@
-% Created 2017-04-20 Thu 21:16
+% Created 2017-04-21 Fri 02:51
 % Intended LaTeX compiler: xelatex
 \documentclass[a4paper, notitlepage]{report}
 \usepackage{graphicx}
@@ -46,13 +46,13 @@
 \pagenumbering{arabic}
 
 \part{Abstract}
-\label{sec:org37b2f36}
+\label{sec:org71d44b6}
 \part{Introduction}
-\label{sec:org2ebffcd}
+\label{sec:org37cdb33}
 \part{Background}
-\label{sec:orgf5d57dc}
+\label{sec:org9751a34}
 \chapter{Decentralised Grid}
-\label{sec:org6b20feb}
+\label{sec:org7a848e7}
 At present in Ireland and in many other countries, the national electric grid
 infrastructure is controlled by a central body, namely the ESB. While there are
 several electricity providers in Ireland, such as Bord Gáis Energy, SSE
@@ -105,13 +105,13 @@ interchangeably.
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=.9\linewidth]{./img/DecentralisedGrid.jpg}
-\caption{\label{fig:orgd7b8fe7}
+\caption{\label{fig:orgd140548}
 Each local consumer and supplier is attached to a regional grid hub which manages the allocation of electricity between suppliers and consumers. This is just a simple overview of the idea but conceivably a consumer or a supplier could be connected to two or more different regional grid hubs.}
 \end{figure}
 \chapter{Smart Grid}
-\label{sec:org3b14a09}
+\label{sec:org1b97ba9}
 \section{Overview}
-\label{sec:org2df7c92}
+\label{sec:org3b181e6}
 Due to advancements in networking technologies as well as in the field of
 sophisticated decision making technologies, the idea of a smart grid has become
 increasingly popular. The idea of the smart grid is that actors within a grid,
@@ -141,7 +141,7 @@ particular time of day, allowing the system to learn over time and make smarter
 decisions as time goes on.
 
 \section{Microgrids and Nanogrids}
-\label{sec:org0b98edb}
+\label{sec:orgb6d44fd}
 At present smart grids have generally been implemented on the level of
 microgrids. Microgrids are generally thought of in terms of having a consumer
 be a single house, or perhaps a group of houses, and a supplier being a small
@@ -178,13 +178,13 @@ distributed grids. This tree could also be adapted into a graph where a parent
 node in the tree could have multiple children and a child could have multiple
 parents. This will be discussed more in the conclusion.
 \chapter{REFIT Scheme}
-\label{sec:org867356c}
+\label{sec:orgc0b0e21}
 \chapter{Auctions}
-\label{sec:org706b282}
+\label{sec:org472f816}
 \chapter{Game Theory}
-\label{sec:org1ea7f2b}
+\label{sec:org1229d2c}
 \section{Overview}
-\label{sec:org3afffb8}
+\label{sec:org2fa179b}
 The field of game theory has been one that has many different facets and
 versions depending on the type of situation required. In this section of the
 report the nomenclature and jargon of game theory will be discussed, as will a
@@ -217,7 +217,7 @@ the game. In a well-designed game the utility function must be designed such
 that the state of equilibrium not only can be reached but also that reaching
 that state is appealing to all players within the game.
 \section{Non-Cooperative Game Theory}
-\label{sec:orga1d1943}
+\label{sec:org77eddc3}
 Non-Cooperative games are the simplest types of games to both understand and
 design. As previously stated, each player is trying to maximise its own utility
 but the core component of a non-cooperative game is that all of the players are
@@ -240,7 +240,7 @@ game. In this case all other players would then be aware that this players
 strategy had changed and would then react accordingly in order to maximise their
 own utility and decrease that player's utility.
 \section{Cooperative Game Theory}
-\label{sec:org0684be2}
+\label{sec:org2027935}
 Cooperative game theory shares many similar traits with that of non-cooperative
 game theory as outlined in the overview section of this part on game theory in
 this report. However the key aspect of cooperative game theory is that players
@@ -266,7 +266,7 @@ this game. Similarly due to the lack of communication between the players in the
 game, they can also never know if other players could change their strategies so
 are unable to even realise that cooperation is even possible at any given stage.
 \section{Cournot and Stackelberg Games}
-\label{sec:org4a2fb93}
+\label{sec:orgfe7bb15}
 Cournot and Stackelberg games are two manners in which players participate in
 the game, in other words they constitute the structure of the game as opposed to
 how players react to one another and strategise within the game. Both of these
@@ -297,9 +297,9 @@ they have a distinct advantage over all players who come afterwards.
 The reasoning behind choosing a Stackelberg game over a Cournot game for this
 project will be discussed later in the Implementation section of this report.
 \chapter{Optimisation Techniques}
-\label{sec:orgf817f66}
+\label{sec:org6015a3f}
 \section{Overview}
-\label{sec:org267bfb1}
+\label{sec:org557aee6}
 Optimisation techniques are an important part of the field of mathematics and
 are reasonably simple to understand, but can be extremely difficult to
 formulate. Optimisation problems concern themselves with a key problem that is
@@ -336,23 +336,58 @@ Optimisation. Both techniques are involved with quickly and accurately solving
 for a maximum in the case of two different utility functions but operate with
 different types of sets, each one being suitable for the relevant type of problem.
 \section{Convex Optimisation}
-\label{sec:orgdc1564b}
+\label{sec:org67a064f}
+Convex optimisation is defined as the as the solving of minimisation problems
+that involve convex functions being applied to convex sets \cite{boyd2004convex}.
+Due to the nature of the convexity of the sets involved in these sorts of
+problems, a term that I will discuss momentarily, the local minimum that is
+discovered is actually a global minimum. Basically this means that the curve of
+the graphed outputs from mapping the values of a convex set through a convex
+function, only has a single minimum as opposed to a situation where the curve
+could have multiple minimums or values that can be converged on which are not
+the true minimum of the curve. This property of a convex optimisation problem as
+well as the property of general optimisation problems of being able to solve the
+problem in polynomial time means that the true solution can be discovered
+relatively quickly.
+
+A convex set is simply a region in which, if you draw a line between any two
+arbitrary points in the region, then all points on the line are also inside the
+region as outlined in the left side of Fig 6.1. The right side shows a
+non-convex set where there is a hollow section to the region.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=.9\linewidth]{./img/convex_set.png}
+\caption{\label{fig:org5a43914}
+A convex set (gtMath March 2016) \cite{convex_set_img}}
+\end{figure}
+
+A convex function on the other hand is simply a function where the entire line
+segment between any two points on the graph is above the or on the graph. This
+is the part of convex optimisation that determines the fact that the local
+minimum is a global minimum. Convex functions are extremely common in the field
+of mathematics such as the quadratic function \(x^2\) and the exponential function
+\(e^x\). 
+
+Convex optimisation is therefore a relatively simple concept to understand and
+is clearly seen to be a very useful and efficient method of accurately and
+quickly finding solutions to minimisation problems.
 \section{Hyperplane Projection}
-\label{sec:org6ce20c3}
+\label{sec:orgf36b1d8}
 \part{Implementation}
-\label{sec:org28b8c9b}
+\label{sec:orga983099}
 \chapter{Design}
-\label{sec:org6fe1645}
+\label{sec:org9509a0c}
 \chapter{Framework}
-\label{sec:org75d258f}
+\label{sec:orgf3ca831}
 \chapter{Processes}
-\label{sec:org070097f}
+\label{sec:org0e2159e}
 \part{Conclusion}
-\label{sec:org25497d6}
+\label{sec:org95b0a56}
 \chapter{Assessment}
-\label{sec:orgded2f1a}
+\label{sec:orgdaaa01e}
 \chapter{Future Work and Continuations}
-\label{sec:org4df4b21}
+\label{sec:orgf68c085}
 \printbibliography
 \appendix
 \end{document}

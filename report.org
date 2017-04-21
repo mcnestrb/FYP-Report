@@ -298,6 +298,38 @@ Optimisation. Both techniques are involved with quickly and accurately solving
 for a maximum in the case of two different utility functions but operate with
 different types of sets, each one being suitable for the relevant type of problem.
 *** Convex Optimisation
+Convex optimisation is defined as the as the solving of minimisation problems
+that involve convex functions being applied to convex sets cite:boyd2004convex.
+Due to the nature of the convexity of the sets involved in these sorts of
+problems, a term that I will discuss momentarily, the local minimum that is
+discovered is actually a global minimum. Basically this means that the curve of
+the graphed outputs from mapping the values of a convex set through a convex
+function, only has a single minimum as opposed to a situation where the curve
+could have multiple minimums or values that can be converged on which are not
+the true minimum of the curve. This property of a convex optimisation problem as
+well as the property of general optimisation problems of being able to solve the
+problem in polynomial time means that the true solution can be discovered
+relatively quickly.
+
+A convex set is simply a region in which, if you draw a line between any two
+arbitrary points in the region, then all points on the line are also inside the
+region as outlined in the left side of Fig 6.1. The right side shows a
+non-convex set where there is a hollow section to the region.
+
+#+CAPTION: A convex set (gtMath March 2016) cite:convex_set_img 
+#+NAME: Convex set diagram
+[[./img/convex_set.png]]
+
+A convex function on the other hand is simply a function where the entire line
+segment between any two points on the graph is above the or on the graph. This
+is the part of convex optimisation that determines the fact that the local
+minimum is a global minimum. Convex functions are extremely common in the field
+of mathematics such as the quadratic function $x^2$ and the exponential function
+$e^x$. 
+
+Convex optimisation is therefore a relatively simple concept to understand and
+is clearly seen to be a very useful and efficient method of accurately and
+quickly finding solutions to minimisation problems.
 *** Hyperplane Projection
 * Implementation
 ** Design
