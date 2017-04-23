@@ -331,6 +331,43 @@ Convex optimisation is therefore a relatively simple concept to understand and
 is clearly seen to be a very useful and efficient method of accurately and
 quickly finding solutions to minimisation problems.
 *** Hyperplane Projection
+**** Variational Inequality Problem
+The hyperplane projection method is a tool for solving problems that suit the
+criteria of a variational inequality problem so first that must be explained
+before moving onto the concept of the solution to such a problem.
+
+A variational inequality is an inequality that involves a functional that must
+be solved for all variables in a set, usually a convex set. As a side note,
+although this problem also involves a convex set like the convex optimisation
+problem, the functional is not a convex function and therefore convex
+optimisation does not apply in this instance. A functional is a a function that
+maps a vector space onto its underlying field of scalars. Often this vector
+space can be a series of functions, meaning that the functional takes a function
+as an argument and can be interpreted as a function of functions. This is
+similar to the Haskell idea of higher order functions, where a single higher
+order function can be used to operate on multiple functions and perhaps capture
+some other important piece of data for a given system.
+
+The origin of, and primary application of, variational inequality problems is in
+the field of finding solutions of equilibrium in a given system. As we'll see
+later on in the implementation section of this report, finding the state of Nash
+Equilibrium between the different suppliers that take part in the game requires a
+state of equilibrium. Therefore it can be easily inferred that the variational
+inequality problem is applicable and the problem can be solved as such using a
+method appropriate for such a problem.
+
+The hyperplane projection method defined here also stipulates that the
+underlying functional involved in the problem must meet a certain monotonicity
+criteria. Monotonicity is a property of a function that says that the function
+must either be non-decreasing or non-increasing. The function does not have to
+be constantly increasing or decreasing but for example if it is increasing then
+it cannot decrease or vice versa in order to be deemed monotonic. This can be
+represented mathematically as $f(x) <= f(y) \forall x <= y$ or $f(x) >= f(y) \forall z <=
+y$. Functions that cleave to this mould are called monotonically increasing and
+monotonically decreasing respectively. 
+**** Hyperplane Projection Method
+Having covered a number of the prerequisites for using a hyperplane projection
+method, the method itself can be explained.
 * Implementation
 ** Design
 ** Framework

@@ -1,4 +1,4 @@
-% Created 2017-04-21 Fri 02:51
+% Created 2017-04-23 Sun 21:42
 % Intended LaTeX compiler: xelatex
 \documentclass[a4paper, notitlepage]{report}
 \usepackage{graphicx}
@@ -46,13 +46,13 @@
 \pagenumbering{arabic}
 
 \part{Abstract}
-\label{sec:org71d44b6}
+\label{sec:org0a5faa8}
 \part{Introduction}
-\label{sec:org37cdb33}
+\label{sec:org7511a30}
 \part{Background}
-\label{sec:org9751a34}
+\label{sec:org232d05d}
 \chapter{Decentralised Grid}
-\label{sec:org7a848e7}
+\label{sec:org6b13ab0}
 At present in Ireland and in many other countries, the national electric grid
 infrastructure is controlled by a central body, namely the ESB. While there are
 several electricity providers in Ireland, such as Bord Gáis Energy, SSE
@@ -105,13 +105,13 @@ interchangeably.
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=.9\linewidth]{./img/DecentralisedGrid.jpg}
-\caption{\label{fig:orgd140548}
+\caption{\label{fig:orgabc8310}
 Each local consumer and supplier is attached to a regional grid hub which manages the allocation of electricity between suppliers and consumers. This is just a simple overview of the idea but conceivably a consumer or a supplier could be connected to two or more different regional grid hubs.}
 \end{figure}
 \chapter{Smart Grid}
-\label{sec:org1b97ba9}
+\label{sec:orgf66676e}
 \section{Overview}
-\label{sec:org3b181e6}
+\label{sec:org2cc25f1}
 Due to advancements in networking technologies as well as in the field of
 sophisticated decision making technologies, the idea of a smart grid has become
 increasingly popular. The idea of the smart grid is that actors within a grid,
@@ -141,7 +141,7 @@ particular time of day, allowing the system to learn over time and make smarter
 decisions as time goes on.
 
 \section{Microgrids and Nanogrids}
-\label{sec:orgb6d44fd}
+\label{sec:org4621971}
 At present smart grids have generally been implemented on the level of
 microgrids. Microgrids are generally thought of in terms of having a consumer
 be a single house, or perhaps a group of houses, and a supplier being a small
@@ -178,13 +178,13 @@ distributed grids. This tree could also be adapted into a graph where a parent
 node in the tree could have multiple children and a child could have multiple
 parents. This will be discussed more in the conclusion.
 \chapter{REFIT Scheme}
-\label{sec:orgc0b0e21}
+\label{sec:orgdc5ec0e}
 \chapter{Auctions}
-\label{sec:org472f816}
+\label{sec:orgfc5ed51}
 \chapter{Game Theory}
-\label{sec:org1229d2c}
+\label{sec:org4dcd288}
 \section{Overview}
-\label{sec:org2fa179b}
+\label{sec:org174a51a}
 The field of game theory has been one that has many different facets and
 versions depending on the type of situation required. In this section of the
 report the nomenclature and jargon of game theory will be discussed, as will a
@@ -217,7 +217,7 @@ the game. In a well-designed game the utility function must be designed such
 that the state of equilibrium not only can be reached but also that reaching
 that state is appealing to all players within the game.
 \section{Non-Cooperative Game Theory}
-\label{sec:org77eddc3}
+\label{sec:org45fbd85}
 Non-Cooperative games are the simplest types of games to both understand and
 design. As previously stated, each player is trying to maximise its own utility
 but the core component of a non-cooperative game is that all of the players are
@@ -240,7 +240,7 @@ game. In this case all other players would then be aware that this players
 strategy had changed and would then react accordingly in order to maximise their
 own utility and decrease that player's utility.
 \section{Cooperative Game Theory}
-\label{sec:org2027935}
+\label{sec:orgc070d78}
 Cooperative game theory shares many similar traits with that of non-cooperative
 game theory as outlined in the overview section of this part on game theory in
 this report. However the key aspect of cooperative game theory is that players
@@ -266,7 +266,7 @@ this game. Similarly due to the lack of communication between the players in the
 game, they can also never know if other players could change their strategies so
 are unable to even realise that cooperation is even possible at any given stage.
 \section{Cournot and Stackelberg Games}
-\label{sec:orgfe7bb15}
+\label{sec:orgebb948f}
 Cournot and Stackelberg games are two manners in which players participate in
 the game, in other words they constitute the structure of the game as opposed to
 how players react to one another and strategise within the game. Both of these
@@ -297,9 +297,9 @@ they have a distinct advantage over all players who come afterwards.
 The reasoning behind choosing a Stackelberg game over a Cournot game for this
 project will be discussed later in the Implementation section of this report.
 \chapter{Optimisation Techniques}
-\label{sec:org6015a3f}
+\label{sec:orga2e440f}
 \section{Overview}
-\label{sec:org557aee6}
+\label{sec:orgd4a2951}
 Optimisation techniques are an important part of the field of mathematics and
 are reasonably simple to understand, but can be extremely difficult to
 formulate. Optimisation problems concern themselves with a key problem that is
@@ -336,7 +336,7 @@ Optimisation. Both techniques are involved with quickly and accurately solving
 for a maximum in the case of two different utility functions but operate with
 different types of sets, each one being suitable for the relevant type of problem.
 \section{Convex Optimisation}
-\label{sec:org67a064f}
+\label{sec:org0b64156}
 Convex optimisation is defined as the as the solving of minimisation problems
 that involve convex functions being applied to convex sets \cite{boyd2004convex}.
 Due to the nature of the convexity of the sets involved in these sorts of
@@ -358,7 +358,7 @@ non-convex set where there is a hollow section to the region.
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=.9\linewidth]{./img/convex_set.png}
-\caption{\label{fig:org5a43914}
+\caption{\label{fig:org241bb75}
 A convex set (gtMath March 2016) \cite{convex_set_img}}
 \end{figure}
 
@@ -373,21 +373,62 @@ Convex optimisation is therefore a relatively simple concept to understand and
 is clearly seen to be a very useful and efficient method of accurately and
 quickly finding solutions to minimisation problems.
 \section{Hyperplane Projection}
-\label{sec:orgf36b1d8}
+\label{sec:org2a177b7}
+\begin{enumerate}
+\item Variational Inequality Problem
+\label{sec:orgf18316a}
+The hyperplane projection method is a tool for solving problems that suit the
+criteria of a variational inequality problem so first that must be explained
+before moving onto the concept of the solution to such a problem.
+
+A variational inequality is an inequality that involves a functional that must
+be solved for all variables in a set, usually a convex set. As a side note,
+although this problem also involves a convex set like the convex optimisation
+problem, the functional is not a convex function and therefore convex
+optimisation does not apply in this instance. A functional is a a function that
+maps a vector space onto its underlying field of scalars. Often this vector
+space can be a series of functions, meaning that the functional takes a function
+as an argument and can be interpreted as a function of functions. This is
+similar to the Haskell idea of higher order functions, where a single higher
+order function can be used to operate on multiple functions and perhaps capture
+some other important piece of data for a given system.
+
+The origin of, and primary application of, variational inequality problems is in
+the field of finding solutions of equilibrium in a given system. As we'll see
+later on in the implementation section of this report, finding the state of Nash
+Equilibrium between the different suppliers that take part in the game requires a
+state of equilibrium. Therefore it can be easily inferred that the variational
+inequality problem is applicable and the problem can be solved as such using a
+method appropriate for such a problem.
+
+The hyperplane projection method defined here also stipulates that the
+underlying functional involved in the problem must meet a certain monotonicity
+criteria. Monotonicity is a property of a function that says that the function
+must either be non-decreasing or non-increasing. The function does not have to
+be constantly increasing or decreasing but for example if it is increasing then
+it cannot decrease or vice versa in order to be deemed monotonic. This can be
+represented mathematically as \(f(x) <= f(y) \forall x <= y\) or \(f(x) >= f(y) \forall z <=
+y\). Functions that cleave to this mould are called monotonically increasing and
+monotonically decreasing respectively. 
+\item Hyperplane Projection Method
+\label{sec:orgc7653ed}
+Having covered a number of the prerequisites for using a hyperplane projection
+method, the method itself can be explained.
+\end{enumerate}
 \part{Implementation}
-\label{sec:orga983099}
+\label{sec:org42f6ca3}
 \chapter{Design}
-\label{sec:org9509a0c}
+\label{sec:orgeb92d88}
 \chapter{Framework}
-\label{sec:orgf3ca831}
+\label{sec:org9ef73c5}
 \chapter{Processes}
-\label{sec:org0e2159e}
+\label{sec:orgd04d253}
 \part{Conclusion}
-\label{sec:org95b0a56}
+\label{sec:org9a7dbe4}
 \chapter{Assessment}
-\label{sec:orgdaaa01e}
+\label{sec:org02ea288}
 \chapter{Future Work and Continuations}
-\label{sec:orgf68c085}
+\label{sec:orgefec18e}
 \printbibliography
 \appendix
 \end{document}
