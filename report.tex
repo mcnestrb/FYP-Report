@@ -1,4 +1,4 @@
-% Created 2017-04-23 Sun 21:42
+% Created 2017-04-24 Mon 13:12
 % Intended LaTeX compiler: xelatex
 \documentclass[a4paper, notitlepage]{report}
 \usepackage{graphicx}
@@ -46,13 +46,13 @@
 \pagenumbering{arabic}
 
 \part{Abstract}
-\label{sec:org0a5faa8}
+\label{sec:orgab1cca8}
 \part{Introduction}
-\label{sec:org7511a30}
+\label{sec:orgb7f7e61}
 \part{Background}
-\label{sec:org232d05d}
+\label{sec:org724d5c1}
 \chapter{Decentralised Grid}
-\label{sec:org6b13ab0}
+\label{sec:org9dbb7fa}
 At present in Ireland and in many other countries, the national electric grid
 infrastructure is controlled by a central body, namely the ESB. While there are
 several electricity providers in Ireland, such as Bord Gáis Energy, SSE
@@ -105,13 +105,13 @@ interchangeably.
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=.9\linewidth]{./img/DecentralisedGrid.jpg}
-\caption{\label{fig:orgabc8310}
+\caption{\label{fig:orgee7db2b}
 Each local consumer and supplier is attached to a regional grid hub which manages the allocation of electricity between suppliers and consumers. This is just a simple overview of the idea but conceivably a consumer or a supplier could be connected to two or more different regional grid hubs.}
 \end{figure}
 \chapter{Smart Grid}
-\label{sec:orgf66676e}
+\label{sec:org42cf66e}
 \section{Overview}
-\label{sec:org2cc25f1}
+\label{sec:org36b09ec}
 Due to advancements in networking technologies as well as in the field of
 sophisticated decision making technologies, the idea of a smart grid has become
 increasingly popular. The idea of the smart grid is that actors within a grid,
@@ -141,7 +141,7 @@ particular time of day, allowing the system to learn over time and make smarter
 decisions as time goes on.
 
 \section{Microgrids and Nanogrids}
-\label{sec:org4621971}
+\label{sec:org32cbded}
 At present smart grids have generally been implemented on the level of
 microgrids. Microgrids are generally thought of in terms of having a consumer
 be a single house, or perhaps a group of houses, and a supplier being a small
@@ -178,13 +178,13 @@ distributed grids. This tree could also be adapted into a graph where a parent
 node in the tree could have multiple children and a child could have multiple
 parents. This will be discussed more in the conclusion.
 \chapter{REFIT Scheme}
-\label{sec:orgdc5ec0e}
+\label{sec:orgf3da2c4}
 \chapter{Auctions}
-\label{sec:orgfc5ed51}
+\label{sec:org27a23cf}
 \chapter{Game Theory}
-\label{sec:org4dcd288}
+\label{sec:orgd19d720}
 \section{Overview}
-\label{sec:org174a51a}
+\label{sec:orgb64b97d}
 The field of game theory has been one that has many different facets and
 versions depending on the type of situation required. In this section of the
 report the nomenclature and jargon of game theory will be discussed, as will a
@@ -217,7 +217,7 @@ the game. In a well-designed game the utility function must be designed such
 that the state of equilibrium not only can be reached but also that reaching
 that state is appealing to all players within the game.
 \section{Non-Cooperative Game Theory}
-\label{sec:org45fbd85}
+\label{sec:orgf1af4af}
 Non-Cooperative games are the simplest types of games to both understand and
 design. As previously stated, each player is trying to maximise its own utility
 but the core component of a non-cooperative game is that all of the players are
@@ -240,7 +240,7 @@ game. In this case all other players would then be aware that this players
 strategy had changed and would then react accordingly in order to maximise their
 own utility and decrease that player's utility.
 \section{Cooperative Game Theory}
-\label{sec:orgc070d78}
+\label{sec:orgbf92477}
 Cooperative game theory shares many similar traits with that of non-cooperative
 game theory as outlined in the overview section of this part on game theory in
 this report. However the key aspect of cooperative game theory is that players
@@ -266,7 +266,7 @@ this game. Similarly due to the lack of communication between the players in the
 game, they can also never know if other players could change their strategies so
 are unable to even realise that cooperation is even possible at any given stage.
 \section{Cournot and Stackelberg Games}
-\label{sec:orgebb948f}
+\label{sec:org31e77d2}
 Cournot and Stackelberg games are two manners in which players participate in
 the game, in other words they constitute the structure of the game as opposed to
 how players react to one another and strategise within the game. Both of these
@@ -297,9 +297,9 @@ they have a distinct advantage over all players who come afterwards.
 The reasoning behind choosing a Stackelberg game over a Cournot game for this
 project will be discussed later in the Implementation section of this report.
 \chapter{Optimisation Techniques}
-\label{sec:orga2e440f}
+\label{sec:orgbaf30b6}
 \section{Overview}
-\label{sec:orgd4a2951}
+\label{sec:org466b878}
 Optimisation techniques are an important part of the field of mathematics and
 are reasonably simple to understand, but can be extremely difficult to
 formulate. Optimisation problems concern themselves with a key problem that is
@@ -336,7 +336,7 @@ Optimisation. Both techniques are involved with quickly and accurately solving
 for a maximum in the case of two different utility functions but operate with
 different types of sets, each one being suitable for the relevant type of problem.
 \section{Convex Optimisation}
-\label{sec:org0b64156}
+\label{sec:orgbcb0e0c}
 Convex optimisation is defined as the as the solving of minimisation problems
 that involve convex functions being applied to convex sets \cite{boyd2004convex}.
 Due to the nature of the convexity of the sets involved in these sorts of
@@ -358,7 +358,7 @@ non-convex set where there is a hollow section to the region.
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=.9\linewidth]{./img/convex_set.png}
-\caption{\label{fig:org241bb75}
+\caption{\label{fig:org3845929}
 A convex set (gtMath March 2016) \cite{convex_set_img}}
 \end{figure}
 
@@ -373,10 +373,9 @@ Convex optimisation is therefore a relatively simple concept to understand and
 is clearly seen to be a very useful and efficient method of accurately and
 quickly finding solutions to minimisation problems.
 \section{Hyperplane Projection}
-\label{sec:org2a177b7}
-\begin{enumerate}
-\item Variational Inequality Problem
-\label{sec:orgf18316a}
+\label{sec:org8baa8b1}
+\subsection{Variational Inequality Problem}
+\label{sec:org48444d5}
 The hyperplane projection method is a tool for solving problems that suit the
 criteria of a variational inequality problem so first that must be explained
 before moving onto the concept of the solution to such a problem.
@@ -410,25 +409,53 @@ it cannot decrease or vice versa in order to be deemed monotonic. This can be
 represented mathematically as \(f(x) <= f(y) \forall x <= y\) or \(f(x) >= f(y) \forall z <=
 y\). Functions that cleave to this mould are called monotonically increasing and
 monotonically decreasing respectively. 
-\item Hyperplane Projection Method
-\label{sec:orgc7653ed}
+\subsection{Hyperplane Projection Method}
+\label{sec:org806f83b}
 Having covered a number of the prerequisites for using a hyperplane projection
-method, the method itself can be explained.
-\end{enumerate}
+method, the method itself can be explained. The version I looked at was
+developed by Solodov and Svaiter and is called the Solodov and Svaiter
+Hyperplane Projection Method (SSHPM) \cite{solodov1999new}. Figure 6.2 will be
+referred to as a part of the explanation.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=.9\linewidth]{./img/SSHPM.png}
+\caption{\label{fig:orgde302ff}
+Solodov and Svaiter Hyperplane Projection Method}
+\end{figure}
+
+The curve in the figure describes the functional in the variational inequality
+(VE) problem. This method uses the projection operator \(P_C[x] := arg min ||y -
+x||\) where \(y \in C\). Suppose we have a point \(x^i\) which is the current approximation of
+the solution to the VE problem involving the set \(C\) and the functional \(F\).
+First we calculate a a projection point \(P_C[x^i - F(x^i)]\). The segment between
+\(x^i\) and \(P_C[x^i - F(x^i)]\) is searched for a point \(z^i\), using a linesearch
+method like the Armijo linesearch method \cite{armijo1966minimization}, such that
+a hyperplane \(\delta H_i\) (using the definition of \(H_i\) as defined in figure 6.2)
+strictly separates \(x^i\) from any solution \(x^*\) of the problem. The next
+approximation to the solution \(x^{i+1}\) is calculated by projecting \(x^i\) onto the
+intersection of the set \(C\) and the halfspace \(H^i\) that contains the solution
+set using \(P_{C \cap H_i}\).
+
+The benefit of this solution is that each iteration of the method only requires
+two projections which makes it computationally efficient, the first to calculate
+the hyperplane \(H_i\) and another onto the intersection \(C \cap H^i\) to find the next
+iterate in finding the solution. Later on in the Implementation section, the
+application of this method will be discussed in further detail.
 \part{Implementation}
-\label{sec:org42f6ca3}
+\label{sec:orgd0ddb8c}
 \chapter{Design}
-\label{sec:orgeb92d88}
+\label{sec:org6242c89}
 \chapter{Framework}
-\label{sec:org9ef73c5}
+\label{sec:orgb372b2f}
 \chapter{Processes}
-\label{sec:orgd04d253}
+\label{sec:orgc52d9f3}
 \part{Conclusion}
-\label{sec:org9a7dbe4}
+\label{sec:orgd29d930}
 \chapter{Assessment}
-\label{sec:org02ea288}
+\label{sec:org9740f44}
 \chapter{Future Work and Continuations}
-\label{sec:orgefec18e}
+\label{sec:orgca56f8b}
 \printbibliography
 \appendix
 \end{document}

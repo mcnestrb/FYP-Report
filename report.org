@@ -3,7 +3,7 @@
 #+LATEX_CLASS_OPTIONS: [a4paper, notitlepage]
 #+LATEX_HEADER: \include{settings/preamble}
 #+LaTeX_HEADER: \addbibresource{bibliography.bib}
-#+OPTIONS: toc:nil
+#+OPTIONS: toc:nil H:4
 
 # Inserts the 'TRINITY COLLEGE' etc. page
 \inserttitlepage
@@ -367,7 +367,33 @@ y$. Functions that cleave to this mould are called monotonically increasing and
 monotonically decreasing respectively. 
 **** Hyperplane Projection Method
 Having covered a number of the prerequisites for using a hyperplane projection
-method, the method itself can be explained.
+method, the method itself can be explained. The version I looked at was
+developed by Solodov and Svaiter and is called the Solodov and Svaiter
+Hyperplane Projection Method (SSHPM) cite:solodov1999new. Figure 6.2 will be
+referred to as a part of the explanation.
+
+#+CAPTION: Solodov and Svaiter Hyperplane Projection Method
+#+NAME: SSHPM
+[[./img/SSHPM.png]]
+
+The curve in the figure describes the functional in the variational inequality
+(VE) problem. This method uses the projection operator $P_C[x] := arg min ||y -
+x||$ where $y \in C$. Suppose we have a point $x^i$ which is the current approximation of
+the solution to the VE problem involving the set $C$ and the functional $F$.
+First we calculate a a projection point $P_C[x^i - F(x^i)]$. The segment between
+$x^i$ and $P_C[x^i - F(x^i)]$ is searched for a point $z^i$, using a linesearch
+method like the Armijo linesearch method cite:armijo1966minimization, such that
+a hyperplane $\delta H_i$ (using the definition of $H_i$ as defined in figure 6.2)
+strictly separates $x^i$ from any solution $x^*$ of the problem. The next
+approximation to the solution $x^{i+1}$ is calculated by projecting $x^i$ onto the
+intersection of the set $C$ and the halfspace $H^i$ that contains the solution
+set using $P_{C \cap H_i}$.
+
+The benefit of this solution is that each iteration of the method only requires
+two projections which makes it computationally efficient, the first to calculate
+the hyperplane $H_i$ and another onto the intersection $C \cap H^i$ to find the next
+iterate in finding the solution. Later on in the Implementation section, the
+application of this method will be discussed in further detail.
 * Implementation
 ** Design
 ** Framework
