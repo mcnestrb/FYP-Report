@@ -192,7 +192,37 @@ cite:parsons2011auctions, only one of these will be discussed here as it the
 only type of auction that was considered, as well as the decision as to why this
 was the only type considered. The type of auction investigated was a continuous
 double auction.
-*** 
+*** Continuous Double Auction
+A continuous double auction was discussed by the paper by Ramachandran
+cite:ramachandran2011intelligent among others and was therefore a popular
+candidate by several potential energy management systems. The idea of a double
+auction is a simple one. Instead of trying to match multiple bidders to a single
+seller or multiple sellers to a single buyer, a double auction is where there
+are multiple sellers and multiple bidders. By combining the buy-side and the
+sell-side of an auction into a single process, we then have a two-sided or
+double action.
+
+A continuous double auction is an extension and a refinement of a double auction
+where multiple rounds are conducted until as many bidders and sellers have been
+satisfied as is possible. The first stage attempts to match up as many bidders
+and sellers as possible who have compatible bids. After that both the sellers
+and the bidders attempt to adjust their respective ask and bid prices and then
+another round begins. This process continues iteratively until either all actors
+involved in the auction are satisfied or until all remaining actors have reached
+their thresholds of how much they are willing to sell for or buy for.
+
+The reason why this particular style of auction was chosen to be investigated
+was that it matches the real world scenario of having multiple consumers within
+the nanogrid environment as well as multiple suppliers. It is also reasonable to
+assume that some kind of memory might be built into the consumers and suppliers
+so that they might remember what each other offered on previous occasions and
+submit bids in order to be accepted quicker. The iterative style of the
+continuous auction was also appealing and realistic due to the nature of having
+to manage the bids and sales of so many different actors within one given
+system. Most of the auctions investigated as part of this project required the
+central controller having access to all the private information of all the other
+nodes. This, among other reasons, led to auctions not being implemented for this
+project and this will be discussed in further detail later.
 ** Game Theory
 *** Overview
 The field of game theory has been one that has many different facets and
