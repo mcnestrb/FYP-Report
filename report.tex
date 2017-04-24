@@ -1,4 +1,4 @@
-% Created 2017-04-24 Mon 13:12
+% Created 2017-04-24 Mon 15:07
 % Intended LaTeX compiler: xelatex
 \documentclass[a4paper, notitlepage]{report}
 \usepackage{graphicx}
@@ -46,13 +46,13 @@
 \pagenumbering{arabic}
 
 \part{Abstract}
-\label{sec:orgab1cca8}
+\label{sec:orgdf467c8}
 \part{Introduction}
-\label{sec:orgb7f7e61}
+\label{sec:orgc0aa344}
 \part{Background}
-\label{sec:org724d5c1}
+\label{sec:orge4e3ea1}
 \chapter{Decentralised Grid}
-\label{sec:org9dbb7fa}
+\label{sec:org8983f01}
 At present in Ireland and in many other countries, the national electric grid
 infrastructure is controlled by a central body, namely the ESB. While there are
 several electricity providers in Ireland, such as Bord Gáis Energy, SSE
@@ -105,13 +105,13 @@ interchangeably.
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=.9\linewidth]{./img/DecentralisedGrid.jpg}
-\caption{\label{fig:orgee7db2b}
+\caption{\label{fig:org1059bb2}
 Each local consumer and supplier is attached to a regional grid hub which manages the allocation of electricity between suppliers and consumers. This is just a simple overview of the idea but conceivably a consumer or a supplier could be connected to two or more different regional grid hubs.}
 \end{figure}
 \chapter{Smart Grid}
-\label{sec:org42cf66e}
+\label{sec:orgb1737ce}
 \section{Overview}
-\label{sec:org36b09ec}
+\label{sec:org52045e1}
 Due to advancements in networking technologies as well as in the field of
 sophisticated decision making technologies, the idea of a smart grid has become
 increasingly popular. The idea of the smart grid is that actors within a grid,
@@ -141,7 +141,7 @@ particular time of day, allowing the system to learn over time and make smarter
 decisions as time goes on.
 
 \section{Microgrids and Nanogrids}
-\label{sec:org32cbded}
+\label{sec:org7225f0e}
 At present smart grids have generally been implemented on the level of
 microgrids. Microgrids are generally thought of in terms of having a consumer
 be a single house, or perhaps a group of houses, and a supplier being a small
@@ -178,13 +178,40 @@ distributed grids. This tree could also be adapted into a graph where a parent
 node in the tree could have multiple children and a child could have multiple
 parents. This will be discussed more in the conclusion.
 \chapter{REFIT Scheme}
-\label{sec:orgf3da2c4}
+\label{sec:org60f0221}
+The REFIT scheme (Renewable Energy Feed In Tariff) \cite{couture2010analysis} is
+one of the most common ways in which countries around the world, including
+Germany, Spain and the state of Hawaii, try to incentivise renewable energy
+sources and suppliers to sell energy into the main grid for consumption by
+consumers. The primary tenet of the REFIT scheme is to guarantee a fixed price
+for energy provided at particular times of the day. The prices are offered in a
+non-discriminatory fashion for every kWh produced by the supplier. The price can
+be lower or higher based on the type of energy being produced, for example in
+Germany the price is higher for suppliers of solar energy than for suppliers of
+wind energy, according to the EU at the time of the writing of this report
+\cite{refit_germany}.
+
+The main advantage of this type of a scheme is that it first of all incentivises
+companies to invest in renewable energy because they know they'll receive a good
+return on their investment but also incentivises landowners and home owners to
+invest, thereby creating a large infrastructure of renewable energy resources in
+a relatively small space of time and this has worked effectively in Germany. The
+payment also easily covers the cost of creating the solar panels or wind
+turbine.
+
+The downside to the REFIT scheme however is that because it is a fixed amount
+based primarily on the type of energy produced and for how long it is being
+provided, it means that it can mean that it is not worth it for a supplier to
+sell if it has a poor supply in reserve for example. In this case, the incentive
+to sell energy is quite low as selling any energy would drain the supplier of
+most of its power. Therefore a scheme of a dynamic price model might be better
+that would incentivise all suppliers at all times.
 \chapter{Auctions}
-\label{sec:org27a23cf}
+\label{sec:org7a8c8d2}
 \chapter{Game Theory}
-\label{sec:orgd19d720}
+\label{sec:org5f0d041}
 \section{Overview}
-\label{sec:orgb64b97d}
+\label{sec:orgca44493}
 The field of game theory has been one that has many different facets and
 versions depending on the type of situation required. In this section of the
 report the nomenclature and jargon of game theory will be discussed, as will a
@@ -217,7 +244,7 @@ the game. In a well-designed game the utility function must be designed such
 that the state of equilibrium not only can be reached but also that reaching
 that state is appealing to all players within the game.
 \section{Non-Cooperative Game Theory}
-\label{sec:orgf1af4af}
+\label{sec:orgdd07552}
 Non-Cooperative games are the simplest types of games to both understand and
 design. As previously stated, each player is trying to maximise its own utility
 but the core component of a non-cooperative game is that all of the players are
@@ -240,7 +267,7 @@ game. In this case all other players would then be aware that this players
 strategy had changed and would then react accordingly in order to maximise their
 own utility and decrease that player's utility.
 \section{Cooperative Game Theory}
-\label{sec:orgbf92477}
+\label{sec:org6973b55}
 Cooperative game theory shares many similar traits with that of non-cooperative
 game theory as outlined in the overview section of this part on game theory in
 this report. However the key aspect of cooperative game theory is that players
@@ -266,7 +293,7 @@ this game. Similarly due to the lack of communication between the players in the
 game, they can also never know if other players could change their strategies so
 are unable to even realise that cooperation is even possible at any given stage.
 \section{Cournot and Stackelberg Games}
-\label{sec:org31e77d2}
+\label{sec:orge1534d6}
 Cournot and Stackelberg games are two manners in which players participate in
 the game, in other words they constitute the structure of the game as opposed to
 how players react to one another and strategise within the game. Both of these
@@ -297,9 +324,9 @@ they have a distinct advantage over all players who come afterwards.
 The reasoning behind choosing a Stackelberg game over a Cournot game for this
 project will be discussed later in the Implementation section of this report.
 \chapter{Optimisation Techniques}
-\label{sec:orgbaf30b6}
+\label{sec:orgb792ab2}
 \section{Overview}
-\label{sec:org466b878}
+\label{sec:org0c76f74}
 Optimisation techniques are an important part of the field of mathematics and
 are reasonably simple to understand, but can be extremely difficult to
 formulate. Optimisation problems concern themselves with a key problem that is
@@ -336,7 +363,7 @@ Optimisation. Both techniques are involved with quickly and accurately solving
 for a maximum in the case of two different utility functions but operate with
 different types of sets, each one being suitable for the relevant type of problem.
 \section{Convex Optimisation}
-\label{sec:orgbcb0e0c}
+\label{sec:org509180a}
 Convex optimisation is defined as the as the solving of minimisation problems
 that involve convex functions being applied to convex sets \cite{boyd2004convex}.
 Due to the nature of the convexity of the sets involved in these sorts of
@@ -358,7 +385,7 @@ non-convex set where there is a hollow section to the region.
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=.9\linewidth]{./img/convex_set.png}
-\caption{\label{fig:org3845929}
+\caption{\label{fig:orgdbcdde9}
 A convex set (gtMath March 2016) \cite{convex_set_img}}
 \end{figure}
 
@@ -373,9 +400,9 @@ Convex optimisation is therefore a relatively simple concept to understand and
 is clearly seen to be a very useful and efficient method of accurately and
 quickly finding solutions to minimisation problems.
 \section{Hyperplane Projection}
-\label{sec:org8baa8b1}
+\label{sec:org155c518}
 \subsection{Variational Inequality Problem}
-\label{sec:org48444d5}
+\label{sec:org2d8c1d9}
 The hyperplane projection method is a tool for solving problems that suit the
 criteria of a variational inequality problem so first that must be explained
 before moving onto the concept of the solution to such a problem.
@@ -410,7 +437,7 @@ represented mathematically as \(f(x) <= f(y) \forall x <= y\) or \(f(x) >= f(y) 
 y\). Functions that cleave to this mould are called monotonically increasing and
 monotonically decreasing respectively. 
 \subsection{Hyperplane Projection Method}
-\label{sec:org806f83b}
+\label{sec:org3d3bb2a}
 Having covered a number of the prerequisites for using a hyperplane projection
 method, the method itself can be explained. The version I looked at was
 developed by Solodov and Svaiter and is called the Solodov and Svaiter
@@ -420,7 +447,7 @@ referred to as a part of the explanation.
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=.9\linewidth]{./img/SSHPM.png}
-\caption{\label{fig:orgde302ff}
+\caption{\label{fig:orgb5235e0}
 Solodov and Svaiter Hyperplane Projection Method}
 \end{figure}
 
@@ -443,19 +470,19 @@ the hyperplane \(H_i\) and another onto the intersection \(C \cap H^i\) to find 
 iterate in finding the solution. Later on in the Implementation section, the
 application of this method will be discussed in further detail.
 \part{Implementation}
-\label{sec:orgd0ddb8c}
+\label{sec:orgff17240}
 \chapter{Design}
-\label{sec:org6242c89}
+\label{sec:orge4ac19e}
 \chapter{Framework}
-\label{sec:orgb372b2f}
+\label{sec:org14c6903}
 \chapter{Processes}
-\label{sec:orgc52d9f3}
+\label{sec:org6bb5b55}
 \part{Conclusion}
-\label{sec:orgd29d930}
+\label{sec:org3dfb478}
 \chapter{Assessment}
-\label{sec:org9740f44}
+\label{sec:org1b9adec}
 \chapter{Future Work and Continuations}
-\label{sec:orgca56f8b}
+\label{sec:org3926790}
 \printbibliography
 \appendix
 \end{document}
