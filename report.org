@@ -23,10 +23,8 @@
 
 \newpage
 
-
 \pagenumbering{arabic}
 
-* Abstract
 * Introduction
 * Background
 ** Decentralised Grid
@@ -177,6 +175,24 @@ to sell energy is quite low as selling any energy would drain the supplier of
 most of its power. Therefore a scheme of a dynamic price model might be better
 that would incentivise all suppliers at all times.
 ** Auctions
+*** Overview
+The first type of node management systems considered as part of this report was
+that of auctions. Auctions have a number of different types of properties
+generally and as such, can be classified into different groupings.
+
++ Single- or multi-dimensional
++ One- or two-sided
++ Open-cry or sealed-bid
++ First- or /k/ th-price
++ Single- or multi-unit
++ Single- or multi-item
+
+While all of these are discussed in detail in the book by Simon Parsons
+cite:parsons2011auctions, only one of these will be discussed here as it the
+only type of auction that was considered, as well as the decision as to why this
+was the only type considered. The type of auction investigated was a continuous
+double auction.
+*** 
 ** Game Theory
 *** Overview
 The field of game theory has been one that has many different facets and
