@@ -1,4 +1,4 @@
-% Created 2017-04-24 Mon 15:07
+% Created 2017-04-24 Mon 15:22
 % Intended LaTeX compiler: xelatex
 \documentclass[a4paper, notitlepage]{report}
 \usepackage{graphicx}
@@ -46,13 +46,13 @@
 \pagenumbering{arabic}
 
 \part{Abstract}
-\label{sec:orgdf467c8}
+\label{sec:org18029b9}
 \part{Introduction}
-\label{sec:orgc0aa344}
+\label{sec:org59ba5bf}
 \part{Background}
-\label{sec:orge4e3ea1}
+\label{sec:org92fb910}
 \chapter{Decentralised Grid}
-\label{sec:org8983f01}
+\label{sec:orgb61ca1b}
 At present in Ireland and in many other countries, the national electric grid
 infrastructure is controlled by a central body, namely the ESB. While there are
 several electricity providers in Ireland, such as Bord Gáis Energy, SSE
@@ -105,13 +105,13 @@ interchangeably.
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=.9\linewidth]{./img/DecentralisedGrid.jpg}
-\caption{\label{fig:org1059bb2}
+\caption{\label{fig:orge2d51ab}
 Each local consumer and supplier is attached to a regional grid hub which manages the allocation of electricity between suppliers and consumers. This is just a simple overview of the idea but conceivably a consumer or a supplier could be connected to two or more different regional grid hubs.}
 \end{figure}
 \chapter{Smart Grid}
-\label{sec:orgb1737ce}
+\label{sec:org0d6cf85}
 \section{Overview}
-\label{sec:org52045e1}
+\label{sec:orgb29ca78}
 Due to advancements in networking technologies as well as in the field of
 sophisticated decision making technologies, the idea of a smart grid has become
 increasingly popular. The idea of the smart grid is that actors within a grid,
@@ -141,7 +141,7 @@ particular time of day, allowing the system to learn over time and make smarter
 decisions as time goes on.
 
 \section{Microgrids and Nanogrids}
-\label{sec:org7225f0e}
+\label{sec:org704e006}
 At present smart grids have generally been implemented on the level of
 microgrids. Microgrids are generally thought of in terms of having a consumer
 be a single house, or perhaps a group of houses, and a supplier being a small
@@ -178,7 +178,7 @@ distributed grids. This tree could also be adapted into a graph where a parent
 node in the tree could have multiple children and a child could have multiple
 parents. This will be discussed more in the conclusion.
 \chapter{REFIT Scheme}
-\label{sec:org60f0221}
+\label{sec:org724e71e}
 The REFIT scheme (Renewable Energy Feed In Tariff) \cite{couture2010analysis} is
 one of the most common ways in which countries around the world, including
 Germany, Spain and the state of Hawaii, try to incentivise renewable energy
@@ -207,11 +207,11 @@ to sell energy is quite low as selling any energy would drain the supplier of
 most of its power. Therefore a scheme of a dynamic price model might be better
 that would incentivise all suppliers at all times.
 \chapter{Auctions}
-\label{sec:org7a8c8d2}
+\label{sec:orgcecd573}
 \chapter{Game Theory}
-\label{sec:org5f0d041}
+\label{sec:orga0bc77c}
 \section{Overview}
-\label{sec:orgca44493}
+\label{sec:orgffd5bd6}
 The field of game theory has been one that has many different facets and
 versions depending on the type of situation required. In this section of the
 report the nomenclature and jargon of game theory will be discussed, as will a
@@ -244,7 +244,7 @@ the game. In a well-designed game the utility function must be designed such
 that the state of equilibrium not only can be reached but also that reaching
 that state is appealing to all players within the game.
 \section{Non-Cooperative Game Theory}
-\label{sec:orgdd07552}
+\label{sec:org09b6178}
 Non-Cooperative games are the simplest types of games to both understand and
 design. As previously stated, each player is trying to maximise its own utility
 but the core component of a non-cooperative game is that all of the players are
@@ -267,7 +267,7 @@ game. In this case all other players would then be aware that this players
 strategy had changed and would then react accordingly in order to maximise their
 own utility and decrease that player's utility.
 \section{Cooperative Game Theory}
-\label{sec:org6973b55}
+\label{sec:org686d288}
 Cooperative game theory shares many similar traits with that of non-cooperative
 game theory as outlined in the overview section of this part on game theory in
 this report. However the key aspect of cooperative game theory is that players
@@ -293,7 +293,7 @@ this game. Similarly due to the lack of communication between the players in the
 game, they can also never know if other players could change their strategies so
 are unable to even realise that cooperation is even possible at any given stage.
 \section{Cournot and Stackelberg Games}
-\label{sec:orge1534d6}
+\label{sec:org747d8ab}
 Cournot and Stackelberg games are two manners in which players participate in
 the game, in other words they constitute the structure of the game as opposed to
 how players react to one another and strategise within the game. Both of these
@@ -324,9 +324,9 @@ they have a distinct advantage over all players who come afterwards.
 The reasoning behind choosing a Stackelberg game over a Cournot game for this
 project will be discussed later in the Implementation section of this report.
 \chapter{Optimisation Techniques}
-\label{sec:orgb792ab2}
+\label{sec:orged6b168}
 \section{Overview}
-\label{sec:org0c76f74}
+\label{sec:orgf0ed6fa}
 Optimisation techniques are an important part of the field of mathematics and
 are reasonably simple to understand, but can be extremely difficult to
 formulate. Optimisation problems concern themselves with a key problem that is
@@ -363,7 +363,7 @@ Optimisation. Both techniques are involved with quickly and accurately solving
 for a maximum in the case of two different utility functions but operate with
 different types of sets, each one being suitable for the relevant type of problem.
 \section{Convex Optimisation}
-\label{sec:org509180a}
+\label{sec:org07404e1}
 Convex optimisation is defined as the as the solving of minimisation problems
 that involve convex functions being applied to convex sets \cite{boyd2004convex}.
 Due to the nature of the convexity of the sets involved in these sorts of
@@ -385,7 +385,7 @@ non-convex set where there is a hollow section to the region.
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=.9\linewidth]{./img/convex_set.png}
-\caption{\label{fig:orgdbcdde9}
+\caption{\label{fig:org5f24af6}
 A convex set (gtMath March 2016) \cite{convex_set_img}}
 \end{figure}
 
@@ -400,9 +400,9 @@ Convex optimisation is therefore a relatively simple concept to understand and
 is clearly seen to be a very useful and efficient method of accurately and
 quickly finding solutions to minimisation problems.
 \section{Hyperplane Projection}
-\label{sec:org155c518}
+\label{sec:orgb56a293}
 \subsection{Variational Inequality Problem}
-\label{sec:org2d8c1d9}
+\label{sec:org635cb76}
 The hyperplane projection method is a tool for solving problems that suit the
 criteria of a variational inequality problem so first that must be explained
 before moving onto the concept of the solution to such a problem.
@@ -437,7 +437,7 @@ represented mathematically as \(f(x) <= f(y) \forall x <= y\) or \(f(x) >= f(y) 
 y\). Functions that cleave to this mould are called monotonically increasing and
 monotonically decreasing respectively. 
 \subsection{Hyperplane Projection Method}
-\label{sec:org3d3bb2a}
+\label{sec:orgf448490}
 Having covered a number of the prerequisites for using a hyperplane projection
 method, the method itself can be explained. The version I looked at was
 developed by Solodov and Svaiter and is called the Solodov and Svaiter
@@ -447,7 +447,7 @@ referred to as a part of the explanation.
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=.9\linewidth]{./img/SSHPM.png}
-\caption{\label{fig:orgb5235e0}
+\caption{\label{fig:orgf2ad297}
 Solodov and Svaiter Hyperplane Projection Method}
 \end{figure}
 
@@ -470,19 +470,19 @@ the hyperplane \(H_i\) and another onto the intersection \(C \cap H^i\) to find 
 iterate in finding the solution. Later on in the Implementation section, the
 application of this method will be discussed in further detail.
 \part{Implementation}
-\label{sec:orgff17240}
+\label{sec:orga1c722e}
 \chapter{Design}
-\label{sec:orge4ac19e}
+\label{sec:org40f71c1}
 \chapter{Framework}
-\label{sec:org14c6903}
+\label{sec:org78f8f37}
 \chapter{Processes}
-\label{sec:org6bb5b55}
+\label{sec:org2b5be76}
 \part{Conclusion}
-\label{sec:org3dfb478}
+\label{sec:orgaf8748a}
 \chapter{Assessment}
-\label{sec:org1b9adec}
+\label{sec:orgee2ff2e}
 \chapter{Future Work and Continuations}
-\label{sec:org3926790}
+\label{sec:org3b6b91f}
 \printbibliography
 \appendix
 \end{document}
