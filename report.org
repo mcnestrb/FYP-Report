@@ -469,9 +469,45 @@ iterate in finding the solution. Later on in the Implementation section, the
 application of this method will be discussed in further detail.
 * Implementation
 ** Design
-** Framework
-** Processes   
+*** Games vs Auctions
+In the background section of this report both the concepts of Auctions and Game
+Theory as both were considered as potential candidates for the management system
+to match supply and demand in a nanogrid system. Ultimately however, a
+non-cooperative game was chosen as the prime candidate for the smart grid in
+this project. It is important to first consider the reasons as to why this
+choice was made before explaining how the game was designed.
+
+In the process of investigation of auctions and game theory, certain
+similarities stood out between the two management systems. Ultimately all actors
+within either of these systems are trying to maximise their utility, a scalar
+value that is determined based on a number of key variables that each actor
+considers pertinent to their operation. In the case of a model such as this one,
+where a price value is involved, the utility of any given actor is usually
+modelled as a balance between any profit that the unit could make versus some
+kind of risk factor of selling too much at any one given time. In this regard,
+the modelling of any actors within the grid would end up being the same on a
+conceptual level and only the interactions between them would change based on
+what kind of system was chosen.
+
+As has been outlined in previous sections, one of the main criteria for the
+nanogrid system, was that of minimal sharing of information between actors in
+the grid. This was to decrease the size of packets exchanged between nodes in
+the network as well as to hopefully decrease the number of packets sent between
+each other in order to improve the efficiency of such a system such that it
+might be practical for a real world scenario. Therefore the focus was on a
+system that would fit this design. Every auction that was investigated as part
+of this report had a crucial element of either all nodes being aware of the each
+others' private information or at the very least the central node needed to have
+all this information to hand. Therefore a non-cooperative game seemed more
+appropriate based off this particular design. 
+*** Utility Functions
+*** Game Design
+** Application
+*** Python Twisted Framework
+*** Client (EC)
+*** Server (CPS)
 * Conclusion
+** Results
 ** Assessment
 ** Future Work and Continuations
 \printbibliography
