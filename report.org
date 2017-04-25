@@ -470,6 +470,7 @@ application of this method will be discussed in further detail.
 * Implementation
 ** Design
 *** Games vs Auctions
+
 In the background section of this report both the concepts of Auctions and Game
 Theory as both were considered as potential candidates for the management system
 to match supply and demand in a nanogrid system. Ultimately however, a
@@ -500,8 +501,28 @@ of this report had a crucial element of either all nodes being aware of the each
 others' private information or at the very least the central node needed to have
 all this information to hand. Therefore a non-cooperative game seemed more
 appropriate based off this particular design. 
-*** Utility Functions
+*** System Design
+In this section I will discuss a brief overview of the operation of the system
+implemented in this project. Below in Figure 7.2 is a basic flowchart of a
+single iteration of the operation of the system, followed by a brief summary of
+each step. The summary below assumes that all the nodes within the network have
+connected with one another already, although in my code submission there is an
+extra step to ensure that the system process doesn't start until the user
+decides that it should so that the system can be monitored on a step by step
+basis. Figure 7.1 is a simple diagram of the connections between different
+actors within the system.
+
+#+CAPTION: Simple diagram to understand the connections between the different actors involved in the system in a given iteration
+#+NAME: Basic Newtork Diagram 
+[[./img/basic_network.png]]
+
+#+CAPTION: Flow chart depicting the operation of the system in terms of the Central Power Station (CPS), Energy Consumers (ECs) and Energy Suppliers (ESs) in a single iteration
+#+NAME: Flow chart of the system operation
+[[./img/design.png]]
 *** Game Design
+*** Utility Functions
+**** EC Utility Function
+**** CPS Utility Function
 ** Application
 *** Python Twisted Framework
 *** Client (EC)
