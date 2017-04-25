@@ -519,6 +519,34 @@ actors within the system.
 #+CAPTION: Flow chart depicting the operation of the system in terms of the Central Power Station (CPS), Energy Consumers (ECs) and Energy Suppliers (ESs) in a single iteration
 #+NAME: Flow chart of the system operation
 [[./img/design.png]]
+
+An iteration of the system is conducted to match supply and demand for in a
+nanogrid situation for a given upcoming timeslot. Some kind of system where a
+consumer can predict their energy usage for the next timeslot is presumed to be
+in place. The suppliers of course know what their own supply of energy is as
+well as having a caution variable $c \in (0, 1)$. The caution value determines how
+willing they are to sell larger amounts of energy, a low caution value
+representing a willingness to sell more energy and a high value standing for a
+more conservative supplier.
+
+The operation begins with the Central Power Station (CPS) announcing a timeslot
+to all consumers and all suppliers within the network. At the beginning the CPS
+doesn't know who is a consumer and who is a supplier in order to accommodate the
+situation where a consumer has proactively bought too much energy in
+anticipation of needing it or has been instructed by some logic to sell excess
+energy into the grid. Each Energy Consumer (EC) then notifies the CPS as to whether it is in need
+of energy or whether it has energy to sell and if it's the case of the former
+then it also sends how much energy it requires.
+
+The CPS then simply sums the total demand and can begin the game. It sends to
+the total demand, the total amount of money it has available to give and the
+number of suppliers within the system to each Energy Supplier (ES). Each ES
+first calculates how much energy it can be offered by dividing the total price
+by the number of players. Each one then uses the SSHPM optimisation method to
+determine an estimate for the energy it is willing to give to the CPS at that
+price and sends that estimate to the CPS.
+
+
 *** Game Design
 *** Utility Functions
 **** EC Utility Function
