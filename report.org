@@ -594,7 +594,7 @@ without giving up any private information. These slack variables are derived
 from the ES's utility functions which will be discussed in the next section. The
 slack variables are used by the CPS to determine Nash Equilibrium within the
 game, namely this is when all of the slack variables are equal. Once this state
-of equilibrium is reached thenthe CPS asks for the energy offer from each of the
+of equilibrium is reached, then the CPS asks for the energy offer from each of the
 ESs.
 
 When the hyperplane projection is initially calculated there is a small piece of
@@ -610,7 +610,19 @@ send back the amount of energy they are offering. If the slack variables are not
 equal then the CPS instructs the ESs to perform another iteration of the SSHPM.
 *** Utility Functions
 **** EC Utility Function
+Each EC has a utility function that is used as the functional in the the
+hyperplane projection optimisation. The utility function in question takes into
+account the energy that EC $n$ has stored $E_n$, the price being offered to it
+$p_n$, the caution value of that EC $c_n$ and the energy that it is offering $e_n$.
+$$ U(e_n, E_n, p_n) = p_{n}e_{n} + (E_{n} - c_{n}e_{n})e_{n} $$ 
+This utility function is based on the profit that the EC could get when it is
+supplying energy, that is $p_{n}e_{n}$. $(E_{n} - c_{n}e_{n})e_{n}$ represents the loss that the
+EC incurs by giving away a certain amount of power. Ultimately the system is
+trying to maximise the utilities of all ECs in the nanogrid, where the sum of
+all offered energies is less than or equal to the energy deficiency (demand) of the
+system for a given timeslot $E_{def}$, that is $$\sum_n e_n <= E_{def}$$.
 **** CPS Utility Function
+
 ** Application
 *** Python Twisted Framework
 *** Client (EC)
@@ -619,5 +631,6 @@ equal then the CPS instructs the ESs to perform another iteration of the SSHPM.
 ** Results
 ** Assessment
 ** Future Work and Continuations
+
 \printbibliography
 \appendix
