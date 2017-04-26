@@ -1,4 +1,4 @@
-% Created 2017-04-26 Wed 14:00
+% Created 2017-04-26 Wed 17:13
 % Intended LaTeX compiler: xelatex
 \documentclass[a4paper, notitlepage]{report}
 \usepackage{graphicx}
@@ -45,11 +45,11 @@
 \pagenumbering{arabic}
 
 \part{Introduction}
-\label{sec:org9c80a6a}
+\label{sec:orgad83c13}
 \part{Background}
-\label{sec:org0a09e70}
+\label{sec:orgdb2a657}
 \chapter{Decentralised Grid}
-\label{sec:orga3bc78e}
+\label{sec:org440a52e}
 At present in Ireland and in many other countries, the national electric grid
 infrastructure is controlled by a central body, namely the ESB. While there are
 several electricity providers in Ireland, such as Bord Gáis Energy, SSE
@@ -102,13 +102,13 @@ interchangeably.
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=.9\linewidth]{./img/DecentralisedGrid.jpg}
-\caption{\label{fig:orgefd7bd0}
+\caption{\label{fig:org26df284}
 Each local consumer and supplier is attached to a regional grid hub which manages the allocation of electricity between suppliers and consumers. This is just a simple overview of the idea but conceivably a consumer or a supplier could be connected to two or more different regional grid hubs.}
 \end{figure}
 \chapter{Smart Grid}
-\label{sec:orgbe23af8}
+\label{sec:orgcdf462b}
 \section{Overview}
-\label{sec:org31ed1f6}
+\label{sec:orgbf4494d}
 Due to advancements in networking technologies as well as in the field of
 sophisticated decision making technologies, the idea of a smart grid has become
 increasingly popular. The idea of the smart grid is that actors within a grid,
@@ -138,7 +138,7 @@ particular time of day, allowing the system to learn over time and make smarter
 decisions as time goes on.
 
 \section{Microgrids and Nanogrids}
-\label{sec:org36a3b68}
+\label{sec:org3b8434c}
 At present smart grids have generally been implemented on the level of
 microgrids. Microgrids are generally thought of in terms of having a consumer
 be a single house, or perhaps a group of houses, and a supplier being a small
@@ -175,7 +175,7 @@ distributed grids. This tree could also be adapted into a graph where a parent
 node in the tree could have multiple children and a child could have multiple
 parents. This will be discussed more in the conclusion.
 \chapter{REFIT Scheme}
-\label{sec:org1d5d468}
+\label{sec:orge4b21a8}
 The REFIT scheme (Renewable Energy Feed In Tariff) \cite{couture2010analysis} is
 one of the most common ways in which countries around the world, including
 Germany, Spain and the state of Hawaii, try to incentivise renewable energy
@@ -204,9 +204,9 @@ to sell energy is quite low as selling any energy would drain the supplier of
 most of its power. Therefore a scheme of a dynamic price model might be better
 that would incentivise all suppliers at all times.
 \chapter{Auctions}
-\label{sec:org0bb8890}
+\label{sec:org17d23a4}
 \section{Overview}
-\label{sec:org26e5287}
+\label{sec:org755f540}
 The first type of node management systems considered as part of this report was
 that of auctions. Auctions have a number of different types of properties
 generally and as such, can be classified into different groupings.
@@ -226,7 +226,7 @@ only type of auction that was considered, as well as the decision as to why this
 was the only type considered. The type of auction investigated was a continuous
 double auction.
 \section{Continuous Double Auction}
-\label{sec:org9d919da}
+\label{sec:org574165a}
 A continuous double auction was discussed by the paper by Ramachandran
 \cite{ramachandran2011intelligent} among others and was therefore a popular
 candidate by several potential energy management systems. The idea of a double
@@ -258,9 +258,9 @@ central controller having access to all the private information of all the other
 nodes. This, among other reasons, led to auctions not being implemented for this
 project and this will be discussed in further detail later.
 \chapter{Game Theory}
-\label{sec:orgfe8cc1b}
+\label{sec:orgc5bae99}
 \section{Overview}
-\label{sec:org40d6f50}
+\label{sec:orgda03129}
 The field of game theory has been one that has many different facets and
 versions depending on the type of situation required. In this section of the
 report the nomenclature and jargon of game theory will be discussed, as will a
@@ -293,7 +293,7 @@ the game. In a well-designed game the utility function must be designed such
 that the state of equilibrium not only can be reached but also that reaching
 that state is appealing to all players within the game.
 \section{Non-Cooperative Game Theory}
-\label{sec:org21a8823}
+\label{sec:orgf120aac}
 Non-Cooperative games are the simplest types of games to both understand and
 design. As previously stated, each player is trying to maximise its own utility
 but the core component of a non-cooperative game is that all of the players are
@@ -316,7 +316,7 @@ game. In this case all other players would then be aware that this players
 strategy had changed and would then react accordingly in order to maximise their
 own utility and decrease that player's utility.
 \section{Cooperative Game Theory}
-\label{sec:org486faac}
+\label{sec:org0421b9c}
 Cooperative game theory shares many similar traits with that of non-cooperative
 game theory as outlined in the overview section of this part on game theory in
 this report. However the key aspect of cooperative game theory is that players
@@ -342,7 +342,7 @@ this game. Similarly due to the lack of communication between the players in the
 game, they can also never know if other players could change their strategies so
 are unable to even realise that cooperation is even possible at any given stage.
 \section{Cournot and Stackelberg Games}
-\label{sec:org0b39cc2}
+\label{sec:org2c81e19}
 Cournot and Stackelberg games are two manners in which players participate in
 the game, in other words they constitute the structure of the game as opposed to
 how players react to one another and strategise within the game. Both of these
@@ -373,9 +373,9 @@ they have a distinct advantage over all players who come afterwards.
 The reasoning behind choosing a Stackelberg game over a Cournot game for this
 project will be discussed later in the Implementation section of this report.
 \chapter{Optimisation Techniques}
-\label{sec:org5c431f1}
+\label{sec:org1b125ae}
 \section{Overview}
-\label{sec:org85481a9}
+\label{sec:org3218191}
 Optimisation techniques are an important part of the field of mathematics and
 are reasonably simple to understand, but can be extremely difficult to
 formulate. Optimisation problems concern themselves with a key problem that is
@@ -412,7 +412,7 @@ Optimisation. Both techniques are involved with quickly and accurately solving
 for a maximum in the case of two different utility functions but operate with
 different types of sets, each one being suitable for the relevant type of problem.
 \section{Convex Optimisation}
-\label{sec:orgfa25e2e}
+\label{sec:org6dd1027}
 Convex optimisation is defined as the as the solving of minimisation problems
 that involve convex functions being applied to convex sets \cite{boyd2004convex}.
 Due to the nature of the convexity of the sets involved in these sorts of
@@ -434,7 +434,7 @@ non-convex set where there is a hollow section to the region.
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=.9\linewidth]{./img/convex_set.png}
-\caption{\label{fig:org58314df}
+\caption{\label{fig:orga0366b7}
 A convex set (gtMath March 2016) \cite{convex_set_img}}
 \end{figure}
 
@@ -449,9 +449,9 @@ Convex optimisation is therefore a relatively simple concept to understand and
 is clearly seen to be a very useful and efficient method of accurately and
 quickly finding solutions to minimisation problems.
 \section{Hyperplane Projection}
-\label{sec:org70ca554}
+\label{sec:org0ee6605}
 \subsection{Variational Inequality Problem}
-\label{sec:org49e4dbc}
+\label{sec:org7d2c18c}
 The hyperplane projection method is a tool for solving problems that suit the
 criteria of a variational inequality problem so first that must be explained
 before moving onto the concept of the solution to such a problem.
@@ -486,7 +486,7 @@ represented mathematically as \(f(x) <= f(y) \forall x <= y\) or \(f(x) >= f(y) 
 y\). Functions that cleave to this mould are called monotonically increasing and
 monotonically decreasing respectively. 
 \subsection{Hyperplane Projection Method}
-\label{sec:orgd55c9a2}
+\label{sec:org5a1ea08}
 Having covered a number of the prerequisites for using a hyperplane projection
 method, the method itself can be explained. The version I looked at was
 developed by Solodov and Svaiter and is called the Solodov and Svaiter
@@ -496,7 +496,7 @@ referred to as a part of the explanation.
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=.9\linewidth]{./img/SSHPM.png}
-\caption{\label{fig:org2455a5b}
+\caption{\label{fig:org3403873}
 Solodov and Svaiter Hyperplane Projection Method}
 \end{figure}
 
@@ -519,11 +519,11 @@ the hyperplane \(H_i\) and another onto the intersection \(C \cap H^i\) to find 
 iterate in finding the solution. Later on in the Implementation section, the
 application of this method will be discussed in further detail.
 \part{Implementation}
-\label{sec:org14cd68d}
+\label{sec:orgba1bfa5}
 \chapter{Design}
-\label{sec:org67a2007}
+\label{sec:org4eae03f}
 \section{Games vs Auctions}
-\label{sec:orga6cb107}
+\label{sec:org6fcd044}
 
 In the background section of this report both the concepts of Auctions and Game
 Theory as both were considered as potential candidates for the management system
@@ -556,7 +556,7 @@ others' private information or at the very least the central node needed to have
 all this information to hand. Therefore a non-cooperative game seemed more
 appropriate based off this particular design. 
 \section{System Design}
-\label{sec:org1427289}
+\label{sec:org064f390}
 In this section I will discuss a brief overview of the operation of the system
 implemented in this project. Below in Figure 7.2 is a basic flowchart of a
 single iteration of the operation of the system, followed by a brief summary of
@@ -570,14 +570,14 @@ actors within the system.
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=.9\linewidth]{./img/basic_network.png}
-\caption{\label{fig:orga34281b}
+\caption{\label{fig:org58073b0}
 Simple diagram to understand the connections between the different actors involved in the system in a given iteration}
 \end{figure}
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=.9\linewidth]{./img/design.png}
-\caption{\label{fig:org36c8c9c}
+\caption{\label{fig:orgecc288f}
 Flow chart depicting the operation of the system in terms of the Central Power Station (CPS), Energy Consumers (ECs) and Energy Suppliers (ESs) in a single iteration}
 \end{figure}
 
@@ -640,7 +640,7 @@ own grid. Once the supply matches the demand, the power is then distributed as
 before. The process then starts again ahead of the next timeslot to ensure that
 everyone that needs power during that time is supplied.
 \section{Game Design}
-\label{sec:orgb8c40a8}
+\label{sec:org01600ac}
 First some of the key components of the game as well as a brief overview of how
 it  is conducted will be explained and then after that, the game will be
 discussed ins and outs will be discussed in further detail The game played
@@ -671,9 +671,9 @@ Equilibrium and the ESs are informed to end their iterations and they instead
 send back the amount of energy they are offering. If the slack variables are not
 equal then the CPS instructs the ESs to perform another iteration of the SSHPM.
 \section{Utility Functions}
-\label{sec:org60c520e}
+\label{sec:org7b3f88c}
 \subsection{EC Utility Function}
-\label{sec:orgc18af2f}
+\label{sec:org0369e76}
 Each EC has a utility function that is used as the functional in the the
 hyperplane projection optimisation. The utility function in question takes into
 account the energy that EC \(n\) has stored \(E_n\), the price being offered to it
@@ -686,24 +686,42 @@ trying to maximise the utilities of all ECs in the nanogrid, where the sum of
 all offered energies is less than or equal to the energy deficiency (demand) of the
 system for a given timeslot \(E_{def}\), that is $$\sum_n e_n <= E_{def}$$.
 \subsection{CPS Utility Function}
-\label{sec:orgaacf1cc}
+\label{sec:org11b52f4}
+The CPS has its own utility function that serves as the convex function for the
+convex optimisation problem in trying to find appropriate prices for each of the
+ESs that have submitted energy estimates for how much they are willing to offer.
+The function is represented as a minimisation problem in terms of the energy
+that each ES is offering \(e_n\), the price that the CPS would offer for that
+energy \(p_n\) and two scalar values \(a_n\) and \(b_n\)  that account for the costs
+associated with storing and transmitting the energy.
 
+$$min_p L(p,e) = min_{p_{n}} \sum_n(e_{n}p_n^r + a_{n}p_{n} + b_n), subject to \sum_n p_n = P, p_{min}
+<= p_n <= p_{max}$$
+
+For each ES, the CPS is trying to find the value of \(p_n\) that will give the
+smallest value. However all values of \(p_n\) must sum to be equal to the value of
+\(P\), the total price that the CPS is willing to pay. As can be seen in this
+model, the system doesn't pay any less for power overall, but rather
+incentivises all suppliers of electricity to try to match the demand in
+question. Another caveat of the minimisation problem is that \(p_n\) must be
+between the values of \(p_{min}\) and \(p_{max}\). This simply means that there is a
+minimum and a maximum value that the CPS is willing to pay for energy.
 \chapter{Application}
-\label{sec:orga06c711}
+\label{sec:orgce20064}
 \section{Python Twisted Framework}
-\label{sec:org6afc7de}
+\label{sec:orgf50baab}
 \section{Client (EC)}
-\label{sec:orgdd63fbd}
+\label{sec:org1ff200d}
 \section{Server (CPS)}
-\label{sec:orgdcce7f6}
+\label{sec:orgb6cbe98}
 \part{Conclusion}
-\label{sec:org907bbb3}
+\label{sec:org655dd53}
 \chapter{Results}
-\label{sec:orgbbbef81}
+\label{sec:orgdfb9fee}
 \chapter{Assessment}
-\label{sec:orgb24717b}
+\label{sec:orgdb5c8d1}
 \chapter{Future Work and Continuations}
-\label{sec:org6026184}
+\label{sec:org04ba7d0}
 
 \printbibliography
 \appendix

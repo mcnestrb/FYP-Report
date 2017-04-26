@@ -622,7 +622,25 @@ trying to maximise the utilities of all ECs in the nanogrid, where the sum of
 all offered energies is less than or equal to the energy deficiency (demand) of the
 system for a given timeslot $E_{def}$, that is $$\sum_n e_n <= E_{def}$$.
 **** CPS Utility Function
+The CPS has its own utility function that serves as the convex function for the
+convex optimisation problem in trying to find appropriate prices for each of the
+ESs that have submitted energy estimates for how much they are willing to offer.
+The function is represented as a minimisation problem in terms of the energy
+that each ES is offering $e_n$, the price that the CPS would offer for that
+energy $p_n$ and two scalar values $a_n$ and $b_n$  that account for the costs
+associated with storing and transmitting the energy.
 
+$$min_p L(p,e) = min_{p_{n}} \sum_n(e_{n}p_n^r + a_{n}p_{n} + b_n), subject to \sum_n p_n = P, p_{min}
+<= p_n <= p_{max}$$
+
+For each ES, the CPS is trying to find the value of $p_n$ that will give the
+smallest value. However all values of $p_n$ must sum to be equal to the value of
+$P$, the total price that the CPS is willing to pay. As can be seen in this
+model, the system doesn't pay any less for power overall, but rather
+incentivises all suppliers of electricity to try to match the demand in
+question. Another caveat of the minimisation problem is that $p_n$ must be
+between the values of $p_{min}$ and $p_{max}$. This simply means that there is a
+minimum and a maximum value that the CPS is willing to pay for energy.
 ** Application
 *** Python Twisted Framework
 *** Client (EC)
