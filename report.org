@@ -643,6 +643,31 @@ between the values of $p_{min}$ and $p_{max}$. This simply means that there is a
 minimum and a maximum value that the CPS is willing to pay for energy.
 ** Application
 *** Python Twisted Framework
+In the course of this project the Python Twisted Framework cite:twistedpython
+was used in order to implement a network between the CPS and the ECs. The
+Twisted Framework has a number of layers in order to abstract out the problem
+for the user so that they only need care about their own application
+cite:kinder2005event. It also has a number of inbuilt functions so that the
+programmer does not have to care about things like sockets that are very tricky
+and are far removed from the problem trying to be solved in this project.
+
+Both the Client and the Server have two main layers where all the Twisted magic
+happens, the Factory layer and the Protocol layer. Essentially the Factory layer
+contains all of the persistent information of any given network actor and the
+Protocol layer contains actions and information for every connection made by
+that actor. In the code produced as part of this project, the factories of the
+CPS and the ECs were mostly used to store the values of variables pertinent to
+each of them such as the price vectors for the CPS and the energy storage for
+each of the ECs.
+
+The majority of the logic that controls both the CPS and ECs was contained
+within separate Finite State Machine (FSM) files which were connected to their
+respective Protocol files the FSM only changes state based on the inputs it
+receives from any given connection. It was easiest to abstract the problem out
+in this fashion for ease of reading and understanding of the code for both the
+programmer and any potential readers. Each EC and the CPS is finally wrapped by
+a simple run script that just sets up the factory from which everything else is
+run. 
 *** Client (EC)
 *** Server (CPS)
 * Conclusion
