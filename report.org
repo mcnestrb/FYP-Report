@@ -579,6 +579,35 @@ own grid. Once the supply matches the demand, the power is then distributed as
 before. The process then starts again ahead of the next timeslot to ensure that
 everyone that needs power during that time is supplied.
 *** Game Design
+First some of the key components of the game as well as a brief overview of how
+it  is conducted will be explained and then after that, the game will be
+discussed ins and outs will be discussed in further detail The game played
+between all of the ESs that are trying to receive remuneration for the energy
+they are willing to offer is played across two steps. First of all the ESs use
+their utility functions along with a number of other important variables such as
+their energy capacity $E_n$, caution $c_n and the current price offer $p_n$ in
+order to determine their new estimate for how much energy they are willing to
+offer to the CPS $e_n$, where $n \in N$, N being the set of all ESs taking part in
+the nanogrid. Next they use that energy estimate to calculate a slack variable
+$\varepsilon_n$ which is a variable indicating the amount of energy it is willing to offer
+without giving up any private information. These slack variables are derived
+from the ES's utility functions which will be discussed in the next section. The
+slack variables are used by the CPS to determine Nash Equilibrium within the
+game, namely this is when all of the slack variables are equal. Once this state
+of equilibrium is reached thenthe CPS asks for the energy offer from each of the
+ESs.
+
+When the hyperplane projection is initially calculated there is a small piece of
+logic that determines what slack variable is sent to the CPS as well as what
+energy should be offered. If the projection is equal to zero then $\varepsilon_n = E_n -
+2c_{n}e_{n} + p_n$. Otherwise the second part of the hyperplane projection method is
+run, where the halfspace is determined and from that a new projection is worked
+out. In this case the slack variable sent back to the CPS is $\varepsilon_n = E_n - e_n +
+p_n$. These slack variables are then sent to the CPS. If the slack variables are
+all equal, as previously mentioned, then the game has reached the state of Nash
+Equilibrium and the ESs are informed to end their iterations and they instead
+send back the amount of energy they are offering. If the slack variables are not
+equal then the CPS instructs the ESs to perform another iteration of the SSHPM.
 *** Utility Functions
 **** EC Utility Function
 **** CPS Utility Function
