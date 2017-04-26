@@ -534,19 +534,50 @@ to all consumers and all suppliers within the network. At the beginning the CPS
 doesn't know who is a consumer and who is a supplier in order to accommodate the
 situation where a consumer has proactively bought too much energy in
 anticipation of needing it or has been instructed by some logic to sell excess
-energy into the grid. Each Energy Consumer (EC) then notifies the CPS as to whether it is in need
-of energy or whether it has energy to sell and if it's the case of the former
-then it also sends how much energy it requires.
+energy into the grid. Each Energy Consumer (EC) then notifies the CPS as to
+whether it is in need of energy or whether it has energy to sell and if it's the
+case of the former then it also sends how much energy it requires. Figure 7.1
+shows the situation where ECs within the grid have already made it clear as to
+whether they are a supplier or a consumer for this particular timeslot.
 
 The CPS then simply sums the total demand and can begin the game. It sends to
 the total demand, the total amount of money it has available to give and the
-number of suppliers within the system to each Energy Supplier (ES). Each ES
-first calculates how much energy it can be offered by dividing the total price
-by the number of players. Each one then uses the SSHPM optimisation method to
-determine an estimate for the energy it is willing to give to the CPS at that
-price and sends that estimate to the CPS.
+number of suppliers within the system to each Energy Supplier (ES). The total
+price is calculated naively by multiplying the current price per unit that is
+offered by the central grid by the number of units of energy required by the
+consumers within the nanogrid. A standard unit would be kWh. Each ES first
+calculates how much energy it can be offered by dividing the total price by the
+number of players. Each one then uses the SSHPM optimisation method to determine
+an estimate for the energy it is willing to give to the CPS at that price and
+sends that estimate to the CPS. The functional used as part of the SSHPM is the
+utility function of each EC and the set of values being mapped over is a one
+dimensional vector space that goes from zero to whatever the total energy of
+each EC is.
 
+The CPS then receives each ES's energy estimate. From this it is able to
+estimate how willing each ES is to giving more or less energy. It cannot work
+out the private store or the caution of each ES but rather understands the ratio
+that exists between all the different players involved. The CPS then uses its
+own utility function and the vector of energy estimates from each ES as the
+inputs to a convex optimisation problem. A disciplined convex optimisation
+method is employed cite:grant2006disciplined as any standard convex optimisation 
+technique is all that is required and the Python solver CVXPY cite:diamond2016cvxpy was readily
+available. A new vector of prices per ES is generated and each one is sent to
+each ES. This is the actual price that each ES receives.
 
+The ESs then play another game using their utility functions and the new price
+that they have been offered by the CPS and try to find the actual amount of
+energy that they are willing to give away using SSHPM. This energy is then sent
+to the CPS. The CPS then sums the total of energy that has been provided at that
+time. If this energy matches the total demand of the consumers in the nanogrid,
+then the energy is simply supplied to those who need it, on a first come first
+serve basis. However, if the supply does not reach the demand then the CPS buys
+the extra power that is needed from the central power grid as seen in Figure
+7.1. This system accepts the fact that it may not be able to supply all
+consumers within the nanogrid using solely local sources that exist within its
+own grid. Once the supply matches the demand, the power is then distributed as
+before. The process then starts again ahead of the next timeslot to ensure that
+everyone that needs power during that time is supplied.
 *** Game Design
 *** Utility Functions
 **** EC Utility Function
