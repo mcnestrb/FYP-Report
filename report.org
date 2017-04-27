@@ -470,7 +470,6 @@ application of this method will be discussed in further detail.
 * Implementation
 ** Design
 *** Games vs Auctions
-
 In the background section of this report both the concepts of Auctions and Game
 Theory as both were considered as potential candidates for the management system
 to match supply and demand in a nanogrid system. Ultimately however, a
@@ -667,8 +666,49 @@ receives from any given connection. It was easiest to abstract the problem out
 in this fashion for ease of reading and understanding of the code for both the
 programmer and any potential readers. Each EC and the CPS is finally wrapped by
 a simple run script that just sets up the factory from which everything else is
-run. 
+run. In each section below, the FSM of both the ECs and the CPS will be examined
+as the system is conducted in the same fashion for both, where the protocol
+calls a different function in the FSM depending on the state of the actor at
+that time.
 *** Client (EC)
+**** Idle State
+The idle state is merely a state for in between operations of the system, where
+no game is being played. In this project it was also used as an initial state
+before the user decides to start the game. When a new game is started by the
+CPS, it notifies each EC to move into the start state.
+**** Start State
+The start state is where the EC sends a message to the CPS to inform it as to
+whether it is a supplier or a consumer for the upcoming timeslot. If it is a
+consumer then it also sends the amount of energy that it requires at that time.
+Also if an EC in the nanogrid requires no energy for the next timeslot, then it
+simply puts itself back into the idle state, awaiting the next timeslot when it
+might need or be able to supply energy. An EC moves to the Estimate 1 State if
+it is a supplier and to the receive state if it is a consumer.
+**** Estimate 1 State
+This state is used for when the ESs are playing the game and making their first
+estimate of how much energy they are willing to offer to the CPS. In this state,
+if an ES is told to "End" its iterations then it moves to the second estimation
+state (Estimate 2 State). Otherwise it uses the hyperplane projection method
+solver (SSHPM Implementation) that was developed as part of this project and
+sends a slack variable to the CPS, used in determining Nash Equilibrium for the
+game. 
+**** Estimate 2 State
+The Estimate 2 State is more or less the exact same as Estimate 1 State except
+that when it receives the "End" message, it instead moves back to the idle
+state, having successfully supplied energy to the CPS and having been
+remunerated for that energy. If it doesn't receive the end message then it uses
+SSHPM to calculate a new slack variable and continues playing the game.
+**** Receive State
+The Receive State is the state for any consumers for the current timeslot. An EC
+stays in this state until the operation of the system has been completed and the
+energy is distributed to it accordingly. Once it receives this energy, it
+returns to the Idle state in order to wait for the next timeslot.
+**** SSHPM Implementation
+The SSHPM implementation caused the greatest amount of difficulty as part of
+this final year project. The paper cite:solodov1999new details a complex and
+dense mathematical algorithm that was difficult to grasp and to implement. The
+functions with the SSHPM.py file follow the steps in the algorithm defined by
+Solodov and Svaiter.
 *** Server (CPS)
 * Conclusion
 ** Results
