@@ -710,10 +710,63 @@ dense mathematical algorithm that was difficult to grasp and to implement. The
 functions with the SSHPM.py file follow the steps in the algorithm defined by
 Solodov and Svaiter.
 *** Server (CPS)
+**** Idle State
+The Idle State is used while the there is no game happening and the CPS is idle.
+The CPS is then able to move into the start state when it wants to begin a game
+immediately preceding a new timeslot. In this implementation it's also used on
+start-up of the system so that the operation of the system doesn't being until
+every EC is connected to the CPS. Each connected EC is stored in a Python
+dictionary with its relevant connection.
+**** Start State
+The Start state accepts incoming messages from each of the ECs about whether
+they will be a consumer or a supplier for the current timeslot or if they will
+be abstaining from the current round of operation. It stores each EC's role in
+the upcoming game and doesn't move to the next state until every single EC in
+the network has given an answer as to what their role shall be. The CPS then
+naively calculates the demand by simply summing the values given by each of the
+consumers and then moves to the Init State, 
+**** Init State
+The Init State is used to allow the suppliers who will be taking part in the
+game to start the game by providing them with the values that they need. Each EC
+is sent the energy deficiency ($E_{def}$) for the current timeslot and price that
+it is willing to offer to each EC which it calculates by multiplying $E_{def}$ by
+the current price per unit of energy and dividing that by the number of ESs in
+the system. The CPS then moves to the Game 1 State.
+**** Game 1 State
+The Game 1 State is used for the first game that is played by the ECs that are
+supplying energy for the current timeslot. When all connected ESs have responded
+with their slack variables, the CPS runs a quick check as to whether or not the
+slack variables are equal. If they are then it tells the ESs to finish their
+iterations of SSHPM and to send the energy estimate that they used to calculate
+the last slack variable that they sent and then the CPS moves to the
+Optimisation State. If the slack variables are not all equal then the CPS tells
+the ESs to continue playing the game.
+**** Optimisation State
+The Optimisation state first waits to receive the energy estimates from each ES
+in the game of the current timeslot before beginning the convex optimisation. It
+formulates the problem and then solves it using the CVXPY cite:diamond2016cvxpy
+solver library. The new prices are then extracted from the solver and the CPS
+sends the relevant price to each ES before moving to the Game 2 State.
+**** Game 2 State
+The Game 2 State is more or less identical to the Game 1 State except that it is
+concerned with managing the ESs who are trying to calculate the actual amount of
+energy that they will give to the CPS as opposed to an estimate. In this state,
+when the slack variables are equal, it similarly tells the ECs to stop the
+iterations of their game and then it moves the CPS to the Distribute State.
+**** Distribute State
+The Distribute State first makes sure that all ESs have submitted the amount of
+energy that they are going to provide to the CPS. It then sums these values and
+compares that to $E_{def}$ and if it the supplied energy is insufficient, then it
+buys the extra energy needed from the central grid. It then disperses the energy
+needed to each of the consumers within the current timeslot and moves into the
+idle state, ready for the next game before the next timeslot.
 * Conclusion
 ** Results
 ** Assessment
 ** Future Work and Continuations
+   :LOGBOOK:
+   CLOCK: [2017-04-27 Thu 20:29]
+   :END:
 
 \printbibliography
 \appendix
