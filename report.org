@@ -791,12 +791,33 @@ buys the extra energy needed from the central grid. It then disperses the energy
 needed to each of the consumers within the current timeslot and moves into the
 idle state, ready for the next game before the next timeslot.
 * Conclusion
-** Results
 ** Assessment
-stuff about how this would require a refit scheme first to ensure growth
-A few years down the line
-Did it work?
+Ultimately the success of the system was unable to be determined due to
+difficulties with the implementation of the hyperplane projection method. In
+order to solve this obstacle, a number of lecturers within the school of
+computer science were contacted for assistance and the author of the paper,
+Wayes Tushar, was approached. However Mr Tushar was unavailable and the
+assistance provided was not enough to reach a proper understanding of the
+mathematics involved in SSHPM in order to work out a correct code
+implementation.
 
+An important question to answer as part of this project, is about the likeliness
+of such an system being implemented in the real world. First of all it must be
+noted that such a system could only exist in a few years' time when suitable
+prediction methods have been developed for predicting the amount of energy that
+a consumer will require within the next timeslot. Secondly, the installation of
+such a smart grid would require a huge overhaul of the current network if it
+were to jump straight to this system. Rather a more realistic approach would be
+to first introduce smart meters into homes in conjunction with the current grid,
+like is in place in Italy as discussed previously and to follow that with a
+REFIT scheme to incentivise the installation and construction of local renewable
+energy sources as is in place in Germany. At this point it would then be
+possible and feasible to introduce a system such as the one discussed in this
+report. The reason why a REFIT scheme would need to precede a game theoretic
+solution is that on a human level, people would need a tangible and static
+amount of money to ensure that they would see a return on their investment
+whereas the game theoretic approach does not yield a concrete and easy to grasp
+amount of money.
 ** Future Work and Continuations
 There are a number of interesting ways in which this project could be continued,
 that were realised during the course of the investigation of the field of smart
