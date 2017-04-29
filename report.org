@@ -28,13 +28,13 @@
 * Introduction
 At present in the field of smart grid technologies, there is an abundance of
 theoretical approaches to the problems of managing the transactions between
-consumers and suppliers of energy. While there are multiple facets to this
-problem, in this project the problem of matching supply and demand in the face
-of unpredictable supply was examined. The world is slowly moving towards a
-future in which renewable energy sources will become our primary source of
-energy production, particularly with the inevitable depletion of fossil fuels.
-This future of more unpredictable supply of energy will require a smarter
-approach to the accumulation and distribution of energy and due to the
+consumers and suppliers of energy cite:ambrosio2016transactive. While there are
+multiple facets to this problem, in this project the problem of matching supply
+and demand in the face of unpredictable supply was examined. The world is slowly
+moving towards a future in which renewable energy sources will become our
+primary source of energy production, particularly with the inevitable depletion
+of fossil fuels. This future of more unpredictable supply of energy will require
+a smarter approach to the accumulation and distribution of energy and due to the
 proliferation of decision making computers, the smart grid is the ideal
 solution. As mentioned already, there are hundreds of papers with theoretical
 solutions to this problem, however very few have real implementations and do not
@@ -645,11 +645,21 @@ account the energy that EC $n$ has stored $E_n$, the price being offered to it
 $p_n$, the caution value of that EC $c_n$ and the energy that it is offering $e_n$.
 $$ U(e_n, E_n, p_n) = p_{n}e_{n} + (E_{n} - c_{n}e_{n})e_{n} $$ 
 This utility function is based on the profit that the EC could get when it is
-supplying energy, that is $p_{n}e_{n}$. $(E_{n} - c_{n}e_{n})e_{n}$ represents the loss that the
-EC incurs by giving away a certain amount of power. Ultimately the system is
-trying to maximise the utilities of all ECs in the nanogrid, where the sum of
-all offered energies is less than or equal to the energy deficiency (demand) of the
-system for a given timeslot $E_{def}$, that is $$\sum_n e_n <= E_{def}$$.
+supplying energy, that is $p_{n}e_{n}$. $(E_{n} - c_{n}e_{n})e_{n}$ represents
+the loss that the EC incurs by giving away a certain amount of power. Ultimately
+the system is trying to maximise the utilities of all ECs in the nanogrid, where
+the sum of all offered energies is less than or equal to the energy deficiency
+(demand) of the system for a given timeslot $E_{def}$, that is $$\sum_n e_n <=
+E_{def}$$. 
+
+The utility function defined for the EC is the the crux of this project in order
+to both structure the game itself and to determine the efficacy of the system.
+The utility function is defined such that each EC is better utilised for each
+timeslot but also does not expend too much electricity at one time unless the
+incentive, namely the price, for it to do so is very high. This means that at a
+later stage when there is perhaps a higher deficit, it can make more money in
+the future as opposed to potentially being depleted of energy for the times of
+high profit.
 **** CPS Utility Function
 The CPS has its own utility function that serves as the convex function for the
 convex optimisation problem in trying to find appropriate prices for each of the
@@ -659,8 +669,8 @@ that each ES is offering $e_n$, the price that the CPS would offer for that
 energy $p_n$ and two scalar values $a_n$ and $b_n$  that account for the costs
 associated with storing and transmitting the energy.
 
-$$min_p L(p,e) = min_{p_{n}} \sum_n(e_{n}p_n^r + a_{n}p_{n} + b_n), subject to \sum_n p_n = P, p_{min}
-<= p_n <= p_{max}$$
+$$min_p L(p,e) = min_{p_{n}} \sum_n(e_{n}p_n^r + a_{n}p_{n} + b_n), subject to
+\sum_n p_n = P, p_{min} <= p_n <= p_{max}$$
 
 For each ES, the CPS is trying to find the value of $p_n$ that will give the
 smallest value. However all values of $p_n$ must sum to be equal to the value of
@@ -857,12 +867,12 @@ then by allowing them to sell energy to further reduce their costs.
 
 The final potential continuation of this project would be to pair any devices
 that would solely be suppliers in a nanogrid such as wind turbines and solar
-panels, with some form of prediction software relating to weather patterns. This
-data could then be used to inform an EC's caution value. For example if the EC
-was nearing capacity and it knew that it was going to be generating enough
-electricity that it would be unable to store it, then it could have a very low
-caution value. Conversely, low energy capacity and low production in the future
-could could be used to inform a higher caution value.
+panels, with some form of prediction software relating to weather patterns
+cite:foley2012current. This data could then be used to inform an EC's caution
+value. For example if the EC was nearing capacity and it knew that it was going
+to be generating enough electricity that it would be unable to store it, then it
+could have a very low caution value. Conversely, low energy capacity and low
+production in the future could could be used to inform a higher caution value.
 
 pair with prediction software for energy production - dynamic caution value 
 
