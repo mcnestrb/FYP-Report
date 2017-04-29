@@ -801,33 +801,62 @@ buys the extra energy needed from the central grid. It then disperses the energy
 needed to each of the consumers within the current timeslot and moves into the
 idle state, ready for the next game before the next timeslot.
 * Conclusion
-** Assessment
+** Results
 Ultimately the success of the system was unable to be determined due to
-difficulties with the implementation of the hyperplane projection method. In
+difficulties with the implementation of the hyperplane projection method.
+Instead of converging on a value for the energy estimate, it instead approaches
+zero for every instance but never reaches it, and therefore runs infinitely. In
 order to solve this obstacle, a number of lecturers within the school of
 computer science were contacted for assistance and the author of the paper,
 Wayes Tushar, was approached. However Mr Tushar was unavailable and the
 assistance provided was not enough to reach a proper understanding of the
 mathematics involved in SSHPM in order to work out a correct code
-implementation.
+implementation. 
 
-An important question to answer as part of this project, is about the likeliness
-of such an system being implemented in the real world. First of all it must be
-noted that such a system could only exist in a few years' time when suitable
-prediction methods have been developed for predicting the amount of energy that
-a consumer will require within the next timeslot. Secondly, the installation of
-such a smart grid would require a huge overhaul of the current network if it
-were to jump straight to this system. Rather a more realistic approach would be
-to first introduce smart meters into homes in conjunction with the current grid,
-like is in place in Italy as discussed previously and to follow that with a
-REFIT scheme to incentivise the installation and construction of local renewable
-energy sources as is in place in Germany. At this point it would then be
-possible and feasible to introduce a system such as the one discussed in this
-report. The reason why a REFIT scheme would need to precede a game theoretic
-solution is that on a human level, people would need a tangible and static
-amount of money to ensure that they would see a return on their investment
-whereas the game theoretic approach does not yield a concrete and easy to grasp
-amount of money.
+However, a pen and paper version of a comparison between the REFIT scheme and
+the proposed scheme was worked out to demonstrate a potential scenario of
+operation in order to compare the two systems. The slack variables were
+calculated on paper and are hard-coded into the current system in order that the
+code can be run as opposed to running forever. The actual code is still there
+but merely commented out. This is commented on in the code. This scenario was
+run between a single consumer and two suppliers. The consumer sets $E_{def}= 700$
+and the two suppliers have $E_{1} = 1100$ and $E_{2} = 1000$. The price per unit (kWh)
+is set at $1.85$. When the proposed system is run with these values the sum of
+utilities $\sum_{n} U_n = 1069618.928$. Compared to the REFIT scheme where the ratio
+between the ratio of capacities is used as a naive method of deciding how much
+energy should be given by each EC, in a system where they share private
+information. In this scenario, the sum of utilities $\sum_{n} U_n = 1068167.8$.
+
+Unfortunately, due to the lack of conversion on correct values by the system, no
+further scenarios could be calculated as it is unclear as to what the values
+that the optimisation methods would reach in instances where the supply does not
+meet the demand. Optimisation techniques can often require several iterations
+before converging on a correct value and therefore are not feasible to be worked
+out on paper.
+** Assessment
+From the numerical results it can be easily seen that the proposed method in
+this instance is superior to the REFIT scheme as the sum of utilities is greater
+in the former approach. However the difference between the two utilities is
+minimal so this system may not be the worth implementation in the real world. A
+working solution, however, would verify whether this statement is true or not.
+
+Regardless, an important question to answer as part of this project, is about
+the likeliness of such an system being implemented in the real world. First of
+all it must be noted that such a system could only exist in a few years' time
+when suitable prediction methods have been developed for predicting the amount
+of energy that a consumer will require within the next timeslot. Secondly, the
+installation of such a smart grid would require a huge overhaul of the current
+network if it were to jump straight to this system. Rather a more realistic
+approach would be to first introduce smart meters into homes in conjunction with
+the current grid, like is in place in Italy as discussed previously and to
+follow that with a REFIT scheme to incentivise the installation and construction
+of local renewable energy sources as is in place in Germany. At this point it
+would then be possible and feasible to introduce a system such as the one
+discussed in this report. The reason why a REFIT scheme would need to precede a
+game theoretic solution is that on a human level, people would need a tangible
+and static amount of money to ensure that they would see a return on their
+investment whereas the game theoretic approach does not yield a concrete and
+easy to grasp amount of money.
 ** Future Work and Continuations
 There are a number of interesting ways in which this project could be continued,
 that were realised during the course of the investigation of the field of smart
@@ -873,8 +902,6 @@ value. For example if the EC was nearing capacity and it knew that it was going
 to be generating enough electricity that it would be unable to store it, then it
 could have a very low caution value. Conversely, low energy capacity and low
 production in the future could could be used to inform a higher caution value.
-
-pair with prediction software for energy production - dynamic caution value 
 
 \printbibliography
 \appendix
