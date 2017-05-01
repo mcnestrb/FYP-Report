@@ -859,46 +859,46 @@ tangible and static amounts of money to ensure that they would see a return on
 their investment whereas the game theoretic approach does not yield a concrete
 and easy-to-grasp amount of money.
 ** Future Work and Continuations
-There are a number of interesting ways in which this project could be continued,
-that were realised during the course of the investigation of the field of smart
-grids and in the particular area around which this project is based. These are
-in two distinct categories: the former being ways in which this project could
-have been extended had there been more time and the latter being ways in which
+There are a number of ways in which this project could be continued, that were
+discovered during the course of the investigation of the field of smart grids
+and in the particular area around which this project is based. These fall under
+two distinct categories: the first being aspects in which this project could
+have been extended had there been more time, and the second being ways in which
 investigations could be made into pairing this project with other proposed smart
-grid technologies. 
+grid technologies.
 
-Originally there was the intention to eventually implement a prototype for the
-supply and demand matching using a number of Raspberry Pis connected over a WiFi
-network in order to analyse network latencies as well as to create a real,
-tangible network and prove whether or not this system could be implemented on a
-larger scale.
+Originally it was intended that the project would include implementing a
+prototype for the supply and demand matching using a number of Raspberry Pis
+connected over a WiFi network. This could then be used to analyse network
+latencies as well as to create a real network and prove whether or not this
+system could be implemented on a larger scale.
 
-Another potential extension would be to create a hierarchy of CPSs in a larger
+A second potential extension would be to create a hierarchy of CPSs in a larger
 smart grid, where the CPS of a nanogrid in a house would then act as an EC
 within say the community or neighbourhood. The CPS controlling that region would
-then be an EC for a larger region, say a county or even an area code. However a
+then be an EC for a larger region, say a county or even an area code. However, a
 major change would need to take place in order to implement such a system. The
-current system that was examined in this project, only ever tried to supply
+current system which was examined in this project, only attempted to supply
 energy less than or equal to the upcoming energy deficiency. This extension
-however would require the game to be able to produce a surplus of electricity
-for a single house at a given time period. If this was possible then a house
+however, would require the system to be able to produce a surplus of electricity
+for a single house at a given time period. If this were possible then a house
 could then act as a supplier in the game within its own neighbourhood and
-actually generate a further profit for that house. 
+actually generate a further profit for that house.
 
-As mentioned previously in this report, as well as supply side management
-systems, there are also plenty of papers concerned with demand side management.
-Most of these papers were primarily concerned with driving down the price of
-energy at any one given timeslot so it would be interesting to investigate
-pairing such a system with the system in this paper in order to see whether the
-low price generated is still enough to incentivise suppliers to give energy to
-the CPS. If successful, such an amalgamation would help citizens who had such a
+As mentioned previously, as well as supply side management systems, there are
+also numerous papers concerned with demand side management. Most of these papers
+were primarily concerned with driving down the price of energy at any one given
+timeslot so it would be both beneficial and interesting to investigate pairing
+such a system with the system in this paper in order to see whether the low
+price generated is still enough to incentivise suppliers to give energy to the
+CPS. If successful, such an amalgamation would help consumers who had such a
 grid system set up in two different ways, first by driving down their costs and
-then by allowing them to sell energy to further reduce their costs.
+then by allowing them to sell energy to make further savings.
 
 The final potential continuation of this project would be to pair any devices
-that would solely be suppliers in a nanogrid such as wind turbines and solar
-panels, with some form of prediction software relating to weather patterns
-cite:foley2012current. This data could then be used to inform an EC's caution
+that would normally solely be suppliers in a nanogrid, such as wind turbines and
+solar panels, with some form of prediction software relating to weather patterns
+cite:foley2012current. This data could then be used to inform an EC’s caution
 value. For example if the EC was nearing capacity and it knew that it was going
 to be generating enough electricity that it would be unable to store it, then it
 could have a very low caution value. Conversely, low energy capacity and low
