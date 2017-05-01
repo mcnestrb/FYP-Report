@@ -570,8 +570,8 @@ case of the former then it also sends how much energy it requires. Figure 7.1
 shows the situation where ECs within the grid have already made it clear as to
 whether they are a supplier or a consumer for this particular timeslot.
 
-The CPS then simply sums the total demand and can begin the game. It sends to
-the total demand, the total amount of money it has available to give and the
+The CPS then simply sums the total demand and can begin the game. It sends the
+total demand, the total amount of money it has available to give and the
 number of suppliers within the system to each Energy Supplier (ES). The total
 price is calculated naively by multiplying the current price per unit that is
 offered by the central grid by the number of units of energy required by the
@@ -610,21 +610,21 @@ before. The process then starts again ahead of the next timeslot to ensure that
 everyone that needs power during that time is supplied.
 *** Game Design
 First some of the key components of the game as well as a brief overview of how
-it  is conducted will be explained and then after that, the game will be
-discussed ins and outs will be discussed in further detail The game played
-between all of the ESs that are trying to receive remuneration for the energy
-they are willing to offer is played across two steps. First of all the ESs use
-their utility functions along with a number of other important variables such as
-their energy capacity $E_n$, caution $c_n and the current price offer $p_n$ in
-order to determine their new estimate for how much energy they are willing to
-offer to the CPS $e_n$, where $n \in N$, N being the set of all ESs taking part in
-the nanogrid. Next they use that energy estimate to calculate a slack variable
-$\varepsilon_n$ which is a variable indicating the amount of energy it is willing to offer
-without giving up any private information. These slack variables are derived
-from the ES's utility functions which will be discussed in the next section. The
-slack variables are used by the CPS to determine Nash Equilibrium within the
-game, namely this is when all of the slack variables are equal. Once this state
-of equilibrium is reached, then the CPS asks for the energy offer from each of the
+it is conducted will be explained. Following that, the game itself will be
+discussed in further detail. The game played between all of the ESs that are
+trying to receive remuneration for the energy they are willing to offer is
+played across two steps. First of all the ESs use their utility functions along
+with a number of other important variables such as their energy capacity $E_n$,
+caution $c_n and the current price offer $p_n$ in order to determine their new
+estimate for how much energy they are willing to offer to the CPS $e_n$, where
+$n \in N$, N being the set of all ESs taking part in the nanogrid. Next they use
+that energy estimate to calculate a slack variable $\varepsilon_n$ which is a
+variable indicating the amount of energy it is willing to offer without giving
+up any private information. These slack variables are derived from the ES's
+utility functions which will be discussed in the next section. The slack
+variables are used by the CPS to determine Nash Equilibrium within the game,
+namely this is when all of the slack variables are equal. Once this state of
+equilibrium is reached, then the CPS asks for the energy offer from each of the
 ESs.
 
 When the hyperplane projection is initially calculated there is a small piece of
@@ -755,7 +755,7 @@ Solodov and Svaiter.
 The Idle State is used while the there is no game happening and the CPS is idle.
 The CPS is then able to move into the start state when it wants to begin a game
 immediately preceding a new timeslot. In this implementation it's also used on
-start-up of the system so that the operation of the system doesn't being until
+start-up of the system so that the operation of the system doesn't begin until
 every EC is connected to the CPS. Each connected EC is stored in a Python
 dictionary with its relevant connection.
 **** Start State
@@ -770,9 +770,9 @@ consumers and then moves to the Init State,
 The Init State is used to allow the suppliers who will be taking part in the
 game to start the game by providing them with the values that they need. Each EC
 is sent the energy deficiency ($E_{def}$) for the current timeslot and price that
-it is willing to offer to each EC which it calculates by multiplying $E_{def}$ by
-the current price per unit of energy and dividing that by the number of ESs in
-the system. The CPS then moves to the Game 1 State.
+the CPS is willing to offer to each EC. The price is calculated by multiplying
+$E_{def}$ by the current price per unit of energy and dividing that by the
+number of ESs in the system. The CPS then moves to the Game 1 State.
 **** Game 1 State
 The Game 1 State is used for the first game that is played by the ECs that are
 supplying energy for the current timeslot. When all connected ESs have responded
