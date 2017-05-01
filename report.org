@@ -256,82 +256,82 @@ other reasons, led to auctions not being implemented for this project and this
 will be discussed in further detail later.
 ** Game Theory
 *** Overview
-The field of game theory has been one that has many different facets and
-versions depending on the type of situation required. In this section of the
-report the nomenclature and jargon of game theory will be discussed, as will a
-short explanation about the decision of selection of the type of game
-implemented as part of this final year project. First the two primary types of
-interactions between players in a game will be discussed and after that the two
-primary types of playing styles will be discussed. However first of all there
-are certain traits that are universal for any type of game that must first be
-explained in order to grasp the concept of game theory enough to understand some
-of the implementation decisions later in this report as well as to grasp the
-general concept of game theory itself.
+The field of game theory is one that has many different facets and versions
+depending on the situation in which this is used. In this section the
+nomenclature and jargon of game theory will be discussed, as will a short
+explanation about the decision to select the type of game implemented as part of
+this final year project. First the two main types of interactions between
+players in a game will be discussed and after that the two primary types of
+playing styles. However, before this, certain traits that are universal for any
+type of game that must first be explained in order to grasp the concept of game
+theory enough to understand some implementation decisions later in this report
+to grasp the general concept of game theory itself.
 
 In game theory, players within a game compete for a finite resource with the
 objective of maximising their own utility within the scope of that game. Each
 player within the game has an associated utility function that is generally the
 same for all players within that game. The utility function generally results in
-some scalar value that is trying to reach some max value, whether on an
-individual or collective level. There is also generally some kind of manager
-node that helps to conduct the game between all of the players involved. Within
-any particular game, the players are all trying to maximise their own utility,
-however in different types of games they may also be conscious of the utilities
-of all the other players involved and try to react accordingly, whether to
-further their own goal or to further the goals of the collective group.
+some scalar value which is trying to reach some maximum value, either on an
+individual or collective level. There is generally some kind of manager node
+also involved, which helps to conduct the game between all of the players
+involved. Within any particular game, the players are all trying to maximise
+their own utility. However in different types of games they may also be
+conscious of the utilities of all the other players involved and try to react
+accordingly, whether to further their own goal or to further the goals of the
+collective group.
 
-A well defined game also has some from of state of equilibrium. This state of
+A well defined game has some form of state of equilibrium. This state of
 equilibrium is when the sum of utilities of all the players within the game
 reaches a maximum. The central managing node, if there is one, generally decides
 whether or not this state has been reached. This state is the success state of
 the game. In a well-designed game the utility function must be designed such
-that the state of equilibrium not only can be reached but also that reaching
-that state is appealing to all players within the game.
+that the state of equilibrium, that is the success state, not only can be
+reached but also that reaching that state is appealing to all players within the
+game.
 *** Non-Cooperative Game Theory
-Non-Cooperative games are the simplest types of games to both understand and
-design. As previously stated, each player is trying to maximise its own utility
-but the core component of a non-cooperative game is that all of the players are
-operating purely independently. Each player within the game knows the best
-strategy to take in order to maximise its own utility. Because each player in a
-game has the same moves open for them to take and therefore the same strategy
-that each other player will take to maximise their own respective utilities.
+Non-Cooperative games are the simplest types of games both to understand and
+design. The core component of a non-cooperative game is that all of the players
+are operating purely independently while trying to maximise their own utility.
+Each player within the game knows the best strategy to take in order to maximise
+their own utility. Because every player in a game has the same objectives and
+strategies available to them, each player knows what strategy will maximise its
+own utility, based on everyone else trying the same technique
 
-This is where the concept of Nash Equilibrium comes into play. Nash Equilibrium
-is the state in which there is the least disparity between the best player and
-the worst player, that is that each player performs the best that it can with
-the knowledge that all other players are similarly going to try to maximise
-their own utilities. With this knowledge, each player is then able to pick the
+This is where the concept of equilibrium comes into play. Equilibrium is the
+state in which there is the least disparity between the best player and the
+worst player, that is that each player performs the best that it can with the
+knowledge that all other players are similarly going to try to maximise their
+own utilities. With this knowledge, each player is then able to pick the
 strategy that maximises its own utility, taking into consideration that all
 other players are trying to do the exact same thing and therefore it picks an
 appropriate strategy. In a well designed game, there should also be no incentive
 for a player to change their strategy to try to undercut other players. If made
 correctly, such an action would have an adverse effect on the player in the
-game. In this case all other players would then be aware that this players
+game. In this case all other players would then be aware that this player’s
 strategy had changed and would then react accordingly in order to maximise their
-own utility and decrease that player's utility.
+own utility and decrease that player’s utility.
 *** Cooperative Game Theory
 Cooperative game theory shares many similar traits with that of non-cooperative
-game theory as outlined in the overview section of this part on game theory in
-this report. However the key aspect of cooperative game theory is that players
-within the game will form coalitions based on threats and incentives that occur
-between each other. The key component of cooperative game theory is the
-analysis of which coalitions are likely to form within any given game and what
-the projected outcomes are based upon these permutations of coalitions. In this
-way the study of cooperative games have two main facets. First of all they are
-concerned with what might cause different groups of players to act together in
-unison. Secondly they are concerned with the outcomes from the most likely of
-each of these games that happen when different groups form.
+game theory as outlined in section 5.1. However the defining feature of
+cooperative game theory is that players within the game will form coalitions
+based on threats and incentives that occur between each other. The key component
+of cooperative game theory is the analysis of which coalitions are likely to
+form within any given game and what the projected outcomes are based upon these
+permutations of coalitions. In this way the study of cooperative games have two
+main facets. Firstly, they are concerned with what might cause different groups
+of players to act together in unison. Secondly they are concerned with the most
+likely outcomes of each of these games that happen when different groups form.
 
-In this project, the nodes involved in the game are all energy suppliers who are
-each trying to maximise their own profit based on the amount of energy that they
-are able to sell. The utility functions of the nodes and other such details will
+In this project, the nodes involved in the game are all of the energy suppliers
+who are trying to maximise their own profit based on the amount of energy that
+they are able to sell. The utility functions of the nodes and other details will
 be discussed later in the Implementation section of this report. The desired
 outcome of each player is therefore entirely selfish and because they are all
 trying to compete for a finite price, they each want to obtain as much of that
-money as possible. Therefore it does not make sense to design this game in such
-a way that these players should be able to form coalitions, as any coalition
-would involve compromising and receiving less money which doesn't make sense in
-this game. Similarly due to the lack of communication between the players in the
+money as possible. Therefore it does not follow to design this game in such a
+way that these players should be able to form coalitions, as any coalition would
+involve compromising and receiving less money which doesn’t make sense in this
+game. Similarly due to the lack of communication between the players in the
 game, they can also never know if other players could change their strategies so
 are unable to even realise that cooperation is even possible at any given stage.
 *** Cournot and Stackelberg Games
@@ -339,7 +339,7 @@ Cournot and Stackelberg games are two manners in which players participate in
 the game, in other words they constitute the structure of the game as opposed to
 how players react to one another and strategise within the game. Both of these
 are relatively easy concepts to understand so this section should be quite
-short. Because these different structures of games effect the way in which a
+short. Because these different structures of games affect the way in which a
 player interacts with the other players in the game, different strategies can be
 better or worse based on whether the game is a Cournot game or a Stackelberg
 game and in some cases some strategies may not even be possible within different
