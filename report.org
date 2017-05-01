@@ -807,26 +807,26 @@ Ultimately the success of the system was unable to be determined due to
 difficulties with the implementation of the hyperplane projection method.
 Instead of converging on a value for the energy estimate, it instead approaches
 zero for every instance but never reaches it, and therefore runs infinitely. In
-order to solve this obstacle, a number of lecturers within the school of
-computer science were contacted for assistance and the author of the paper,
-Wayes Tushar, was approached. However Mr Tushar was unavailable and the
-assistance provided was not enough to reach a proper understanding of the
-mathematics involved in SSHPM in order to work out a correct code
-implementation. 
-
-However, a pen and paper version of a comparison between the REFIT scheme and
-the proposed scheme was worked out to demonstrate a potential scenario of
-operation in order to compare the two systems. The slack variables were
-calculated on paper and are hard-coded into the current system in order that the
-code can be run as opposed to running forever. The actual code is still there
-but merely commented out. This is commented on in the code. This scenario was
-run between a single consumer and two suppliers. The consumer sets $E_{def}= 700$
-and the two suppliers have $E_{1} = 1100$ and $E_{2} = 1000$. The price per unit (kWh)
-is set at $1.85$. When the proposed system is run with these values the sum of
-utilities $\sum_{n} U_n = 1069618.928$. Compared to the REFIT scheme where the ratio
-between the ratio of capacities is used as a naive method of deciding how much
-energy should be given by each EC, in a system where they share private
-information. In this scenario, the sum of utilities $\sum_{n} U_n = 1068167.8$.
+order to solve for this, a number of lecturers within the school of computer
+science were contacted for assistance and the author of the paper, Wayes Tushar,
+was approached. However Mr Tushar was unavailable and unfortunately a proper
+understanding of the mathematics involved in SSHPM was not reached and
+consequently a correct code implementation could not be achieved.
+ 
+However, a pen and paper comparison between the REFIT scheme and the proposed
+scheme was calculated to demonstrate a potential scenario of operation in order
+to compare the two systems. The slack variables were calculated on paper and
+were hard-coded into the current system in order that the code can be run as
+opposed to running indefinitely. The attempt at the correct solution is still
+present but is currently commented out. These sections are flagged in the code.
+This scenario was run between a single consumer and two suppliers. The consumer
+sets $Edef= 700$ and the two suppliers have $E1 = 1100$ and $E2 = 1000$. The
+price per unit (kWh) is set at $1.85$. When the proposed system is run with
+these values the sum of utilities $∑n U_n = 1069618.928$. Compared to the REFIT
+scheme where the ratio between the capacities is used as a naive method of
+deciding how much energy should be given by each EC, in a system where they
+share private information. In this scenario, the sum of utilities $∑n U_n =
+1068167.8$.
 
 Unfortunately, due to the lack of conversion on correct values by the system, no
 further scenarios could be calculated as it is unclear as to what the values
@@ -857,7 +857,7 @@ discussed in this report. The reason why a REFIT scheme would need to precede a
 game theoretic solution is that on a human level, people would need a tangible
 and static amount of money to ensure that they would see a return on their
 investment whereas the game theoretic approach does not yield a concrete and
-easy to grasp amount of money.
+easy-to-grasp amount of money.
 ** Future Work and Continuations
 There are a number of interesting ways in which this project could be continued,
 that were realised during the course of the investigation of the field of smart
