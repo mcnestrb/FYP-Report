@@ -26,36 +26,37 @@
 \pagenumbering{arabic}
 
 * Introduction
-At present in the field of smart grid technologies, there is an abundance of
+Currently in the field of smart grid technologies, there is an abundance of
 theoretical approaches to the problems of managing the transactions between
 consumers and suppliers of energy cite:ambrosio2016transactive. While there are
-multiple facets to this problem, in this project the problem of matching supply
-and demand in the face of unpredictable supply was examined. The world is slowly
+multiple facets to this problem, this project examines the problem of matching
+supply and demand in the face of unpredictable supply. The world is slowly
 moving towards a future in which renewable energy sources will become our
-primary source of energy production, particularly with the inevitable depletion
-of fossil fuels. This future of more unpredictable supply of energy will require
-a smarter approach to the accumulation and distribution of energy and due to the
-proliferation of decision making computers, the smart grid is the ideal
-solution. As mentioned already, there are hundreds of papers with theoretical
-solutions to this problem, however very few have real implementations and do not
-take into account the limitations and overheads of a real network.
+primary method of energy production, particularly with the inevitable depletion
+of fossil fuels cite:boyle1997renewable. This future, which will unfortunately be accompanied by a more
+unpredictable supply of energy, will require a smarter approach to the
+accumulation and distribution of energy. Due to the proliferation of decision
+making computers, the smart grid is a very popular solution. As mentioned
+previously,  research has been conducted by hundreds of papers on theoretical
+solutions to this problem. However very few have real implementations and do not
+take into account the limitations and overheads of a real network. 
 
-The goal of this paper is to implement a network solution to the problem of
+The goal of this project is to implement a network solution to the problem of
 matching supply and demand in the face of unpredictable supply. The paper
-authored by Wayes Tushar cite:tushar2014prioritizing will form the basis of the
-paper. The system will then be compared against a simple scenario of the current
-REFIT scheme and an analysis will be provided to see whether or not this
-particular smart grid solution would be effective in a real world situation.
+authored by Wayes Tushar cite:tushar2014prioritizing formed the basis of the
+project and therefore this report. The system will then be compared against a
+simple scenario of the current REFIT scheme cite:lauber2004refit and an analysis will be provided to
+see whether or not this particular smart grid solution would be effective in a
+real world situation. 
 
-In this paper, first a discussion of the technologies used and an explanation of
-the associated terms will be presented, including topics such as the smart grid,
-the current implementation of managing supply (REFIT), definitions of auctions
-and game theory as well as a brief summary of the mathematical optimisation
-techniques employed in this project. Next the design of the project will be
-examined and finally the actual implementation itself will be presented. At the
-end of the report will be an assessment of the system designed and a number of
-potential continuations of the project will be discussed. 
-
+First a discussion of the technologies used and an explanation of the associated
+terms will be presented, including topics such as the smart grid, the current
+implementation of managing supply (REFIT), definitions of auctions and game
+theory, as well as a brief summary of the mathematical optimisation techniques
+employed in this project. Next, the design of the project will be examined and
+finally the actual implementation itself will be presented. To conclude there
+will be an assessment of the system designed and a number of potential
+continuations of the project will be discussed.
 * Background
 ** Decentralised Grid
 At present in Ireland and in many other countries, the national electric grid
