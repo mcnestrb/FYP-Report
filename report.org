@@ -177,33 +177,34 @@ also be adapted into a graph where a parent node in the tree could have multiple
 children and a child could have multiple parents. This will be discussed more in
 the conclusion.
 ** REFIT Scheme
-The REFIT scheme (Renewable Energy Feed In Tariff) cite:couture2010analysis is
-one of the most common ways in which countries around the world, including
-Germany, Spain and the state of Hawaii, try to incentivise renewable energy
-sources and suppliers to sell energy into the main grid for consumption by
-consumers. The primary tenet of the REFIT scheme is to guarantee a fixed price
-for energy provided at particular times of the day. The prices are offered in a
-non-discriminatory fashion for every kWh produced by the supplier. The price can
-be lower or higher based on the type of energy being produced, for example in
-Germany the price is higher for suppliers of solar energy than for suppliers of
-wind energy, according to the EU at the time of the writing of this report
-cite:refit_germany.
+The REFIT scheme (Renewable Energy Feed In Tariff) is one of the most common
+ways in which countries around the world, including Germany, Spain and the state
+of Hawaii cite:couture2010analysis, try to incentivise renewable energy sources
+and suppliers to sell energy into the main grid for consumption by consumers.
+The primary tenet of the REFIT scheme is to guarantee a fixed price for energy
+provided by suppliers at particular times of the day. These prices are offered
+in a non-discriminatory fashion for every kWh produced by the supplier. The
+prices can be lower or higher based on the type of energy being produced. For
+example in Germany the price is higher for suppliers of solar energy than for
+suppliers of wind energy, according to the EU at the time of the writing of this
+report cite:refit_germany.
 
-The main advantage of this type of a scheme is that it first of all incentivises
-companies to invest in renewable energy because they know they'll receive a good
-return on their investment but also incentivises landowners and home owners to
+The main advantage of this type of a scheme is that firstly it incentivises
+companies to invest in renewable energy because they know they’ll receive a good
+return on their investment. It also incentivises landowners and homeowners to
 invest, thereby creating a large infrastructure of renewable energy resources in
-a relatively small space of time and this has worked effectively in Germany. The
-payment also easily covers the cost of creating the solar panels or wind
-turbine.
+a relatively small space of time and this has worked effectively in Germany
+cite:lauber2004refit. The payment also easily covers the cost of creating the
+solar panels or wind turbines for regular consumers.
 
-The downside to the REFIT scheme however is that because it is a fixed amount
-based primarily on the type of energy produced and for how long it is being
-provided, it means that it can mean that it is not worth it for a supplier to
-sell if it has a poor supply in reserve for example. In this case, the incentive
-to sell energy is quite low as selling any energy would drain the supplier of
-most of its power. Therefore a scheme of a dynamic price model might be better
-that would incentivise all suppliers at all times.
+The main downside to the REFIT scheme however is that because it provides a
+fixed amount based primarily on the type of energy produced and for how long it
+is being provided, which means that it is not worth it for a supplier to sell if
+it has a poor supply in reserve for example. In this case, the incentive to sell
+energy is quite low as selling any energy would drain the supplier of most of
+its power. Therefore a scheme involving a dynamic price model that incentivises
+all suppliers at all times to contribute to the demand and maximise their own
+utility in the system might be better. 
 ** Auctions
 *** Overview
 The first type of node management systems considered as part of this report was
