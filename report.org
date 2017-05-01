@@ -402,7 +402,7 @@ Optimisation. Both techniques are involved with quickly and accurately solving
 for a maximum in the case of two different utility functions but operate with
 different types of sets, each one being suitable for the relevant type of problem.
 *** Convex Optimisation
-Convex optimisation is defined as the as the solving of minimisation problems
+Convex optimisation is defined as the solving of minimisation problems
 that involve convex functions being applied to convex sets cite:boyd2004convex.
 Due to the nature of the convexity of the sets involved in these sorts of
 problems, a term that I will discuss momentarily, the local minimum that is
