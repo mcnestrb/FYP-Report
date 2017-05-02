@@ -438,7 +438,7 @@ problems, a term that I will discuss momentarily, the local minimum that is
 discovered is actually a global minimum. Basically this means that the curve of
 the graphed outputs from mapping the values of a convex set through a convex
 function, only has a single minimum as opposed to a situation where the curve
-could have multiple minimums or values that can be converged on which are not
+could have multiple minimima or values that can be converged on which are not
 the true minimum of the curve. This property of a convex optimisation problem as
 well as the property of general optimisation problems of being able to solve the
 problem in polynomial time means that the true solution can be discovered
@@ -454,7 +454,7 @@ non-convex set where there is a hollow section to the region.
 [[./img/convex_set.png]]
 
 A convex function on the other hand is simply a function where the entire line
-segment between any two points on the graph is above the or on the graph. This
+segment between any two points on the graph is above or on the graph. This
 is the part of convex optimisation that determines the fact that the local
 minimum is a global minimum. Convex functions are extremely common in the field
 of mathematics such as the quadratic function $x^2$ and the exponential function
