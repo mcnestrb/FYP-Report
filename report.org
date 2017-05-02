@@ -213,7 +213,8 @@ utility in the system might be better.
 *** Overview
 The first type of node management systems considered as part of this project was
 that of auctions. Auctions generally have a number of different types of
-properties and as such, can be classified into different groupings. 
+properties cite:parsons2011auctions and as such, can be classified into
+different groupings, including: 
 
 + Single- or multi-dimensional
 + One- or two-sided
@@ -222,20 +223,16 @@ properties and as such, can be classified into different groupings.
 + Single- or multi-unit
 + Single- or multi-item
 
-While all of these are examined in detail in the book by Simon Parsons
-cite:parsons2011auctions, only one of these will be discussed here as it the
-only type of auction that was considered. The reasoning for the decision as to
-why this was the only type considered is also explained. The type of auction
-investigated was a continuous double auction. 
+While all of these are examined in detail in the book by Simon Parsons, only the
+continuous double auction will be discussed here as it the only type of auction
+that was deemed suitable. The reasoning for the decision is explained in the
+next section along with a description of what the method itself entails.
 *** Continuous Double Auction
-A continuous double auction was discussed in the paper by Ramachandran
-cite:ramachandran2011intelligent among others and was therefore a popular
-candidate by several potential energy management systems. The idea of a double
-auction is a simple one. Instead of trying to match multiple bidders to a single
-seller or multiple sellers to a single buyer, a double auction is where there
-are multiple sellers and multiple bidders. Through combining the buy-side and
-the sell-side of an auction into a single process, we then have a two-sided or
-double action. 
+The idea of a double auction is a simple one. Instead of trying to match
+multiple bidders to a single seller or multiple sellers to a single buyer, a
+double auction is where there are multiple sellers and multiple bidders. Through
+combining the buy-side and the sell-side of an auction into a single process, we
+then have a two-sided or double action. 
 
 A continuous double auction is an extension and a refinement of a double auction
 where multiple rounds are conducted until as many bidders and sellers have been
@@ -248,16 +245,19 @@ their respective buying or selling thresholds.
 
 The reason why this particular style of auction was chosen to be investigated
 was that it matches the real world scenario of having multiple consumers within
-a nanogrid environment as well as multiple suppliers. It is also reasonable to
+a nanogrid environment as well as multiple suppliers and as such proved to be a
+popular choice among many proposed auction based solutions to the smart grid
+problem cite:ramachandran2011intelligent. It is also reasonable to
 assume that some kind of memory might be built into the consumers and suppliers
 so that they might remember what each other offered on previous occasions and
 submit bids in order to be accepted quicker. The iterative style of the
 continuous auction was appealing and realistic due to the nature of managing the
-bids and sales of so many different actors within one given system. Most of the
-auctions investigated as part of this project required the central controller
-having access to all the private information of all the other nodes. This, among
-other reasons, led to auctions not being implemented for this project and this
-will be discussed in further detail later.
+bids and sales of so many different actors within one given system.
+
+However, most of the auctions investigated as part of this project required the central
+controller having access to all the private information of all the other nodes.
+This, among other reasons, led to auctions not being implemented for this
+project and this will be discussed in further detail later.
 ** Game Theory
 *** Overview
 The field of game theory is one that has many different facets and versions
