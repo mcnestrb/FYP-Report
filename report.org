@@ -59,18 +59,16 @@ will be an assessment of the system designed and a number of potential
 continuations of the project will be discussed.
 * Background
 ** Decentralised Grid
-At present, in Ireland and in many other countries, the national electric grid
-infrastructure is controlled by a central body, namely the ESB. While there are
-several electricity providers in Ireland, such as Bord Gáis Energy, SSE
-Airtricity and Energy Ireland, each of them use the same distribution network.
-Fundamentally, the power is provided from each of the different providers and
-then routed into the same centralised hub belonging to the ESB. From there, each
-consumer (a household) receives the energy that they pay for accordingly at a
-fixed rate through that same infrastructure belonging to the ESB. This is
-similar to many other countries where there is a centralised grid.
+For many years, in Ireland and in many other countries, the national electric grid
+infrastructure was controlled by a central body, namely the ESB. The various
+electricity providers all used the same distribution network. Fundamentally, the
+power was provided from each of the different providers and then routed into the
+same centralised hub belonging to the ESB. From there, each consumer (a
+household) received the energy that they paid for accordingly at a fixed rate
+through that same infrastructure belonging to the ESB.
 
 This system has been in place for decades and lends itself very well to large
-companies can providing a steady supply of energy by way of electricity plants
+companies providing a steady supply of energy by way of electricity plants
 that use both renewable and nonrenewable energy sources. Non-renewable energy
 sources, also known as fossil fuels, include resources such as coal, gas and
 oil. While these are finite resources, at present they can be burned at a steady
@@ -134,48 +132,54 @@ with some kind of prediction technology. An example of such a system has been
 proposed by Garcia et al cite:mohsenian2010optimal where a device tries to time
 its own operation within a certain time-frame in accordance with when the price
 of energy is cheapest. It also attempts to predict how much energy the system
-will consume based off its own knowledge of previous experiences in buying power
+will consume based on its own knowledge of previous experiences in buying power
 at that particular time of day, allowing the system to learn over time and make
 smarter decisions as time goes on. 
 *** Microgrids and Nanogrids
 At present smart grids have generally been implemented at the level of
 microgrids. Microgrids are generally thought of having a consumer be a single
 house, or perhaps a group of houses, and a supplier being a small wind farm or
-solar farm, or perhaps a group of these together. In the case of a microgrid,
-actors within the system are defined in similar terms to those involved in a
-centralised grid system, meaning that the transition from a centralised grid to
-the microgrid scheme is a relatively easy one.
+solar farm, or perhaps a group of these together. Real world examples of these
+are campuses and industrial estates cite:markvart2006microgrids. In the case of
+a microgrid, actors within the system are defined in similar terms to those
+involved in a centralised grid system, meaning that the transition from a
+centralised grid to the microgrid scheme is a relatively easy one.
 
 An example of a real world implementation is that of the system in place in
-Japan. The majority of the work completed on this system was conducted following
-the disaster of Fukushima, where it became clear that a reliance on a single
-power source and a centralised power distribution network left the country
-vulnerable following the disaster cite:japan_microgrids. Several regions were
-cut off from power as a result of the disaster which hampered relief efforts as
-well as making the lives of ordinary Japanese citizens more difficult. Had a
-microgrid system been in place then fewer hospitals and homes would have been
-left without power following the disaster.
+Japan. Due to the robust nature of the Sendai Microgrid Tohuku Fukushi
+University following the 2011 disaster of Fukushima cite:hirose2013sendai, the
+microgrid has garnered ever increasing popularity. When the region was cut off
+from the central grid, the local generators attached to the local micro grid
+were able to supply the on-campus hospital with power while repair work was
+being carried out. This greatly helped the relief effort in the area by
+providing much needed medical aid to those injured by the earthquake and
+tsunami. Following this success of the microgrid system, several other
+developments have been made in creating more microgrids in Japan
+cite:japan_microgrids. 
 
 The company ENEL has also introduced a smart grid system in the region of Apulia
 in southern Italy cite:sapienza2013enel with great success. The system there
 allows customers to produce and network their own electricity as well as making
 them more aware of their consumption and any potential savings.
 
-The nanogrid system is very similar to that of the microgrid system conceptually
-but is concerned with a much smaller scale. A nanogrid is one that operates
-within the confines of a single building, generally where each consumer is a
-single appliance such as a washing machine or an electronic vehicles (EV).
-Suppliers would also be very small scale perhaps a set of solar panels or a
-small wind turbine. A nanogrid system could also be adapted to aggregate a
-number of devices to act as one as a single actor within the nanogrid system,
-for example all the lights on one floor of a house could act as a single
-consumer and draw on a shared reserve of power.
+The concept of a nanogrid is much more modern one, having been introduced
+by Bruce Nordman in 2012 cite:nordman2012think. The nanogrid system is very
+similar to that of the microgrid system conceptually but is concerned with a
+much smaller scale. A nanogrid is one that operates within the confines of a
+single building, generally where each consumer is a single appliance such as a
+washing machine or an electronic vehicles (EV). Suppliers would also be very
+small scale perhaps a set of solar panels or a small wind turbine. A nanogrid
+system could also be adapted to aggregate a number of devices to act as one as a
+single actor within the nanogrid system, for example all the lights on one floor
+of a house could act as a single consumer and draw on a shared reserve of power.
 
-Another extension would be to incorporate a nanogrid system as a sub-node of a
-microgrid. This would create a hierarchy of distributed grids. This tree could
-also be adapted into a graph where a parent node in the tree could have multiple
-children and a child could have multiple parents. This will be discussed more in
-the conclusion.
+Further extensions involve connecting multiple nanogrid systems together, such
+as having a nanogrid as a sub-node of a microgrid. This would create a hierarchy
+of distributed grids. This tree could also be adapted into a graph where a
+parent node in the tree could have multiple children and a child could have
+multiple parents. Another version of this would be to have a peer-to-peer
+network, where multiple nanogrids could trade electricity between one another.
+These will be discussed in more detail in the conclusion.
 ** REFIT Scheme
 The REFIT scheme (Renewable Energy Feed In Tariff) is one of the most common
 ways in which countries around the world, including Germany, Spain and the state
