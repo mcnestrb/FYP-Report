@@ -271,11 +271,22 @@ type of game that must first be explained in order to grasp the concept of game
 theory enough to understand some implementation decisions later in this report
 to grasp the general concept of game theory itself.
 
+The concept of utility is an important one to grasp in game theory. Each player
+that takes part in the game has a utility function associated with it. This
+function takes the variables involved within the game as parameters and
+generally results in some kind of scalar value. This value, or utility, can be
+considered as the score of a particular player in a given turn of the game. In a
+game that involves money, such as the one proposed in this project, the utility
+function is modelled as the potential profit that a player can earn when offering
+different amounts of the resource they are selling. This profit is weighed
+against any potential loss that the player can incur by offering too much of the
+resource in a given turn.
+
 In game theory, players within a game compete for a finite resource with the
 objective of maximising their own utility within the scope of that game. Each
 player within the game has an associated utility function that is generally the
-same for all players within that game. The utility function generally results in
-some scalar value which is trying to reach some maximum value, either on an
+same for all players within that game. The player strategises to try to reach
+some maximum value for their utility function, on either an
 individual or collective level. There is generally some kind of manager node
 also involved, which helps to conduct the game between all of the players
 involved. Within any particular game, the players are all trying to maximise
@@ -305,15 +316,29 @@ This is where the concept of equilibrium comes into play. Equilibrium is the
 state in which there is the least disparity between the best player and the
 worst player, that is that each player performs the best that it can with the
 knowledge that all other players are similarly going to try to maximise their
-own utilities. With this knowledge, each player is then able to pick the
-strategy that maximises its own utility, taking into consideration that all
-other players are trying to do the exact same thing and therefore it picks an
-appropriate strategy. In a well designed game, there should also be no incentive
-for a player to change their strategy to try to undercut other players. If made
-correctly, such an action would have an adverse effect on the player in the
-game. In this case all other players would then be aware that this player’s
-strategy had changed and would then react accordingly in order to maximise their
-own utility and decrease that player’s utility.
+own utilities. In non-cooperative games, the term "Nash Equilibrium" is used to
+mean equilibrium cite:cournot1960researches.
+
+A simple example of a non-cooperative game is thought experiment called the
+prisoners' dilemma cite:poundstone1993prisoner, where two prisoners are face
+with a choice of snitching on the other or keeping quiet. If both keep quiet,
+then they each receive a prison sentence of 1 year. If they both betray each other
+then they receive 2 years each. However if one stays silent and the other
+decides to betray them then the silent one receives 3 years and the snitch goes
+free. In this game, the players (prisoners) are both trying to maximise their
+own utility, in this case their freedom and are working purely selfishly. Each
+player should then try to always betray the other as this has the potential to
+lead to freedom and if not, then they avoid the worst sentence of 3 years. 
+
+With the knowledge of the strategies of the other players in the game, each
+player is then able to pick the strategy that maximises its own utility, taking
+into consideration that all other players are trying to do the exact same thing
+and therefore it picks an appropriate strategy. In a well designed game, there
+should also be no incentive for a player to change their strategy to try to
+undercut other players. If made correctly, such an action would have an adverse
+effect on the player in the game. In this case all other players would then be
+aware that this player’s strategy had changed and would then react accordingly
+in order to maximise their own utility and decrease that player’s utility.
 *** Cooperative Game Theory
 Cooperative game theory shares many similar traits with that of non-cooperative
 game theory as outlined in section 5.1. However the defining feature of
