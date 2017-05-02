@@ -197,9 +197,9 @@ The main advantage of this type of a scheme is that firstly it incentivises
 companies to invest in renewable energy because they know they’ll receive a good
 return on their investment. It also incentivises landowners and homeowners to
 invest, thereby creating a large infrastructure of renewable energy resources in
-a relatively small space of time and this has worked effectively in Germany
-cite:lauber2004refit. The payment also easily covers the cost of creating the
-solar panels or wind turbines for regular consumers.
+a relatively small space of time and this has worked effectively in Germany. The
+payment also eventually covers the cost of constructing the solar panels or wind
+turbines for regular consumers over a period of 6-10 years cite:lauber2004refit. 
 
 The main downside to the REFIT scheme however is that because it provides a
 fixed amount based primarily on the type of energy produced and for how long it
@@ -208,7 +208,7 @@ it has a poor supply in reserve for example. In this case, the incentive to sell
 energy is quite low as selling any energy would drain the supplier of most of
 its power. Therefore a scheme involving a dynamic price model that incentivises
 all suppliers at all times to contribute to the demand and maximise their own
-utility in the system might be better. 
+utility in the system might be better.
 ** Auctions
 *** Overview
 The first type of node management systems considered as part of this project was
