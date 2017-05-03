@@ -723,14 +723,13 @@ cite:kinder2005event. It also has a number of inbuilt functions so that the
 programmer does not have to care about things like sockets that are very tricky
 and are far removed from the problem trying to be solved in this project.
 
-Both the Client and the Server have two main layers where all the Twisted magic
-happens, the Factory layer and the Protocol layer. Essentially the Factory layer
-contains all of the persistent information of any given network actor and the
-Protocol layer contains actions and information for every connection made by
-that actor. In the code produced as part of this project, the factories of the
-CPS and the ECs were mostly used to store the values of variables pertinent to
-each of them such as the price vectors for the CPS and the energy storage for
-each of the ECs.
+In Twisted, both the Client and the Server have two main layers, the Factory
+layer and the Protocol layer. Essentially the Factory layer contains all of the
+persistent information of any given network actor and the Protocol layer
+contains actions and information for every connection made by that actor. In the
+code produced as part of this project, the factories of the CPS and the ECs were
+mostly used to store the values of variables pertinent to each of them such as
+the price vectors for the CPS and the energy storage for each of the ECs.
 
 The majority of the logic that controls both the CPS and ECs was contained
 within separate Finite State Machine (FSM) files which were connected to their
@@ -743,7 +742,17 @@ run. In each section below, the FSM of both the ECs and the CPS will be examined
 as the system is conducted in the same fashion for both, where the protocol
 calls a different function in the FSM depending on the state of the actor at
 that time.
+
+The FSM logic is not a part of the Twisted Framework but was a separate class that
+was attached to it in order to better encapsulate the actions required at each
+step. Figures 8.1 and 8.2 respectively describe the Finite State Machines of the
+EC and CPS while Figure 8.3 describes the interactions between the CPS and EC entities.
 *** Client (EC)
+
+#+NAME: EC Finite State Machine
+#+CAPTION: Finite State Machine for an EC
+[[./img/ECFSM.png]]
+
 **** Idle State
 The idle state is merely a state for in between operations of the system, where
 no game is being played. In this project it was also used as an initial state
@@ -783,6 +792,11 @@ dense mathematical algorithm that was difficult to grasp and to implement. The
 functions with the SSHPM.py file follow the steps in the algorithm defined by
 Solodov and Svaiter.
 *** Server (CPS)
+
+#+NAME: CPS Finite State Machine 
+#+CAPTION: Finite State Machine for the CPS
+[[./img/CPSFSM.png]]
+
 **** Idle State
 The Idle State is used while the there is no game happening and the CPS is idle.
 The CPS is then able to move into the start state when it wants to begin a game
@@ -797,7 +811,8 @@ be abstaining from the current round of operation. It stores each EC's role in
 the upcoming game and doesn't move to the next state until every single EC in
 the network has given an answer as to what their role shall be. The CPS then
 naively calculates the demand by simply summing the values given by each of the
-consumers and then moves to the Init State, 
+consumers and then moves to the Init State. Each EC also has a timer associated
+with it so that if the EC dies, then it times out and is not included in the game.
 **** Init State
 The Init State is used to allow the suppliers who will be taking part in the
 game to start the game by providing them with the values that they need. Each EC
@@ -820,6 +835,17 @@ in the game of the current timeslot before beginning the convex optimisation. It
 formulates the problem and then solves it using the CVXPY cite:diamond2016cvxpy
 solver library. The new prices are then extracted from the solver and the CPS
 sends the relevant price to each ES before moving to the Game 2 State.
+
+In order to use the CVXPY solver, the problem must first be condensed into a
+constructor. The problem has two parts, the objective and the constraints. The
+convex function is the objective, in this case the utility function of the CPS,
+namely $L$ from section 7.4.2. It is passed a one-dimensional vector that
+represents the prices that will be offered to each of the ESs for their offers.
+The other variables such as those energy estimates are also added as appropriate
+in vectors or as scalar values. The constraints are then specified in an array
+and in this case ensure that each price does not exceed the minimum or maximum
+price that the CPS is willing to offer each ES and that the prices sum to the
+total price that the CPS has to give for the given timeslot.
 **** Game 2 State
 The Game 2 State is more or less identical to the Game 1 State except that it is
 concerned with managing the ESs who are trying to calculate the actual amount of
@@ -833,8 +859,12 @@ compares that to $E_{def}$ and if it the supplied energy is insufficient, then i
 buys the extra energy needed from the central grid. It then disperses the energy
 needed to each of the consumers within the current timeslot and moves into the
 idle state, ready for the next game before the next timeslot.
-* Conclusion
-** Results
+
+#+NAME: System Interaction
+#+CAPTION: Diagram showing the interactions between the states of the two entities
+[[./img/SystemInteraction.png]]
+
+* Results and Discussion
 Ultimately the success of the system was unable to be determined due to
 difficulties with the implementation of the hyperplane projection method.
 Instead of converging on a value for the energy estimate, it instead approaches
@@ -890,7 +920,8 @@ precede a game theoretic solution is that on a human level, people would need
 tangible and static amounts of money to ensure that they would see a return on
 their investment whereas the game theoretic approach does not yield a concrete
 and easy-to-grasp amount of money.
-** Future Work and Continuations
+
+* Conclusion
 There are a number of ways in which this project could be continued, that were
 discovered during the course of the investigation of the field of smart grids
 and in the particular area around which this project is based. These fall under
