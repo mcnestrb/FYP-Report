@@ -620,7 +620,8 @@ sum of utilities of the ECs is maximised, that is that each EC gives an
 appropriate amount of energy to the system based on the price incentive offered
 by the CPS. When the sum of utilities is maximised, the energy deficit for a
 given timeslot is more likely to be met and ECs are more likely to be able to
-continue to provide power into the future.
+continue to provide power into the future, as they will only deplete their power
+supply if the incentive to do so is very high.
 
 An iteration of the system is conducted to match supply and demand for in a
 nanogrid situation for a given upcoming timeslot. Some kind of system where a
@@ -642,31 +643,48 @@ case of the former then it also sends how much energy it requires. Figure 7.1
 shows the situation where ECs within the grid have already made it clear as to
 whether they are a supplier or a consumer for this particular timeslot.
 
+For each timeslot the CPS has a fixed price per unit (per kWh) already associated with it
+before the game begins. This can be determined using some kind of real time
+price estimator such as the one proposed in cite:yun2008rbf. When the game
+begins the "total price" $P$ is determined by multiplying the total demand of
+the timeslot by the current price per unit. This total price is the finite
+resource for which the ECs are competing in the non-cooperative game. If the CPS
+was simply buying energy from the central grid, this is the same amount of money
+that it would be paying out. However, in this system, instead of paying the
+central grid, the CPS is paying the ECs for the energy they can provide and they
+are trying to get as much money as they can for the energy they can offer while
+maximising their utility.
+
 The CPS then simply sums the total demand and can begin the game. It sends the
 total demand, the total amount of money it has available to give, also called
-the "total price" $P$, and the
-number of suppliers within the system to each Energy Supplier (ES). The total
-price is calculated naively by multiplying the current price per unit that is
-offered by the central grid by the number of units of energy required by the
-consumers within the nanogrid. A standard unit would be kWh. Each ES first
-calculates how much energy it can be offered by dividing the total price by the
-number of players. Each one then uses the SSHPM optimisation method to determine
-an estimate for the energy it is willing to give to the CPS at that price and
-sends that estimate to the CPS. The functional used as part of the SSHPM is the
-utility function of each EC and the set of values being mapped over is a one
-dimensional vector space that goes from zero to whatever the total energy of
-each EC is.
+the "total price" $P$, and the number of suppliers within the system to each
+Energy Supplier (ES). The total price is calculated naively by multiplying the
+current price per unit that is offered by the central grid by the number of
+units of energy required by the consumers within the nanogrid. A standard unit
+would be kWh. Each ES first calculates how much energy it can be offered by
+dividing the total price by the number of players. Each one then uses the SSHPM
+optimisation method to determine an estimate for the energy it is willing to
+give to the CPS at that price and sends that estimate to the CPS. The functional
+used as part of the SSHPM is the utility function of each EC and the set of
+values being mapped over is a one dimensional vector space that goes from zero
+to the total amount of power currently stored by each EC, that is the amount
+available for them to give.
 
 The CPS then receives each ES's energy estimate. From this it is able to
 estimate how willing each ES is to giving more or less energy. It cannot work
 out the private store or the caution of each ES but rather understands the ratio
-that exists between all the different players involved. The CPS then uses its
-own utility function and the vector of energy estimates from each ES as the
-inputs to a convex optimisation problem. A disciplined convex optimisation
-method is employed cite:grant2006disciplined as any standard convex optimisation 
-technique is all that is required and the Python solver CVXPY cite:diamond2016cvxpy was readily
-available. A new vector of prices per ES is generated and each one is sent to
-each ES. This is the actual price that each ES receives.
+that exists between all the different players involved. Each ES is thus able to
+keep their private information private but, using this estimate the CPS can infer the
+amount of energy that each ES is willing to give and can offer a higher
+incentive accordingly to those who have less to give and a lower incentive to
+those who have more to give. This maximises the utility of all ESs involved in
+the game. The CPS uses its own utility function and the vector of energy
+estimates from each ES as the inputs to a convex optimisation problem. A
+disciplined convex optimisation method is employed cite:grant2006disciplined as
+any standard convex optimisation  technique is all that is required and the
+Python solver CVXPY cite:diamond2016cvxpy was readily available. A new vector of
+prices per ES is generated and each one is sent to each ES. This is the actual
+price that each ES receives.
 
 The ESs then play another game using their utility functions and the new price
 that they have been offered by the CPS and try to find the actual amount of
@@ -681,6 +699,17 @@ consumers within the nanogrid using solely local sources that exist within its
 own grid. Once the supply matches the demand, the power is then distributed as
 before. The process then starts again ahead of the next timeslot to ensure that
 everyone that needs power during that time is supplied.
+
+At the end of each iteration of the system, the demand of the consumers within
+the system has been met without compromising the utilities of the the devices
+that supplied the energy. This means that no suppliers have been left with no
+energy without receiving proper compensation for it, meaning that they are more
+likely to have more power to sell later on when perhaps the demand might be
+higher or the supply of other ESs in the system might be lower. It must be noted
+that this system does not attempt to drive down the price for power but rather
+to distribute that money in such a way that the demand is more likely to be met
+within the local grid and to increase the chances of power continuing to be
+supplied in this fashion.
 *** Game Design
 First some of the key components of the game as well as a brief overview of how
 it is conducted will be explained. Following that, the game itself will be
