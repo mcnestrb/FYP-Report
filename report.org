@@ -972,6 +972,7 @@ idle state, ready for the next game before the next timeslot.
 [[./img/SystemInteraction.png]]
 
 * Results and Discussion
+** Results
 Ultimately the success of the system was unable to be determined due to
 difficulties with the implementation of the hyperplane projection method.
 Instead of converging on a value for the energy estimate, it instead approaches
@@ -997,38 +998,25 @@ deciding how much energy should be given by each EC, in a system where they
 share private information. In this scenario, the sum of utilities $∑n U_n =
 1068167.8$.
 
-Unfortunately, due to the lack of conversion on correct values by the system, no
+Unfortunately, due to the lack of convergence on correct values by the system, no
 further scenarios could be calculated as it is unclear as to what the values
 that the optimisation methods would reach in instances where the supply does not
 meet the demand. Optimisation techniques can often require several iterations
 before converging on a correct value and therefore are not feasible to be worked
-out on paper.
-** Assessment
+out on paper. Also because the correct implementation of the optimisation
+technique was not properly worked out, it would be fruitless to show workings of
+any of these iterations as they would be incorrect.
+
 From the numerical results it can be easily seen that the proposed method in
 this instance is superior to the REFIT scheme as the sum of utilities is greater
-in the former approach. However the difference between the two utilities is
-minimal so this system may not be the worth implementing in reality. A working
-solution, however, would verify whether this statement is true or not.
-
-Regardless, another equally important question to answer as part of this
-project, is about the likeliness of such an system being implemented in the real
-world. First of all, it must be noted that such a system could only be deployed
-following advancements in the creation of suitable prediction methods for
-predicting the amount of energy that a consumer will require within the next
-timeslot. Secondly, the installation of such a smart grid would require a huge
-overhaul of the current network if this system was focussed on immediately.
-Rather, a more realistic approach would be to first introduce smart meters into
-homes in conjunction with the current grid, like is in place in Italy as
-discussed previously and to follow that with a REFIT scheme to incentivise the
-installation and construction of local renewable energy sources as is in place
-in Germany. At this point it would then be feasible to introduce a system such
-as the one discussed in this report. The reason why a REFIT scheme would need to
-precede a game theoretic solution is that on a human level, people would need
-tangible and static amounts of money to ensure that they would see a return on
-their investment whereas the game theoretic approach does not yield a concrete
-and easy-to-grasp amount of money.
-
+in the former approach. This particular example, indicative of situations where
+the demand is met by the supply within the game theoretic system, seems to
+indicate that the system may not be worth implementing in reality. However,
+without knowledge of a solution to a scenario in which supply does not meet
+demand, it cannot be said whether or not the proposed system meets its goals. A working
+solution, however, would verify whether it does or not.
 * Conclusion
+** Further Work
 There are a number of ways in which this project could be continued, that were
 discovered during the course of the investigation of the field of smart grids
 and in the particular area around which this project is based. These fall under
@@ -1073,6 +1061,24 @@ value. For example if the EC was nearing capacity and it knew that it was going
 to be generating enough electricity that it would be unable to store it, then it
 could have a very low caution value. Conversely, low energy capacity and low
 production in the future could could be used to inform a higher caution value.
+** Assessment
+Regardless, another equally important question to answer as part of this
+project, is about the likeliness of such an system being implemented in the real
+world. First of all, it must be noted that such a system could only be deployed
+following advancements in the creation of suitable prediction methods for
+predicting the amount of energy that a consumer will require within the next
+timeslot. Secondly, the installation of such a smart grid would require a huge
+overhaul of the current network if this system was focussed on immediately.
+Rather, a more realistic approach would be to first introduce smart meters into
+homes in conjunction with the current grid, like is in place in Italy as
+discussed previously and to follow that with a REFIT scheme to incentivise the
+installation and construction of local renewable energy sources as is in place
+in Germany. At this point it would then be feasible to introduce a system such
+as the one discussed in this report. The reason why a REFIT scheme would need to
+precede a game theoretic solution is that on a human level, people would need
+tangible and static amounts of money to ensure that they would see a return on
+their investment whereas the game theoretic approach does not yield a concrete
+and easy-to-grasp amount of money.
 
 \printbibliography
 \appendix
