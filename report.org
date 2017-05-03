@@ -466,20 +466,22 @@ quickly finding solutions to minimisation problems.
 *** Hyperplane Projection
 **** Variational Inequality Problem
 The hyperplane projection method is a tool for solving problems that suit the
-criteria of a variational inequality problem so first that must be explained
+criteria of a variational inequality problem (VI problem) so first that must be explained
 before moving onto the concept of the solution to such a problem.
 
+One of the components of the VI problem is that of a functional. A functional is
+a function that maps a vector space onto its underlying field of scalars. Often
+this vector space can be a series of functions, meaning that the functional
+takes a function as an argument and can be interpreted as a function of
+functions. This is similar to the Haskell idea of higher order functions, where
+a single higher order function can be used to operate on multiple functions and
+perhaps capture some other important piece of data for a given system.
+ 
 A variational inequality is an inequality that involves a functional that must
 be solved for all variables in a set, usually a convex set. As a side note,
 although this problem also involves a convex set like the convex optimisation
 problem, the functional is not a convex function and therefore convex
-optimisation does not apply in this instance. A functional is a a function that
-maps a vector space onto its underlying field of scalars. Often this vector
-space can be a series of functions, meaning that the functional takes a function
-as an argument and can be interpreted as a function of functions. This is
-similar to the Haskell idea of higher order functions, where a single higher
-order function can be used to operate on multiple functions and perhaps capture
-some other important piece of data for a given system.
+optimisation does not apply in this instance.
 
 The origin of, and primary application of, variational inequality problems is in
 the field of finding solutions of equilibrium in a given system. As we'll see
@@ -600,7 +602,8 @@ shows the situation where ECs within the grid have already made it clear as to
 whether they are a supplier or a consumer for this particular timeslot.
 
 The CPS then simply sums the total demand and can begin the game. It sends the
-total demand, the total amount of money it has available to give and the
+total demand, the total amount of money it has available to give, also called
+the "total price" $P$, and the
 number of suppliers within the system to each Energy Supplier (ES). The total
 price is calculated naively by multiplying the current price per unit that is
 offered by the central grid by the number of units of energy required by the
@@ -703,8 +706,8 @@ $$min_p L(p,e) = min_{p_{n}} \sum_n(e_{n}p_n^r + a_{n}p_{n} + b_n), subject to
 \sum_n p_n = P, p_{min} <= p_n <= p_{max}$$
 
 For each ES, the CPS is trying to find the value of $p_n$ that will give the
-smallest value. However all values of $p_n$ must sum to be equal to the value of
-$P$, the total price that the CPS is willing to pay. As can be seen in this
+smallest value for the function $L$. However all values of $p_n$ must sum to be
+equal to the value of $P$, the total price that the CPS is willing to pay. As can be seen in this
 model, the system doesn't pay any less for power overall, but rather
 incentivises all suppliers of electricity to try to match the demand in
 question. Another caveat of the minimisation problem is that $p_n$ must be
