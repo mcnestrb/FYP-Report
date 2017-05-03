@@ -575,6 +575,31 @@ of this report had a crucial element of either all nodes being aware of the each
 others' private information or at the very least the central node needed to have
 all this information to hand. Therefore a non-cooperative game seemed more
 appropriate based off this particular design. 
+*** System Structure
+#+CAPTION: Simple diagram to understand the connections between the different actors involved in the system in a given iteration
+#+NAME: Basic Newtork Diagram 
+[[./img/basic_network.png]]
+
+Figure 7.1 above defines the connections that exist in the network in a given
+iteration of the system. This section introduces the different kinds of entities
+involved in this proposed scheme, namely the ECs and CPS.
+
+The Central Power Station (CPS) is the central manager unit in the system. It is
+responsible for processing all of the energy estimates given by the ECs. It is
+also the entity that controls the amount of money supplied to each of the ECs.
+In a more formal sense, the CPS is the manager unit of the game conducted in the
+system and as such decides when the game has reached the state of Nash
+Equilibrium. Should the game be unable to provide appropriate supply to the
+demand specified by the system, the CPS is also connected to the central grid
+and is able to purchase extra power in order that the demand is still met.
+
+The Energy Consumers (ECs) are the appliances and energy suppliers within the
+system. They were modelled here as the same entity and at the start of a
+timeslot in the system operation they notify the CPS as to whether they are
+consumers or suppliers. This decision was made to facilitate the situation where
+an appliance might have bought too much energy in advance and wants to sell its
+excess. It also facilitates extensions to the system where a nanogrid could buy
+or sell to and from other nanogrids, where a nanogrid could be of either type.
 *** System Design
 In this section I will discuss a brief overview of the operation of the system
 implemented in this project. Below in Figure 7.2 is a basic flowchart of a
@@ -586,19 +611,22 @@ decides that it should so that the system can be monitored on a step by step
 basis. Figure 7.1 is a simple diagram of the connections between different
 actors within the system.
 
-#+CAPTION: Simple diagram to understand the connections between the different actors involved in the system in a given iteration
-#+NAME: Basic Newtork Diagram 
-[[./img/basic_network.png]]
-
 #+CAPTION: Flow chart depicting the operation of the system in terms of the Central Power Station (CPS), Energy Consumers (ECs) and Energy Suppliers (ESs) in a single iteration
 #+NAME: Flow chart of the system operation
 [[./img/design.png]]
+
+The objective of the proposed system is to ensure that for each timeslot, the
+sum of utilities of the ECs is maximised, that is that each EC gives an
+appropriate amount of energy to the system based on the price incentive offered
+by the CPS. When the sum of utilities is maximised, the energy deficit for a
+given timeslot is more likely to be met and ECs are more likely to be able to
+continue to provide power into the future.
 
 An iteration of the system is conducted to match supply and demand for in a
 nanogrid situation for a given upcoming timeslot. Some kind of system where a
 consumer can predict their energy usage for the next timeslot is presumed to be
 in place. The suppliers of course know what their own supply of energy is as
-well as having a caution variable $c \in (0, 1)$. The caution value determines how
+well as having a caution level. The caution level determines how
 willing they are to sell larger amounts of energy, a low caution value
 representing a willingness to sell more energy and a high value standing for a
 more conservative supplier.
