@@ -469,12 +469,14 @@ The hyperplane projection method is a tool for solving problems that suit the
 criteria of a variational inequality problem (VI problem) so first that must be explained
 before moving onto the concept of the solution to such a problem.
 
-One of the components of the VI problem is that of a functional. A functional is
-a function that maps a vector space onto its underlying field of scalars. Often
-this vector space can be a series of functions, meaning that the functional
-takes a function as an argument and can be interpreted as a function of
-functions. This is similar to the Haskell idea of higher order functions, where
-a single higher order function can be used to operate on multiple functions and
+One of the components of the VI problem cite:konnov1997generalized is that of a
+functional. A functional is a function that maps a vector space onto its
+underlying field of scalars. A scalar field is where there is an associated
+scalar value to every point in a space, in this case to every point in the
+vector. Often this vector space can be a series of functions, meaning that the
+functional takes a function as an argument and can be interpreted as a function
+of functions. This is similar to the idea of higher order functions, where a
+single higher order function can be used to operate on multiple functions and
 perhaps capture some other important piece of data for a given system.
  
 A variational inequality is an inequality that involves a functional that must
@@ -527,7 +529,18 @@ set using $P_{C \cap H_i}$.
 The benefit of this solution is that each iteration of the method only requires
 two projections which makes it computationally efficient, the first to calculate
 the hyperplane $H_i$ and another onto the intersection $C \cap H^i$ to find the next
-iterate in finding the solution. Later on in the Implementation section, the
+iterate in finding the solution.
+
+A good analogy for the hyperplane projection method is that of the binary search
+method. The space is divided in two and it is determined as to which half the
+solution resides in. That half is then searched in the same manner until the
+solution is eventually converged on. The difference with SSHPM is that it
+operates in n-dimensions whereas binary search only works in one dimension.
+
+In this smart grid scenario, the value being searched for is that of the amount
+of energy that a particular supplier will provide to the system. The system
+tries to find the ideal value for the amount of energy to offer to the system
+based on the current incentives. Later on in the Implementation section, the
 application of this method will be discussed in further detail.
 * Implementation
 ** Design
