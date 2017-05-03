@@ -1062,13 +1062,17 @@ to be generating enough electricity that it would be unable to store it, then it
 could have a very low caution value. Conversely, low energy capacity and low
 production in the future could could be used to inform a higher caution value.
 ** Assessment
-Regardless, another equally important question to answer as part of this
-project, is about the likeliness of such an system being implemented in the real
-world. First of all, it must be noted that such a system could only be deployed
-following advancements in the creation of suitable prediction methods for
-predicting the amount of energy that a consumer will require within the next
-timeslot. Secondly, the installation of such a smart grid would require a huge
-overhaul of the current network if this system was focussed on immediately.
+Many countries across the world, including Germany cite:smartmetersgermany, have
+invested large amounts of money in rolling out millions of smart meters into
+homes, offices and factories. This is certainly a positive step towards creating
+a smarter grid and perhaps a system akin to the one proposed in this project,
+however, at present there are no formal plans with following up on this
+deployment. At present, the introduction of all these smart meters only allows
+for the collection of more data regarding energy, but it would be wasteful not
+to implement some form of smart management using this data.
+
+
+
 Rather, a more realistic approach would be to first introduce smart meters into
 homes in conjunction with the current grid, like is in place in Italy as
 discussed previously and to follow that with a REFIT scheme to incentivise the
@@ -1080,5 +1084,6 @@ tangible and static amounts of money to ensure that they would see a return on
 their investment whereas the game theoretic approach does not yield a concrete
 and easy-to-grasp amount of money.
 
-\printbibliography
+\printbibliography[heading=bibintoc, title=References]
 \appendix
+@@latex:\addtocontents{toc}{\noindent\textbf{Source Code CD}}@@
