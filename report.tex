@@ -1,4 +1,4 @@
-% Created 2017-05-03 Wed 18:06
+% Created 2017-05-03 Wed 18:40
 % Intended LaTeX compiler: xelatex
 \documentclass[a4paper, notitlepage]{report}
 \usepackage{graphicx}
@@ -45,7 +45,7 @@
 \pagenumbering{arabic}
 
 \part{Introduction}
-\label{sec:org026035c}
+\label{sec:org80c3395}
 Currently in the field of smart grid technologies, there is an abundance of
 theoretical approaches to the problems of managing the transactions between
 consumers and suppliers of energy \cite{ambrosio2016transactive}. While there are
@@ -78,9 +78,9 @@ finally the actual implementation itself will be presented. To conclude there
 will be an assessment of the system designed and a number of potential
 continuations of the project will be discussed.
 \part{Background}
-\label{sec:orgbcda4b6}
+\label{sec:org87d8b9a}
 \chapter{Decentralised Grid}
-\label{sec:orgc10ea82}
+\label{sec:org08dbd32}
 For many years, in Ireland and in many other countries, the national electric grid
 infrastructure was controlled by a central body, namely the ESB. The various
 electricity providers all used the same distribution network. Fundamentally, the
@@ -129,13 +129,13 @@ implementing it. The rough idea of a distributed grid is described in figure
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=.9\linewidth]{./img/DecentralisedGrid.jpg}
-\caption{\label{fig:orgf4b7b4a}
+\caption{\label{fig:org1bca547}
 Each local consumer and supplier is attached to a regional grid hub which manages the allocation of electricity between suppliers and consumers. This is just a simple overview of the idea but conceivably a consumer or a supplier could be connected to two or more different regional grid hubs.}
 \end{figure}
 \chapter{Smart Grid}
-\label{sec:orgc59028a}
+\label{sec:orge88d043}
 \section{Overview}
-\label{sec:org477da7f}
+\label{sec:orgcfdca1c}
 Due to advancements in networking technologies, and the field of sophisticated
 decision making technologies, the idea of a smart grid has become increasingly
 popular. Actors within a smart grid, be they individual consumers or suppliers,
@@ -163,7 +163,7 @@ will consume based on its own knowledge of previous experiences in buying power
 at that particular time of day, allowing the system to learn over time and make
 smarter decisions as time goes on. 
 \section{Microgrids and Nanogrids}
-\label{sec:org74f39a9}
+\label{sec:org5d4f353}
 At present smart grids have generally been implemented at the level of
 microgrids. Microgrids are generally thought of having a consumer be a single
 house, or perhaps a group of houses, and a supplier being a small wind farm or
@@ -209,7 +209,7 @@ multiple parents. Another version of this would be to have a peer-to-peer
 network, where multiple nanogrids could trade electricity between one another.
 These will be discussed in more detail in the conclusion.
 \chapter{REFIT Scheme}
-\label{sec:orgaff34ca}
+\label{sec:orge9c8f9d}
 The REFIT scheme (Renewable Energy Feed In Tariff) is one of the most common
 ways in which countries around the world, including Germany, Spain and the state
 of Hawaii \cite{couture2010analysis}, try to incentivise renewable energy sources
@@ -239,9 +239,9 @@ its power. Therefore a scheme involving a dynamic price model that incentivises
 all suppliers at all times to contribute to the demand and maximise their own
 utility in the system might be better.
 \chapter{Auctions}
-\label{sec:org3f542c8}
+\label{sec:org2f8117f}
 \section{Overview}
-\label{sec:org917665f}
+\label{sec:orgbe8f092}
 The first type of node management systems considered as part of this project was
 that of auctions. Auctions generally have a number of different types of
 properties \cite{parsons2011auctions} and as such, can be classified into
@@ -261,7 +261,7 @@ continuous double auction will be discussed here as it the only type of auction
 that was deemed suitable. The reasoning for the decision is explained in the
 next section along with a description of what the method itself entails.
 \section{Continuous Double Auction}
-\label{sec:org0a4a8dd}
+\label{sec:org8145427}
 The idea of a double auction is a simple one. Instead of trying to match
 multiple bidders to a single seller or multiple sellers to a single buyer, a
 double auction is where there are multiple sellers and multiple bidders. Through
@@ -293,9 +293,9 @@ controller having access to all the private information of all the other nodes.
 This, among other reasons, led to auctions not being implemented for this
 project and this will be discussed in further detail later.
 \chapter{Game Theory}
-\label{sec:orgdef932e}
+\label{sec:orgc9dbe1c}
 \section{Overview}
-\label{sec:org48d95fa}
+\label{sec:org94318fb}
 The field of game theory is one that has many different facets and versions
 depending on the situation in which this is used. In this section the
 nomenclature and jargon of game theory will be discussed, as will a short
@@ -340,7 +340,7 @@ that the state of equilibrium, that is the success state, not only can be
 reached but also that reaching that state is appealing to all players within the
 game.
 \section{Non-Cooperative Game Theory}
-\label{sec:org2b27484}
+\label{sec:orgd5728dd}
 Non-Cooperative games are the simplest types of games both to understand and
 design. The core component of a non-cooperative game is that all of the players
 are operating purely independently while trying to maximise their own utility.
@@ -377,7 +377,7 @@ effect on the player in the game. In this case all other players would then be
 aware that this player’s strategy had changed and would then react accordingly
 in order to maximise their own utility and decrease that player’s utility.
 \section{Cooperative Game Theory}
-\label{sec:orgfddae3c}
+\label{sec:org2ae1f09}
 Cooperative game theory shares many similar traits with that of non-cooperative
 game theory as outlined in section 5.1. However the defining feature of
 cooperative game theory is that players within the game will form coalitions
@@ -402,7 +402,7 @@ game. Similarly due to the lack of communication between the players in the
 game, they can also never know if other players could change their strategies so
 are unable to even realise that cooperation is even possible at any given stage.
 \section{Cournot and Stackelberg Games}
-\label{sec:orgfe16935}
+\label{sec:orga69f8f0}
 Cournot and Stackelberg games are two manners in which players participate in
 the game, in other words they constitute the structure of the game as opposed to
 how players react to one another and strategise within the game. Both of these
@@ -433,9 +433,9 @@ they have a distinct advantage over all players who come afterwards.
 The reasoning behind choosing a Stackelberg game over a Cournot game for this
 project will be discussed later in the Implementation section of this report.
 \chapter{Optimisation Techniques}
-\label{sec:orgd2a5922}
+\label{sec:orga223a65}
 \section{Overview}
-\label{sec:org70ce24e}
+\label{sec:org2b3fb39}
 Optimisation techniques are an important part of the field of mathematics and
 are reasonably simple to understand, but can be extremely difficult to
 formulate. Optimisation problems concern themselves with a key problem that is
@@ -472,7 +472,7 @@ Optimisation. Both techniques are involved with quickly and accurately solving
 for a maximum in the case of two different utility functions but operate with
 different types of sets, each one being suitable for the relevant type of problem.
 \section{Convex Optimisation}
-\label{sec:orgdd4b1af}
+\label{sec:orge7af025}
 Convex optimisation is defined as the solving of minimisation problems
 that involve convex functions being applied to convex sets \cite{boyd2004convex}.
 Due to the nature of the convexity of the sets involved in these sorts of
@@ -494,7 +494,7 @@ non-convex set where there is a hollow section to the region.
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=.9\linewidth]{./img/convex_set.png}
-\caption{\label{fig:org46fd378}
+\caption{\label{fig:org2f0be46}
 A convex set (gtMath March 2016) \cite{convex_set_img}}
 \end{figure}
 
@@ -509,9 +509,9 @@ Convex optimisation is therefore a relatively simple concept to understand and
 is clearly seen to be a very useful and efficient method of accurately and
 quickly finding solutions to minimisation problems.
 \section{Hyperplane Projection}
-\label{sec:orgd44d4ba}
+\label{sec:org4365972}
 \subsection{Variational Inequality Problem}
-\label{sec:org81f972c}
+\label{sec:org1fde3d5}
 The hyperplane projection method is a tool for solving problems that suit the
 criteria of a variational inequality problem (VI problem) so first that must be explained
 before moving onto the concept of the solution to such a problem.
@@ -550,7 +550,7 @@ represented mathematically as \(f(x) <= f(y) \forall x <= y\) or \(f(x) >= f(y) 
 y\). Functions that cleave to this mould are called monotonically increasing and
 monotonically decreasing respectively. 
 \subsection{Hyperplane Projection Method}
-\label{sec:orgcf3424f}
+\label{sec:orgb2b2094}
 Having covered a number of the prerequisites for using a hyperplane projection
 method, the method itself can be explained. The version I looked at was
 developed by Solodov and Svaiter and is called the Solodov and Svaiter
@@ -560,7 +560,7 @@ referred to as a part of the explanation.
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=.9\linewidth]{./img/SSHPM.png}
-\caption{\label{fig:org6c7a732}
+\caption{\label{fig:orgc794c0e}
 Solodov and Svaiter Hyperplane Projection Method}
 \end{figure}
 
@@ -594,11 +594,11 @@ tries to find the ideal value for the amount of energy to offer to the system
 based on the current incentives. Later on in the Implementation section, the
 application of this method will be discussed in further detail.
 \part{Implementation}
-\label{sec:org7c069ed}
+\label{sec:org2f5f399}
 \chapter{Design}
-\label{sec:org6d42f22}
+\label{sec:orgc96c5ec}
 \section{Games vs Auctions}
-\label{sec:org4f8c357}
+\label{sec:orgedfa004}
 In the background section of this report both the concepts of Auctions and Game
 Theory as both were considered as potential candidates for the management system
 to match supply and demand in a nanogrid system. Ultimately however, a
@@ -630,11 +630,11 @@ others' private information or at the very least the central node needed to have
 all this information to hand. Therefore a non-cooperative game seemed more
 appropriate based off this particular design. 
 \section{System Structure}
-\label{sec:orgd0e1ec6}
+\label{sec:org3e539af}
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=.9\linewidth]{./img/basic_network.png}
-\caption{\label{fig:org7b0b301}
+\caption{\label{fig:org274c422}
 Simple diagram to understand the connections between the different actors involved in the system in a given iteration}
 \end{figure}
 
@@ -659,7 +659,7 @@ an appliance might have bought too much energy in advance and wants to sell its
 excess. It also facilitates extensions to the system where a nanogrid could buy
 or sell to and from other nanogrids, where a nanogrid could be of either type.
 \section{System Design}
-\label{sec:orgd15bda5}
+\label{sec:orgb651421}
 In this section I will discuss a brief overview of the operation of the system
 implemented in this project. Below in Figure 7.2 is a basic flowchart of a
 single iteration of the operation of the system, followed by a brief summary of
@@ -673,7 +673,7 @@ actors within the system.
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=.9\linewidth]{./img/design.png}
-\caption{\label{fig:orged8d49e}
+\caption{\label{fig:org7d6f051}
 Flow chart depicting the operation of the system in terms of the Central Power Station (CPS), Energy Consumers (ECs) and Energy Suppliers (ESs) in a single iteration}
 \end{figure}
 
@@ -773,17 +773,37 @@ to distribute that money in such a way that the demand is more likely to be met
 within the local grid and to increase the chances of power continuing to be
 supplied in this fashion.
 \section{Game Design}
-\label{sec:org65805cc}
+\label{sec:orga7ca275}
 First some of the key components of the game as well as a brief overview of how
 it is conducted will be explained. Following that, the game itself will be
 discussed in further detail. The game played between all of the ESs that are
 trying to receive remuneration for the energy they are willing to offer is
 played across two steps. First of all the ESs use their utility functions along
 with a number of other important variables such as their energy capacity \(E_n\),
-caution \$c\(_{\text{n}}\) and the current price offer \(p_n\) in order to determine their new
+caution \(c_n\) and the current price offer \(p_n\) in order to determine their new
 estimate for how much energy they are willing to offer to the CPS \(e_n\), where
-\(n \in N\), N being the set of all ESs taking part in the nanogrid. Next they use
-that energy estimate to calculate a slack variable \(\varepsilon_n\) which is a
+\(n \in N\), N being the set of all ESs taking part in the nanogrid. 
+
+\begin{table}[htbp]
+\caption{\label{tab:orgad84382}
+A description of each of the variables involved in the game}
+\centering
+\begin{tabular}{ll}
+Variable & Description\\
+\hline
+\(e_{n}\) & The amount of energy the ES is currently offering (the variable that changes on each iteration)\\
+\hline
+\(E_n\) & The total energy stored by the ES. This is the maximum amount of energy that it is able to sell\\
+\hline
+\(c_n\) & The caution variable of the ES where \(c_n \in (0,1)\). This determines how cautious the ES is\\
+\hline
+\(\varepsilon_{n}\) & The slack variable of the current iteration. Used to determine Nash Equilibrium by the CPS\\
+\hline
+\end{tabular}
+\end{table}
+
+
+Next they use that energy estimate to calculate a slack variable \(\varepsilon_n\) which is a
 variable indicating the amount of energy it is willing to offer without giving
 up any private information. These slack variables are derived from the ES's
 utility functions which will be discussed in the next section. The slack
@@ -794,19 +814,20 @@ ESs.
 
 When the hyperplane projection is initially calculated there is a small piece of
 logic that determines what slack variable is sent to the CPS as well as what
-energy should be offered. If the projection is equal to zero then \(\varepsilon_n = E_n -
-2c_{n}e_{n} + p_n\). Otherwise the second part of the hyperplane projection method is
-run, where the halfspace is determined and from that a new projection is worked
-out. In this case the slack variable sent back to the CPS is \(\varepsilon_n = E_n - e_n +
-p_n\). These slack variables are then sent to the CPS. If the slack variables are
-all equal, as previously mentioned, then the game has reached the state of Nash
-Equilibrium and the ESs are informed to end their iterations and they instead
-send back the amount of energy they are offering. If the slack variables are not
-equal then the CPS instructs the ESs to perform another iteration of the SSHPM.
+energy should be offered. If the hyperplane projection \(P_{C}[e_n]\), as defined in
+section 6.3.2, is equal to zero then \(\varepsilon_n = E_n - 2c_{n}e_{n} + p_n\). Otherwise the
+second part of the hyperplane projection method is run, where the halfspace is
+determined and from that a new projection is worked out. In this case the slack
+variable sent back to the CPS is \(\varepsilon_n = E_n - e_n + p_n\). These slack variables are
+then sent to the CPS. If the slack variables are all equal, as previously
+mentioned, then the game has reached the state of Nash Equilibrium and the ESs
+are informed to end their iterations and they instead send back the amount of
+energy they are offering. If the slack variables are not equal then the CPS
+instructs the ESs to perform another iteration of the SSHPM. 
 \section{Utility Functions}
-\label{sec:org6d9921a}
+\label{sec:orgf17dc9a}
 \subsection{EC Utility Function}
-\label{sec:orgb916090}
+\label{sec:orgcf2225b}
 Each EC has a utility function that is used as the functional in the the
 hyperplane projection optimisation. The utility function in question takes into
 account the energy that EC \(n\) has stored \(E_n\), the price being offered to it
@@ -829,16 +850,16 @@ later stage when there is perhaps a higher deficit, it can make more money in
 the future as opposed to potentially being depleted of energy for the times of
 high profit.
 \subsection{CPS Utility Function}
-\label{sec:orge82bf56}
+\label{sec:orgf5ed23d}
 The CPS has its own utility function that serves as the convex function for the
 convex optimisation problem in trying to find appropriate prices for each of the
 ESs that have submitted energy estimates for how much they are willing to offer.
 The function is represented as a minimisation problem in terms of the energy
 that each ES is offering \(e_n\), the price that the CPS would offer for that
 energy \(p_n\) and two scalar values \(a_n\) and \(b_n\)  that account for the costs
-associated with storing and transmitting the energy.
+associated with storing and transmitting the energy respectively.
 
-$$min_p L(p,e) = min_{p_{n}} \sum_n(e_{n}p_n^r + a_{n}p_{n} + b_n), subject to
+$$min_p L(p,e) = min_{p_{n}} \sum_n(e_{n}p_n^r + a_{n}p_{n} + b_n), where
 \sum_n p_n = P, p_{min} <= p_n <= p_{max}$$
 
 For each ES, the CPS is trying to find the value of \(p_n\) that will give the
@@ -850,9 +871,9 @@ question. Another caveat of the minimisation problem is that \(p_n\) must be
 between the values of \(p_{min}\) and \(p_{max}\). This simply means that there is a
 minimum and a maximum value that the CPS is willing to pay for energy.
 \chapter{Application}
-\label{sec:org250b9ed}
+\label{sec:org057df57}
 \section{Python Twisted Framework}
-\label{sec:orgb070027}
+\label{sec:org46f8f64}
 In the course of this project the Python Twisted Framework \cite{twistedpython}
 was used in order to implement a network between the CPS and the ECs. The
 Twisted Framework has a number of layers in order to abstract out the problem
@@ -886,23 +907,23 @@ was attached to it in order to better encapsulate the actions required at each
 step. Figures 8.1 and 8.2 respectively describe the Finite State Machines of the
 EC and CPS while Figure 8.3 describes the interactions between the CPS and EC entities.
 \section{Client (EC)}
-\label{sec:org95d2792}
+\label{sec:orgdd58ae8}
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=.9\linewidth]{./img/ECFSM.png}
-\caption{\label{fig:org68183bb}
+\caption{\label{fig:orga0df42c}
 Finite State Machine for an EC}
 \end{figure}
 
 \subsection{Idle State}
-\label{sec:orgef67db8}
+\label{sec:org0298d0a}
 The idle state is merely a state for in between operations of the system, where
 no game is being played. In this project it was also used as an initial state
 before the user decides to start the game. When a new game is started by the
 CPS, it notifies each EC to move into the start state.
 \subsection{Start State}
-\label{sec:orga699074}
+\label{sec:org5b028ba}
 The start state is where the EC sends a message to the CPS to inform it as to
 whether it is a supplier or a consumer for the upcoming timeslot. If it is a
 consumer then it also sends the amount of energy that it requires at that time.
@@ -911,7 +932,7 @@ simply puts itself back into the idle state, awaiting the next timeslot when it
 might need or be able to supply energy. An EC moves to the Estimate 1 State if
 it is a supplier and to the receive state if it is a consumer.
 \subsection{Estimate 1 State}
-\label{sec:orgd78c6ce}
+\label{sec:org67fd4c7}
 This state is used for when the ESs are playing the game and making their first
 estimate of how much energy they are willing to offer to the CPS. In this state,
 if an ES is told to "End" its iterations then it moves to the second estimation
@@ -920,37 +941,37 @@ solver (SSHPM Implementation) that was developed as part of this project and
 sends a slack variable to the CPS, used in determining Nash Equilibrium for the
 game. 
 \subsection{Estimate 2 State}
-\label{sec:org9f3e10e}
+\label{sec:org62fe13d}
 The Estimate 2 State is more or less the exact same as Estimate 1 State except
 that when it receives the "End" message, it instead moves back to the idle
 state, having successfully supplied energy to the CPS and having been
 remunerated for that energy. If it doesn't receive the end message then it uses
 SSHPM to calculate a new slack variable and continues playing the game.
 \subsection{Receive State}
-\label{sec:org980282b}
+\label{sec:org00423d5}
 The Receive State is the state for any consumers for the current timeslot. An EC
 stays in this state until the operation of the system has been completed and the
 energy is distributed to it accordingly. Once it receives this energy, it
 returns to the Idle state in order to wait for the next timeslot.
 \subsection{SSHPM Implementation}
-\label{sec:org2fccba2}
+\label{sec:orgbe94d73}
 The SSHPM implementation caused the greatest amount of difficulty as part of
 this final year project. The paper \cite{solodov1999new} details a complex and
 dense mathematical algorithm that was difficult to grasp and to implement. The
 functions with the SSHPM.py file follow the steps in the algorithm defined by
 Solodov and Svaiter.
 \section{Server (CPS)}
-\label{sec:org32025f0}
+\label{sec:org2b31755}
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=.9\linewidth]{./img/CPSFSM.png}
-\caption{\label{fig:orgd309ba8}
+\caption{\label{fig:org0c05a6a}
 Finite State Machine for the CPS}
 \end{figure}
 
 \subsection{Idle State}
-\label{sec:orgcacd5d5}
+\label{sec:orgbb9510a}
 The Idle State is used while the there is no game happening and the CPS is idle.
 The CPS is then able to move into the start state when it wants to begin a game
 immediately preceding a new timeslot. In this implementation it's also used on
@@ -958,7 +979,7 @@ start-up of the system so that the operation of the system doesn't begin until
 every EC is connected to the CPS. Each connected EC is stored in a Python
 dictionary with its relevant connection.
 \subsection{Start State}
-\label{sec:org386899a}
+\label{sec:orgd9e455f}
 The Start state accepts incoming messages from each of the ECs about whether
 they will be a consumer or a supplier for the current timeslot or if they will
 be abstaining from the current round of operation. It stores each EC's role in
@@ -968,7 +989,7 @@ naively calculates the demand by simply summing the values given by each of the
 consumers and then moves to the Init State. Each EC also has a timer associated
 with it so that if the EC dies, then it times out and is not included in the game.
 \subsection{Init State}
-\label{sec:orga8c21be}
+\label{sec:org2b84c0b}
 The Init State is used to allow the suppliers who will be taking part in the
 game to start the game by providing them with the values that they need. Each EC
 is sent the energy deficiency (\(E_{def}\)) for the current timeslot and price that
@@ -976,7 +997,7 @@ the CPS is willing to offer to each EC. The price is calculated by multiplying
 \(E_{def}\) by the current price per unit of energy and dividing that by the
 number of ESs in the system. The CPS then moves to the Game 1 State.
 \subsection{Game 1 State}
-\label{sec:orgd13e2de}
+\label{sec:orgcd79d97}
 The Game 1 State is used for the first game that is played by the ECs that are
 supplying energy for the current timeslot. When all connected ESs have responded
 with their slack variables, the CPS runs a quick check as to whether or not the
@@ -986,7 +1007,7 @@ the last slack variable that they sent and then the CPS moves to the
 Optimisation State. If the slack variables are not all equal then the CPS tells
 the ESs to continue playing the game.
 \subsection{Optimisation State}
-\label{sec:org8fb39b1}
+\label{sec:org562dae5}
 The Optimisation state first waits to receive the energy estimates from each ES
 in the game of the current timeslot before beginning the convex optimisation. It
 formulates the problem and then solves it using the CVXPY \cite{diamond2016cvxpy}
@@ -1004,14 +1025,14 @@ and in this case ensure that each price does not exceed the minimum or maximum
 price that the CPS is willing to offer each ES and that the prices sum to the
 total price that the CPS has to give for the given timeslot.
 \subsection{Game 2 State}
-\label{sec:org92751bd}
+\label{sec:orgcf41147}
 The Game 2 State is more or less identical to the Game 1 State except that it is
 concerned with managing the ESs who are trying to calculate the actual amount of
 energy that they will give to the CPS as opposed to an estimate. In this state,
 when the slack variables are equal, it similarly tells the ECs to stop the
 iterations of their game and then it moves the CPS to the Distribute State.
 \subsection{Distribute State}
-\label{sec:org7462bb0}
+\label{sec:org135e5a9}
 The Distribute State first makes sure that all ESs have submitted the amount of
 energy that they are going to provide to the CPS. It then sums these values and
 compares that to \(E_{def}\) and if it the supplied energy is insufficient, then it
@@ -1022,12 +1043,12 @@ idle state, ready for the next game before the next timeslot.
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=.9\linewidth]{./img/SystemInteraction.png}
-\caption{\label{fig:org6761bbd}
+\caption{\label{fig:orgbb466d6}
 Diagram showing the interactions between the states of the two entities}
 \end{figure}
 
 \part{Results and Discussion}
-\label{sec:org7fd9ec7}
+\label{sec:org7f86628}
 Ultimately the success of the system was unable to be determined due to
 difficulties with the implementation of the hyperplane projection method.
 Instead of converging on a value for the energy estimate, it instead approaches
@@ -1060,7 +1081,7 @@ meet the demand. Optimisation techniques can often require several iterations
 before converging on a correct value and therefore are not feasible to be worked
 out on paper.
 \chapter{Assessment}
-\label{sec:orgd39db38}
+\label{sec:org7a92ea9}
 From the numerical results it can be easily seen that the proposed method in
 this instance is superior to the REFIT scheme as the sum of utilities is greater
 in the former approach. However the difference between the two utilities is
@@ -1086,7 +1107,7 @@ their investment whereas the game theoretic approach does not yield a concrete
 and easy-to-grasp amount of money.
 
 \part{Conclusion}
-\label{sec:org6c6ca5f}
+\label{sec:orgfc743e0}
 There are a number of ways in which this project could be continued, that were
 discovered during the course of the investigation of the field of smart grids
 and in the particular area around which this project is based. These fall under

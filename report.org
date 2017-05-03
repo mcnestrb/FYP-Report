@@ -717,10 +717,25 @@ discussed in further detail. The game played between all of the ESs that are
 trying to receive remuneration for the energy they are willing to offer is
 played across two steps. First of all the ESs use their utility functions along
 with a number of other important variables such as their energy capacity $E_n$,
-caution $c_n and the current price offer $p_n$ in order to determine their new
+caution $c_n$ and the current price offer $p_n$ in order to determine their new
 estimate for how much energy they are willing to offer to the CPS $e_n$, where
-$n \in N$, N being the set of all ESs taking part in the nanogrid. Next they use
-that energy estimate to calculate a slack variable $\varepsilon_n$ which is a
+$n \in N$, N being the set of all ESs taking part in the nanogrid. 
+
+#+NAME: Game Variables
+#+CAPTION: A description of each of the variables involved in the game
+| Variable | Description |
+|-
+| $e_{n}$     | The amount of energy the ES is currently offering (the variable that changes on each iteration) |
+|-
+| $E_n$     | The total energy stored by the ES. This is the maximum amount of energy that it is able to sell |
+|-
+| $c_n$     | The caution variable of the ES where $c_n \in (0,1)$. This determines how cautious the ES is |
+|-
+| $\varepsilon_{n}$     | The slack variable of the current iteration. Used to determine Nash Equilibrium by the CPS |
+|- 
+
+
+Next they use that energy estimate to calculate a slack variable $\varepsilon_n$ which is a
 variable indicating the amount of energy it is willing to offer without giving
 up any private information. These slack variables are derived from the ES's
 utility functions which will be discussed in the next section. The slack
@@ -731,15 +746,16 @@ ESs.
 
 When the hyperplane projection is initially calculated there is a small piece of
 logic that determines what slack variable is sent to the CPS as well as what
-energy should be offered. If the projection is equal to zero then $\varepsilon_n = E_n -
-2c_{n}e_{n} + p_n$. Otherwise the second part of the hyperplane projection method is
-run, where the halfspace is determined and from that a new projection is worked
-out. In this case the slack variable sent back to the CPS is $\varepsilon_n = E_n - e_n +
-p_n$. These slack variables are then sent to the CPS. If the slack variables are
-all equal, as previously mentioned, then the game has reached the state of Nash
-Equilibrium and the ESs are informed to end their iterations and they instead
-send back the amount of energy they are offering. If the slack variables are not
-equal then the CPS instructs the ESs to perform another iteration of the SSHPM.
+energy should be offered. If the hyperplane projection $P_{C}[e_n]$, as defined in
+section 6.3.2, is equal to zero then $\varepsilon_n = E_n - 2c_{n}e_{n} + p_n$. Otherwise the
+second part of the hyperplane projection method is run, where the halfspace is
+determined and from that a new projection is worked out. In this case the slack
+variable sent back to the CPS is $\varepsilon_n = E_n - e_n + p_n$. These slack variables are
+then sent to the CPS. If the slack variables are all equal, as previously
+mentioned, then the game has reached the state of Nash Equilibrium and the ESs
+are informed to end their iterations and they instead send back the amount of
+energy they are offering. If the slack variables are not equal then the CPS
+instructs the ESs to perform another iteration of the SSHPM. 
 *** Utility Functions
 **** EC Utility Function
 Each EC has a utility function that is used as the functional in the the
@@ -770,9 +786,9 @@ ESs that have submitted energy estimates for how much they are willing to offer.
 The function is represented as a minimisation problem in terms of the energy
 that each ES is offering $e_n$, the price that the CPS would offer for that
 energy $p_n$ and two scalar values $a_n$ and $b_n$  that account for the costs
-associated with storing and transmitting the energy.
+associated with storing and transmitting the energy respectively.
 
-$$min_p L(p,e) = min_{p_{n}} \sum_n(e_{n}p_n^r + a_{n}p_{n} + b_n), subject to
+$$min_p L(p,e) = min_{p_{n}} \sum_n(e_{n}p_n^r + a_{n}p_{n} + b_n), where
 \sum_n p_n = P, p_{min} <= p_n <= p_{max}$$
 
 For each ES, the CPS is trying to find the value of $p_n$ that will give the
