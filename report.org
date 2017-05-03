@@ -201,14 +201,16 @@ a relatively small space of time and this has worked effectively in Germany. The
 payment also eventually covers the cost of constructing the solar panels or wind
 turbines for regular consumers over a period of 6-10 years cite:lauber2004refit. 
 
-The main downside to the REFIT scheme however is that because it provides a
-fixed amount based primarily on the type of energy produced and for how long it
-is being provided, which means that it is not worth it for a supplier to sell if
-it has a poor supply in reserve for example. In this case, the incentive to sell
-energy is quite low as selling any energy would drain the supplier of most of
-its power. Therefore a scheme involving a dynamic price model that incentivises
+Most REFIT schemes involve the supplier selling electricity directly into the
+central grid as soon as it is produced at a fixed rate. This fixed rate is based
+primarily on the type of energy produced and for how long it is being provided.
+In some implementations a supplier can sell at one rate up to a certain
+threshold and then another rate beyond that threshold if generation of power is
+particularly high due to the suitable weather conditions. The downside to this
+is that the supplier does not receive the maximum profits for all the energy it
+is producing. Therefore a scheme involving a dynamic price model that incentivises
 all suppliers at all times to contribute to the demand and maximise their own
-utility in the system might be better.
+utility (profits) in the system might be better.
 ** Auctions
 *** Overview
 The first type of node management systems considered as part of this project was
@@ -600,6 +602,9 @@ consumers or suppliers. This decision was made to facilitate the situation where
 an appliance might have bought too much energy in advance and wants to sell its
 excess. It also facilitates extensions to the system where a nanogrid could buy
 or sell to and from other nanogrids, where a nanogrid could be of either type.
+It is also assumed within the scope of this system that each energy supplier has
+the capacity to store a certain amount of energy in its own battery and is aware
+of how much energy that battery contains.
 *** System Design
 In this section I will discuss a brief overview of the operation of the system
 implemented in this project. Below in Figure 7.2 is a basic flowchart of a
