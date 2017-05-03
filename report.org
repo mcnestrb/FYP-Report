@@ -67,7 +67,15 @@ same centralised hub belonging to the ESB. From there, each consumer (a
 household) received the energy that they paid for accordingly at a fixed rate
 through that same infrastructure belonging to the ESB.
 
-This system has been in place for decades and lends itself very well to large
+In recent years the grid has become more and more decentralised. For example the
+Single Electricity Market Operator (SEMO) cite:semo, is a joint venture between
+the Irish company Eirgrid and the Northern Irish company SONI. Whole-sale buyers
+and sellers of energy are thus able to trade on a different grid network to that
+of the ESB. While this is certainly a turn towards a decentralised grid, it is
+still controlled by a central body and that there are now multiple central
+bodies.
+
+These systems has been in place for decades and lend themselves very well to large
 companies providing a steady supply of energy by way of electricity plants
 that use both renewable and nonrenewable energy sources. Non-renewable energy
 sources, also known as fossil fuels, include resources such as coal, gas and
@@ -81,8 +89,9 @@ typically enjoy clearer skies than other areas.
 
 However in the future, with the ongoing depletion of nonrenewable resources,
 increasing numbers of customers will turn to erecting solar panels and local
-wind farms  on their own properties, regardless of whether or not they are
-living in a particularly sunny or windy area. Presently there are a few houses
+wind farms on their own properties, regardless of whether or not they are
+living in a particularly sunny or windy area. This would further decentralise
+the grid even from how it is now. Presently there are a few houses
 that use a solar panel to heat their water or other smaller tasks but soon more
 and more people will become more and more dependent on what they can produce
 either within their own home, or in a more collective sense in their own
@@ -96,7 +105,14 @@ would instead be used at a local level to try to cover the demand for
 electricity of the house or business with which that particular device is
 associated.
 
-The model of infrastructure that would then be required is that of a
+Most of the grid infrastructure was also designed for one directional
+operations, that is that any given actor within the system would either be a
+consumer or a supplier but could never change. However, with the proliferation
+of personal solar panels and other renewable energy generators, an end-user
+could potentially become a supplier, at least a small scale at certain times of
+the day.
+
+The model of infrastructure that would then be required is that of a truly
 decentralised grid. This model would require a massive infrastructure overhaul
 in order to implement, so it would not exist until it is absolutely necessary
 and has been accepted by the major companies who would then go about
