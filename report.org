@@ -1071,18 +1071,61 @@ deployment. At present, the introduction of all these smart meters only allows
 for the collection of more data regarding energy, but it would be wasteful not
 to implement some form of smart management using this data.
 
+While the proliferation of smart meters as certainly improved, an important
+factor, in order for this system to be built, is for consumers, both individuals
+and collectives, to construct local renewable energy generators. The REFIT
+scheme in place in Germany, as mentioned earlier, incentivises the installation
+and construction of local renewable energy sources. Ideally a scheme such as
+this would then cause the infrastructure to be in place for a game theoretic
+approach to be installed.  The reason why a REFIT scheme would need to precede a
+game theoretic solution is that they would need to borrow capital, from a bank
+for example, and then have that be paid back over time. On top of that, on a
+human level, people would need tangible and static amounts of money to ensure
+that they would be able to conceive of a return on their investment whereas the
+game theoretic approach does not yield a concrete and easy-to-grasp amount of
+money.
 
+An important aspect of this project to assess, is that of scalability. While it
+is nice to consider situations where a few ECs are connected to a single CPS in
+a network, it is conceivable that on say a college campus or in an industrial
+estate, hundreds or thousands of devices could be involved. One solution to this
+issue would be to group together sets of similar devices, for example a lab of
+computers that are all in the same room could be collectively referred to as a
+single consumer. In this instance some kind of intermediate device would be used
+to collect the demand at the start of the system and to distribute the energy at
+the end.
 
-Rather, a more realistic approach would be to first introduce smart meters into
-homes in conjunction with the current grid, like is in place in Italy as
-discussed previously and to follow that with a REFIT scheme to incentivise the
-installation and construction of local renewable energy sources as is in place
-in Germany. At this point it would then be feasible to introduce a system such
-as the one discussed in this report. The reason why a REFIT scheme would need to
-precede a game theoretic solution is that on a human level, people would need
-tangible and static amounts of money to ensure that they would see a return on
-their investment whereas the game theoretic approach does not yield a concrete
-and easy-to-grasp amount of money.
+Optimisation techniques also help to tackle the scalability issue. In a network
+situation it is both cheaper and quicker to perform calculations on a single
+device compared to sending information across the network. For example, in this
+project convex optimisation was used by the CPS to determine the price vector
+based on the provided energy estimates. The new prices were calculated rapidly
+and then sent out to each of the ESs within that particular game. The
+optimisation technique found a solution extremely quickly. It is hard to say
+about the hyperplane projection method as to whether or not it would have the
+same success.
+
+One detractor from the scalability of the system was the game itself as it
+turned out. In order to determine Nash Equilibrium within the game, the slack
+variables were sent to the CPS from each of the ESs involved in the current
+game. Every single ES had to respond before the CPS could determine where
+equilibrium had been achieved. Taking into account the network propagation, as
+well as the time to wait for potentially hundreds of ESs to reply to the CPS,
+this part of the system does not help the scalability problem.
+
+While game theory seems like a very suitable approach to the problem of matching
+supply with demand in the face of the unpredictable supply, the issue of
+scalability makes it unsuitable for managing systems involving lots of devices.
+The proposed system in this report would therefore be best suited for situations
+like single houses where each room within the house is a collective consumer,
+again with intermediate devices to control collection and distribution of
+energy. If another game theory approach allowed for less network communication
+for determining Nash Equilibrium then that might be better suited to scenarios
+involving larger quantities of users.
+
+This project can be considered a success for successfully analysing the problem
+of matching supply and demand in the face of unpredictable supply and finding a
+solution to that problem, albeit only in certain circumstances. 
 
 \printbibliography[heading=bibintoc, title=References]
 \appendix
