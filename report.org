@@ -42,21 +42,37 @@ solutions to this problem. However very few have real implementations and do not
 take into account the limitations and overheads of a real network. 
 
 The goal of this project is to implement a network solution to the problem of
-matching supply and demand in the face of unpredictable supply. The paper
-authored by Wayes Tushar cite:tushar2014prioritizing formed the basis of the
-project and therefore this report. The system will then be compared against a
-simple scenario of the current REFIT scheme cite:lauber2004refit and an analysis will be provided to
-see whether or not this particular smart grid solution would be effective in a
-real world situation. 
+matching supply and demand in the face of unpredictable supply. In the course of
+this project, several papers were surveyed, before deciding on the paper
+authored by Wayes Tushar cite:tushar2014prioritizing to form the basis of the
+project and therefore this report. This paper was selected due to the importance
+it placed on minimal communication and the privacy which is provides to each of
+the actors within the system, that is that they do not share their private
+information with everyone involved. The system will then be compared against a
+simple scenario of current approaches to solving this problem to see whether or
+not this particular smart grid solution would be effective in a real world
+situation.
+
+In order to determine the success of this project, it will try to prove whether
+a game theoretic approach to the problem of matching supply and demand in the
+face of unpredictable supply is feasible within a real network situation. In
+order to do this, the game theoretic approach will first be implemented and then
+analysed to see whether it is suitable and is in fact able to solve the problem
+in an amount of time that would make it fit to use in the real world. That is,
+that the system would match supply and demand in a realistic amount of time. The
+report will also analyse the appropriateness of the implementation of a game
+theoretic approach and the usefulness, or lack thereof, of mathematical
+optimisation techniques.
 
 First a discussion of the technologies used and an explanation of the associated
 terms will be presented, including topics such as the smart grid, the current
-implementation of managing supply (REFIT), definitions of auctions and game
+implementation of managing supply, definitions of auctions and game
 theory, as well as a brief summary of the mathematical optimisation techniques
 employed in this project. Next, the design of the project will be examined and
-finally the actual implementation itself will be presented. To conclude there
-will be an assessment of the system designed and a number of potential
-continuations of the project will be discussed.
+finally the actual implementation itself will be presented. This will then be
+followed by a small discussion on the implementation and running of the system.
+To conclude there will be an assessment of the system designed and a number of
+potential continuations of the project will be discussed.
 * Background
 ** Decentralised Grid
 For many years, in Ireland and in many other countries, the national electric grid
@@ -197,7 +213,7 @@ multiple parents. Another version of this would be to have a peer-to-peer
 network, where multiple nanogrids could trade electricity between one another.
 These will be discussed in more detail in the conclusion.
 ** REFIT Scheme
-The REFIT scheme (Renewable Energy Feed In Tariff) is one of the most common
+The REFIT scheme (Renewable Energy Feed In Tariff) cite:lauber2004refit is one of the most common
 ways in which countries around the world, including Germany, Spain and the state
 of Hawaii cite:couture2010analysis, try to incentivise renewable energy sources
 and suppliers to sell energy into the main grid for consumption by consumers.
