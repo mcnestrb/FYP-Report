@@ -26,53 +26,54 @@
 \pagenumbering{arabic}
 
 * Introduction
-Currently in the field of smart grid technologies, there is an abundance of
+Currently in the field of smart grid technologies, there are an abundance of
 theoretical approaches to the problems of managing the transactions between
 consumers and suppliers of energy cite:ambrosio2016transactive. While there are
 multiple facets to this problem, this project examines the problem of matching
 supply and demand in the face of unpredictable supply. The world is slowly
 moving towards a future in which renewable energy sources will become our
 primary method of energy production, particularly with the inevitable depletion
-of fossil fuels cite:boyle1997renewable. This future, which will unfortunately be accompanied by a more
-unpredictable supply of energy, will require a smarter approach to the
-accumulation and distribution of energy. Due to the proliferation of decision
-making computers, the smart grid is a very popular solution. As mentioned
-previously,  research has been conducted by hundreds of papers on theoretical
-solutions to this problem. However very few have real implementations and do not
-take into account the limitations and overheads of a real network. 
+of fossil fuels cite:boyle1997renewable. This future, which will unfortunately
+be accompanied by a more unpredictable supply of energy, will require a smarter
+approach to the accumulation and distribution of energy. Due to the
+proliferation of decision making computers, the smart grid is a very popular
+solution. As mentioned previously, research has been conducted in hundreds of
+papers on theoretical solutions to this problem. However very few have real
+implementations and do not take into account the limitations and overheads of a
+real network.
 
 The goal of this project is to implement a network solution to the problem of
-matching supply and demand in the face of unpredictable supply. In the course of
-this project, several papers were surveyed, before deciding on the paper
-authored by Wayes Tushar cite:tushar2014prioritizing to form the basis of the
-project and therefore this report. This paper was selected due to the importance
-it placed on minimal communication and the privacy which is provides to each of
-the actors within the system, that is that they do not share their private
-information with everyone involved. The system will then be compared against a
-simple scenario of current approaches to solving this problem to see whether or
-not this particular smart grid solution would be effective in a real world
-situation.
+matching supply and demand in the face of unpredictable supply. Over the course
+of this project, several papers were surveyed, before a decision was made to use
+the paper authored by Wayes Tushar cite:tushar2014prioritizing as the basis of
+the project and therefore this report. This paper was selected due to the
+importance it placed on minimal communication and the privacy which is provided
+to each of the actors within the system, which is that they do not share their
+private information with everyone involved. The system will then be compared
+against a simple scenario of current approaches to solving this problem to see
+whether or not this particular smart grid solution would be effective in a real
+world situation.
 
-In order to determine the success of this project, it will try to prove whether
-a game theoretic approach to the problem of matching supply and demand in the
-face of unpredictable supply is feasible within a real network situation. In
-order to do this, the game theoretic approach will first be implemented and then
-analysed to see whether it is suitable and is in fact able to solve the problem
-in an amount of time that would make it fit to use in the real world. That is,
-that the system would match supply and demand in a realistic amount of time. The
-report will also analyse the appropriateness of the implementation of a game
-theoretic approach and the usefulness, or lack thereof, of mathematical
-optimisation techniques.
+In this project, a game theoretic approach to the problem of matching supply and
+demand in the face of unpredictable supply is investigated to see whether using
+it would be feasible within a real network situation. In order to do this, the
+game theoretic approach will first be implemented and then analysed to see
+whether it is suitable and able to solve the problem in an amount of time that
+would make it fit to use in the real world. That is, that the system would match
+supply and demand in a realistic amount of time. This report will also analyse
+the appropriateness of implementing a game theoretic approach and the
+usefulness, or lack thereof, of mathematical optimisation techniques.
 
-First a discussion of the technologies used and an explanation of the associated
-terms will be presented, including topics such as the smart grid, the current
-implementation of managing supply, definitions of auctions and game
+Firstly, a discussion of the technologies used and an explanation of the
+associated terms will be presented, including topics such as the smart grid, the
+current implementation of managing supply, definitions of auctions and game
 theory, as well as a brief summary of the mathematical optimisation techniques
 employed in this project. Next, the design of the project will be examined and
-finally the actual implementation itself will be presented. This will then be
-followed by a small discussion on the implementation and running of the system.
-To conclude there will be an assessment of the system designed and a number of
-potential continuations of the project will be discussed.
+finally the actual implementation of the proposed solution itself will be
+presented. This will then be followed by a small discussion on the
+implementation and running of the system. To conclude, there will be an
+assessment of the designed system and a number of potential continuations of the
+project will be discussed.
 * Background
 ** Decentralised Grid
 For many years, in Ireland and in many other countries, the national electric grid
@@ -1033,17 +1034,16 @@ demand, it cannot be said whether or not the proposed system meets its goals. A 
 solution, however, would verify whether it does or not.
 * Conclusion
 ** Further Work
-There are a number of ways in which this project could be continued, that were
-discovered during the course of the investigation of the field of smart grids
-and in the particular area around which this project is based. These fall under
-two distinct categories: the first being aspects in which this project could
-have been extended had there been more time, and the second being ways in which
-investigations could be made into pairing this project with other proposed smart
-grid technologies.
+There are a number of ways in which this project could be continued that were
+discovered during the course of the investigation of the field of smart grids.
+These fall under two distinct categories: aspects of this project which could
+have been extended had there been more time, and ways in which the system
+developed for this project could be paired with other proposed smart grid
+technologies in future work.
 
-Originally it was intended that the project would include implementing a
-prototype for the supply and demand matching using a number of Raspberry Pis
-connected over a WiFi network. This could then be used to analyse network
+Originally, it was intended that the project would involve implementing a
+prototype for the supply and demand matching system using a number of Raspberry
+Pis connected over a WiFi network. This could then be used to analyse network
 latencies as well as to create a real network and prove whether or not this
 system could be implemented on a larger scale.
 
@@ -1052,12 +1052,12 @@ smart grid, where the CPS of a nanogrid in a house would then act as an EC
 within say the community or neighbourhood. The CPS controlling that region would
 then be an EC for a larger region, say a county or even an area code. However, a
 major change would need to take place in order to implement such a system. The
-current system which was examined in this project, only attempted to supply
-energy less than or equal to the upcoming energy deficiency. This extension
+current system, which was examined in this project, only attempted to supply
+energy less than or equal to the upcoming energy deficiency. This extension,
 however, would require the system to be able to produce a surplus of electricity
 for a single house at a given time period. If this were possible then a house
-could then act as a supplier in the game within its own neighbourhood and
-actually generate a further profit for that house.
+could act as a supplier in the game within its own neighbourhood and actually
+generate a further profit for that house.
 
 As mentioned previously, as well as supply side management systems, there are
 also numerous papers concerned with demand side management. Most of these papers
@@ -1073,27 +1073,27 @@ The final potential continuation of this project would be to pair any devices
 that would normally solely be suppliers in a nanogrid, such as wind turbines and
 solar panels, with some form of prediction software relating to weather patterns
 cite:foley2012current. This data could then be used to inform an EC’s caution
-value. For example if the EC was nearing capacity and it knew that it was going
+value. For example, if the EC was nearing capacity and it knew that it was going
 to be generating enough electricity that it would be unable to store it, then it
 could have a very low caution value. Conversely, low energy capacity and low
-production in the future could could be used to inform a higher caution value.
+production in the future could be used to inform a higher caution value.
 ** Assessment
 Many countries across the world, including Germany cite:smartmetersgermany, have
 invested large amounts of money in rolling out millions of smart meters into
 homes, offices and factories. This is certainly a positive step towards creating
-a smarter grid and perhaps a system akin to the one proposed in this project,
-however, at present there are no formal plans with following up on this
-deployment. At present, the introduction of all these smart meters only allows
+a smarter grid and perhaps a system akin to the one proposed in this project.
+However, at present there are no formal plans with following up on this
+deployment. Currently, the introduction of all these smart meters only allows
 for the collection of more data regarding energy, but it would be wasteful not
 to implement some form of smart management using this data.
 
-While the proliferation of smart meters as certainly improved, an important
+While the proliferation of smart meters has certainly improved, an important
 factor, in order for this system to be built, is for consumers, both individuals
 and collectives, to construct local renewable energy generators. The REFIT
 scheme in place in Germany, as mentioned earlier, incentivises the installation
-and construction of local renewable energy sources. Ideally a scheme such as
+and construction of local renewable energy sources. Ideally, a scheme such as
 this would then cause the infrastructure to be in place for a game theoretic
-approach to be installed.  The reason why a REFIT scheme would need to precede a
+approach to be installed. The reason why a REFIT scheme would need to precede a
 game theoretic solution is that they would need to borrow capital, from a bank
 for example, and then have that be paid back over time. On top of that, on a
 human level, people would need tangible and static amounts of money to ensure
@@ -1101,28 +1101,28 @@ that they would be able to conceive of a return on their investment whereas the
 game theoretic approach does not yield a concrete and easy-to-grasp amount of
 money.
 
-An important aspect of this project to assess, is that of scalability. While it
+An important aspect of this project to assess is that of scalability. While it
 is nice to consider situations where a few ECs are connected to a single CPS in
 a network, it is conceivable that on say a college campus or in an industrial
 estate, hundreds or thousands of devices could be involved. One solution to this
 issue would be to group together sets of similar devices, for example a lab of
 computers that are all in the same room could be collectively referred to as a
-single consumer. In this instance some kind of intermediate device would be used
-to collect the demand at the start of the system and to distribute the energy at
-the end.
+single consumer. In this instance, some kind of intermediate device would be
+used to gauge the demand at the start of the system and to distribute the energy
+at the end.
 
 Optimisation techniques also help to tackle the scalability issue. In a network
 situation it is both cheaper and quicker to perform calculations on a single
-device compared to sending information across the network. For example, in this
-project convex optimisation was used by the CPS to determine the price vector
-based on the provided energy estimates. The new prices were calculated rapidly
-and then sent out to each of the ESs within that particular game. The
+device as opposed to sending information across the network. In this project,
+for example, convex optimisation was used by the CPS to determine the price
+vector based on the provided energy estimates. The new prices were calculated
+rapidly and then sent out to each of the ESs within that particular game. This
 optimisation technique found a solution extremely quickly. It is hard to say
 about the hyperplane projection method as to whether or not it would have the
 same success.
 
-One detractor from the scalability of the system was the game itself as it
-turned out. In order to determine Nash Equilibrium within the game, the slack
+One detractor from the scalability of the system was the formulation of the game
+itself. In order to determine Nash Equilibrium within the game, the slack
 variables were sent to the CPS from each of the ESs involved in the current
 game. Every single ES had to respond before the CPS could determine where
 equilibrium had been achieved. Taking into account the network propagation, as
@@ -1141,7 +1141,7 @@ involving larger quantities of users.
 
 This project can be considered a success for successfully analysing the problem
 of matching supply and demand in the face of unpredictable supply and finding a
-solution to that problem, albeit only in certain circumstances. 
+solution to that problem, albeit only in certain circumstances.
 
 \printbibliography[heading=bibintoc, title=References]
 \appendix
